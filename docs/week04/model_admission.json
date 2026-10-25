@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "benchmark_id": "cm_lambda1_supported_v1",
+  "decision": "technical_proposal_prepared_pending_human_agreement_and_week5_loader",
+  "public_existing_trained_checkpoint_verified": true,
+  "new_training_performed": false,
+  "parameter_transformations": [],
+  "technical_checks": {
+    "pinned_archive_and_member_hashes": "passed",
+    "complete_unique_upper_triangle_J_and_h_coverage": "passed",
+    "finite_couplings": "passed",
+    "support_semantics": "passed: finite original h permitted, literal h=-inf forbidden",
+    "reference_sequence_coordinate_map": "passed: exact unique ungapped match to Q5SLA5 residues 2-90",
+    "single_nonpathogenic_reference_context": "supported by DSMZ HB8/DSM 579 risk group 1 classification",
+    "full_model_finite_arithmetic_check": "passed in one inspection: unmodified Natural_CM sequence_1 energy=-57.358659772664",
+    "native_coordinate_anchor_score": "positive_infinity: model 38 Q and 45 H have h=-inf",
+    "conditional_case_nonempty_support": "passed for all 4 proposed cases",
+    "exact_conditional_case_full_model_enumeration": "passed: each 4 states, 96 selected h and 4560 selected J per state",
+    "development_evaluation_selected_positions_disjoint": "passed: development 8,12; evaluation 16,24",
+    "admission_unit_tests": "passed: 10 stdlib tests"
+  },
+  "reference_roles": {
+    "biological_coordinate_anchor": "unmodified Natural_CM sequence_2, matched to Q5SLA5/HB8; outside lambda1 support; never initialize a chain here",
+    "finite_arithmetic_fixture": "unmodified Natural_CM sequence_1; computational-only role, no nonpathogenic taxonomic assertion; not in the reference-gap-pattern case support",
+    "restricted_support_witness": "constructed coordinate anchor with model 38 Q->E and 45 H->A; explicitly not a natural or experimentally tested T.thermophilus sequence",
+    "family_taxonomy_limit": "Single HB8 reference context does not certify all training homologs or generated sequences as nonpathogenic."
+  },
+  "cases": [
+    "cm_dev_exact_8_12",
+    "cm_dev_broad_8_12",
+    "cm_eval_exact_16_24",
+    "cm_eval_broad_16_24"
+  ],
+  "still_required": [
+    {
+      "item": "Human agreement on the biological scope, feedback-informed checkpoint and positional restrictions",
+      "status": "pending",
+      "evidence": "No approval or lead/adviser decision record was supplied."
+    },
+    {
+      "item": "Independent score and numbering checks by both project leads",
+      "status": "pending",
+      "evidence": "Decimal and binary64 arithmetic in one script do not establish two independent human checks."
+    },
+    {
+      "item": "Adviser review and benchmark agreement",
+      "status": "pending",
+      "evidence": "The review packet can be prepared; no completed review is claimed."
+    },
+    {
+      "item": "Week 5 production loader supporting exact forbidden-state semantics",
+      "status": "planned_and_required_before_sampling",
+      "evidence": "Current adabmDCA 1.0.0 load_params rejects nonfinite fields; one-hot field dot products can produce NaN."
+    },
+    {
+      "item": "Independent mapped experimental holdout",
+      "status": "not_established; disabled",
+      "evidence": "P1 labels informed reintegration. Existing classifier predictions and archived sampled headers are not independent measurements or validated equilibrium traces."
+    }
+  ],
+  "claim_limits": {
+    "production_loader_complete": false,
+    "sampler_implemented_or_verified_on_CM": false,
+    "biological_function_claim": false,
+    "planner_or_runtime_advantage_measured": false,
+    "adviser_signoff_obtained": false
+  },
+  "artifacts": {
+    "config": "configs/benchmark.json",
+    "inspection": "data/benchmark/inspection.json",
+    "source_manifest": "data/benchmark/source_manifest.json",
+    "support": "data/benchmark/support.json",
+    "position_map": "data/benchmark/position_map.csv",
+    "reference_provenance": "data/benchmark/reference_provenance.json",
+    "restrictions": "data/benchmark/restriction_cases.json",
+    "scores": "data/benchmark/score_checks.json",
+    "tests": "tests/test_benchmark_admission.py"
+  }
+}

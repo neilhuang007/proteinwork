@@ -1,0 +1,15 @@
+{
+  "source_filename": "Protein_sequence_sampling_project_plan_revised.docx",
+  "source_sha256": "2dd6adb9ca65c9c82bd8d33ca58f7c9d44b2d0a6999f63ff71148a0ce1f92663",
+  "review_date": "2026-10-08",
+  "project_duration_weeks": 18,
+  "week": 1,
+  "scheduled_work": "Review how researchers generate candidate libraries and compare two or three protein families. Begin the adabmDCA model-reading exercise.",
+  "deliverable_due": "Scope draft and comparison of candidate protein families.",
+  "planned_hours_per_person": 8,
+  "actual_hours": null,
+  "calendar_deadline": null,
+  "next_week_work": "Run a documented sequence-generation example and a tiny thrml model. Save setup steps, software versions, outputs, and any failures.",
+  "next_week_deliverable": "Biology and systems pilot logs with runnable examples.",
+  "next_week_planned_hours_per_person": 10
+}

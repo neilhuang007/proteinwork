@@ -1,0 +1,30 @@
+Protein Sequence Sampling Project
+Week 3 Report
+
+Tasks completed
+
+This week, I focused on understanding which parts of the sampling workflow I could trust and reuse. My planned tasks were to check score arithmetic and position numbering, review Gibbsiq's code, test relevant components, compare related methods, and draft benchmark requirements. I completed these technical tasks and recorded the exact Gibbsiq version and source files I checked. Nine learning tests and 69 focused Gibbsiq tests passed, completing the Week 3 technical milestone.
+
+Outcomes and reflections
+
+I started by calculating the synthetic sequence AC by hand. Its score is 3.5, which corresponds to an energy of -3.5 under this model's convention. I also checked how positions numbered from zero in the code relate to positions numbered from one in the teaching reference. Working through the calculation helped me connect the indexing and sign conventions to the values the code should return.
+
+The reuse exercise then confirmed that all nine synthetic sequence energies agree across the original model and Gibbsiq's categorical and binary representations. All nine valid binary encodings decoded correctly, while seven invalid combinations were rejected. These results give me useful building blocks for representing amino-acid choices in a binary model.
+
+The biggest insight came from the sampling-correction exercise. Some moves can be easier to propose than their reverse, so deciding whether to accept them requires accounting for that imbalance. The correct Metropolis-Hastings rule preserved the intended probabilities in the small example; leaving out the proposal ratio produced an error of about 0.107. I also checked that rejected moves leave repeated states in the saved trace. Those repeats record time spent in a state and belong in the analysis.
+
+The related-work review clarified my project's contribution. Encoding and correction are established techniques. My goal is to compare verified methods fairly and use measured costs to decide when each is worthwhile.
+
+Challenges and responses
+
+The supplied Gibbsiq description was older than the implementation I inspected. I resolved that mismatch by recording and testing the actual source version. Another challenge was connecting the encoded moves to the original sequence probabilities. I addressed this in the benchmark requirements by specifying that the proposal rule and its correction must be checked together. The small correction exercise gives me a concrete starting point for that work.
+
+Updates and adjustments
+
+I kept the original timeline and clarified how I will use Gibbsiq. Its tested representation components provide the foundation for the protein loader, positional restrictions, and corrected sampling workflow I will build. I carried these requirements into the benchmark draft so later implementation has explicit checks to satisfy.
+
+Upcoming tasks
+
+Next week, I will prepare the concrete benchmark proposal, including the model, biological position map, allowed residues, separate development and evaluation cases, and accuracy criteria. I will assemble these with the updated project plan for both project leads and the adviser to review.
+
+Evidence: docs/week03/validation.json; docs/week03/research_audit.md.

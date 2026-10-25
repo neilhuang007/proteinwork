@@ -1,0 +1,17 @@
+{
+  "source_run": "output\\week05\\cm_direct",
+  "run_manifest_sha256": "c1cef74ac75232a4d63aa326130bbe16ded47c33ba5c59842bb27bd153585b8c",
+  "script_sha256": "c5782e744bfb61cb5211e53ac0c32f55dc3fa58f0ce59abbb08597960e5c83f1",
+  "archive_sha256": "193c7dc912b394df12f0662fc6fde70d265567e7c9265b5106c3cec3d5746329",
+  "alignment_member": "Chorismate_Mutase/Natural_CM.faa",
+  "alignment_member_sha256": "60e45ab3c9a7059b9e21d23413e67c7a321ac109c01dc87ed6773f85fee698f3",
+  "model_sha256": "bf180a3ed43637ab082a0d398d6663ffbd2566e73b2232404519ac8e4f32a004",
+  "position_map_sha256": "d976da09881eb74e6d602d43383c1d294a0f63d067c9ff8e9860e428c68ba777",
+  "artifacts": {
+    "alignment_profiles.json": "2765d363fc32a9059fce38bf855fe2ad000399c48096590542122e0803f5fdc7",
+    "candidate_annotations.csv": "2f2e720c30dd52a519c29b454c4997b8d51f987a8dce8641dc0ea2f099066d7b",
+    "pair_frequencies.csv": "bc65095df51c00e8e65cf04b2d47fd92494554b6c239d8fd99c1615dba193c8f",
+    "residue_frequencies.csv": "1e8017b027817ab920c885c8d56d7c73297dd2dc403730747b2770238961d499",
+    "summary.json": "e515a37393b852ea199e0a111468985e3a05d93e46d6b0f6c7cf4c99411d69d5"
+  }
+}

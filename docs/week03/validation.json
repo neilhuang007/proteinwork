@@ -1,0 +1,40 @@
+{
+  "validation_date": "2026-10-08",
+  "python": "3.13.5",
+  "interpreter": "E:/projects/proteinwork/.venv/Scripts/python.exe",
+  "upstream_repository": "https://github.com/neilhuang007/Gibbsiq.git",
+  "upstream_commit": "06590b82ba509ecf721d8a7685ed27a319d6b0c1",
+  "upstream_tests": {
+    "working_directory": "E:/projects/Gibbsiq",
+    "modules": ["test_suite.tests.test_categorical_model", "test_suite.tests.test_domain_wall_encoding", "test_suite.tests.test_reference_sampler", "test_suite.tests.test_exact_distribution", "test_suite.tests.test_statistical_verifier"],
+    "passed": 69,
+    "skipped": 0,
+    "exit_code": 0,
+    "bytecode_writes_disabled": true,
+    "tree_unchanged": true,
+    "log": "docs/week03/upstream_test_run.log"
+  },
+  "learning_tests": {
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -p test_week03_*.py -v",
+    "passed": 9,
+    "skipped": 0,
+    "exit_code": 0,
+    "log": "docs/week03/test_run.log"
+  },
+  "learning_example": {
+    "command": ".venv/Scripts/python.exe examples/week03/learning_checks.py",
+    "exit_code": 0,
+    "output": "examples/week03/output/learning_checks.json",
+    "scope": "synthetic score/position map, 3-state MH matrix, invalid domain-wall endpoints, scripted trace with rejection repeats"
+  },
+  "upstream_adapter_example": {
+    "command": ".venv/Scripts/python.exe examples/week03/upstream_reuse_check.py --source E:/projects/Gibbsiq",
+    "exit_code": 0,
+    "energy_states_checked": 9,
+    "valid_encoded_words": 9,
+    "invalid_words_rejected": 7,
+    "output": "examples/week03/output/upstream_reuse.json"
+  },
+  "pending": ["real trained-model hand score and biological position mapping", "independent checks by both human leads", "actual encoded proposal and original-target correction proof", "THRML adapter integration", "Week4 benchmark and adviser review"],
+  "claims_excluded": ["production corrected sampler", "measured speedup", "hardware execution", "laboratory validation"]
+}

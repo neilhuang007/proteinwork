@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "status": "technical_proposal_pending_human_review",
+  "model_index_base": 0,
+  "reference_position_base": 1,
+  "model_parameter_transformations": [],
+  "common_constraints": {
+    "fixed_gap_model_indices": [
+      0,
+      1,
+      2,
+      63,
+      64,
+      94,
+      95
+    ],
+    "fixed_gap_symbol": "-",
+    "nongap_columns_exclude_gap": true,
+    "finite_original_field_support_required": true,
+    "role": "Define a conditional computational target with this anchor gap pattern; no biological function claim."
+  },
+  "computational_witness": {
+    "sequence": "---DERIQALRKEVDRVNREILRLLSERGRLVQEIGRLETELGLPAYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+    "role": "Constructed support witness and exact-case background; not a native T.thermophilus protein or experimental record.",
+    "construction": "Keep coordinate anchor symbols where supported; replace its two forbidden states by the first allowed amino-acid symbol in canonical alphabet order.",
+    "substitutions": [
+      {
+        "model_index_0based": 38,
+        "uniprot_position_1based": 37,
+        "anchor_symbol": "Q",
+        "witness_symbol": "E"
+      },
+      {
+        "model_index_0based": 45,
+        "uniprot_position_1based": 44,
+        "anchor_symbol": "H",
+        "witness_symbol": "A"
+      }
+    ]
+  },
+  "split_semantics": "Frozen restriction-input split for future computational planner tuning; not assay-label or sequence-training holdout. Evaluation inputs must not tune the planner.",
+  "cases": [
+    {
+      "case_id": "cm_dev_exact_8_12",
+      "split": "development",
+      "kind": "exact_conditional",
+      "positional_restrictions": [
+        {
+          "model_index_0based": 8,
+          "allowed_symbols": "AC"
+        },
+        {
+          "model_index_0based": 12,
+          "allowed_symbols": "EF"
+        }
+      ],
+      "other_positions": "fixed to computational_witness",
+      "purpose": "Full-model conditional arithmetic/correctness check with 4 states",
+      "biological_restriction_approval": "pending"
+    },
+    {
+      "case_id": "cm_dev_broad_8_12",
+      "split": "development",
+      "kind": "broad_conditional",
+      "positional_restrictions": [
+        {
+          "model_index_0based": 8,
+          "allowed_symbols": "A"
+        },
+        {
+          "model_index_0based": 12,
+          "allowed_symbols": "EF"
+        }
+      ],
+      "other_positions": "common gap pattern and finite original field support",
+      "purpose": "Broad support conditional case for later runtime/quality comparison",
+      "biological_restriction_approval": "pending"
+    },
+    {
+      "case_id": "cm_eval_exact_16_24",
+      "split": "evaluation",
+      "kind": "exact_conditional",
+      "positional_restrictions": [
+        {
+          "model_index_0based": 16,
+          "allowed_symbols": "VI"
+        },
+        {
+          "model_index_0based": 24,
+          "allowed_symbols": "LM"
+        }
+      ],
+      "other_positions": "fixed to computational_witness",
+      "purpose": "Full-model conditional arithmetic/correctness check with 4 states",
+      "biological_restriction_approval": "pending"
+    },
+    {
+      "case_id": "cm_eval_broad_16_24",
+      "split": "evaluation",
+      "kind": "broad_conditional",
+      "positional_restrictions": [
+        {
+          "model_index_0based": 16,
+          "allowed_symbols": "V"
+        },
+        {
+          "model_index_0based": 24,
+          "allowed_symbols": "LM"
+        }
+      ],
+      "other_positions": "common gap pattern and finite original field support",
+      "purpose": "Broad support conditional case for later runtime/quality comparison",
+      "biological_restriction_approval": "pending"
+    }
+  ]
+}

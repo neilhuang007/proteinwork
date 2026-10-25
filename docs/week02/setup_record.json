@@ -1,0 +1,61 @@
+{
+  "observed_date": "2026-10-08",
+  "environment": ".venv-pilots",
+  "uv_version": "0.9.29 (1f1321d84 2026-02-03)",
+  "python_version": "3.13.5",
+  "python_selection": "Existing uv-managed CPython 3.13.5 for Windows x86-64; no fallback required.",
+  "requirements_input": "requirements/pilots.in",
+  "requirements_lock": "requirements/pilots-win-py313.txt",
+  "platform_scope": "Windows x86-64, Python 3.13.5; hashed, pinned transitive dependency lock.",
+  "commands": [
+    {
+      "command": "uv venv .venv-pilots --python 3.13.5",
+      "exit_code": 0,
+      "result": "Created isolated environment using existing CPython 3.13.5."
+    },
+    {
+      "command": "uv pip compile requirements/pilots.in --python .venv-pilots/Scripts/python.exe --python-platform windows --generate-hashes --output-file requirements/pilots-win-py313.txt",
+      "exit_code": 0,
+      "result": "Resolved and pinned 61 packages with SHA256 hashes."
+    },
+    {
+      "command": "uv pip sync requirements/pilots-win-py313.txt --python .venv-pilots/Scripts/python.exe --require-hashes",
+      "exit_code": 0,
+      "result": "Installed all 61 resolved packages.",
+      "terminal_output": "docs/week02/install_output.txt"
+    },
+    {
+      "command": "uv pip check --python .venv-pilots/Scripts/python.exe",
+      "exit_code": 0,
+      "result": "All installed packages are compatible.",
+      "terminal_output": "docs/week02/dependency_check_output.txt"
+    }
+  ],
+  "warnings": [
+    {
+      "source": "uv installation",
+      "message": "Failed to hardlink files; falling back to full copy. This may lead to degraded performance.",
+      "interpretation": "Cache and environment are on different drives; packages installed successfully. Recommended reproduction command adds --link-mode=copy."
+    },
+    {
+      "source": "upstream adabmDCA use of TorchScript",
+      "message": "`torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.",
+      "interpretation": "FutureWarning, retained in smoke log and full adabmDCA JSON; execution succeeded. No failed compilation or unavailable compiler was observed."
+    }
+  ],
+  "installation_errors": [],
+  "failed_pilot_calls": [],
+  "primary_sources": [
+    "https://pypi.org/project/adabmDCA/1.0.0/",
+    "https://github.com/spqb/adabmDCApy",
+    "https://spqb.github.io/adabmDCApy/high_level_api/",
+    "https://pypi.org/project/thrml/0.1.4/",
+    "https://github.com/extropic-ai/thrml",
+    "https://docs.thrml.ai/en/latest/getting-started.html",
+    "https://docs.thrml.ai/en/latest/examples/02_spin_models/"
+  ],
+  "full_software_inventory": "runtime.packages in each retained pilot JSON",
+  "global_packages_installed": false,
+  "server_accessed": false,
+  "model_training_performed": false
+}

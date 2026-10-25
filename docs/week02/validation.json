@@ -1,0 +1,57 @@
+{
+  "milestone": "week02_official_toolkit_pilots",
+  "observed_date": "2026-10-08",
+  "python_executable": "E:/projects/proteinwork/.venv-pilots/Scripts/python.exe",
+  "python_version": "3.13.5",
+  "platform": "Windows x86-64",
+  "official_packages": {
+    "adabmDCA": "1.0.0",
+    "thrml": "0.1.4",
+    "torch": "2.14.1",
+    "jax": "0.11.2",
+    "jaxlib": "0.11.2",
+    "equinox": "0.13.8",
+    "numpy": "2.5.3"
+  },
+  "dependency_check": {
+    "command": "uv pip check --python .venv-pilots/Scripts/python.exe",
+    "exit_code": 0,
+    "checked_packages": 61,
+    "message": "All installed packages are compatible",
+    "output": "docs/week02/dependency_check_output.txt"
+  },
+  "tests": {
+    "command": ".venv-pilots/Scripts/python.exe -m unittest discover -s tests -p 'test_week02_*.py' -v",
+    "exit_code": 0,
+    "run": 6,
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "reported_elapsed_seconds": 2.204,
+    "output": "docs/week02/test_output.txt"
+  },
+  "runs": [
+    {
+      "command": ".venv-pilots/Scripts/python.exe examples/week02/adabmdca_pilot.py",
+      "exit_code": 0,
+      "result": "examples/week02/output/adabmdca.json",
+      "fasta": "examples/week02/output/adabmdca.fasta",
+      "terminal_output": "docs/week02/adabmdca_run_output.txt",
+      "returned_sequences": 2048,
+      "hand_reference_energy_checks": 9,
+      "upstream_warnings": 2,
+      "warning_category": "FutureWarning: torch.jit.script deprecation"
+    },
+    {
+      "command": ".venv-pilots/Scripts/python.exe examples/week02/thrml_pilot.py",
+      "exit_code": 0,
+      "result": "examples/week02/output/thrml.json",
+      "terminal_output": "docs/week02/thrml_run_output.txt",
+      "returned_states": 4096,
+      "returned_block_shape": [4096, 2],
+      "repeats_retained": true,
+      "upstream_warnings": 0
+    }
+  ],
+  "interpretation": "Scientific convention and saved-artifact checks; descriptive finite-run frequency agreement, not convergence, ESS, speedup or biological validation."
+}

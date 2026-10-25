@@ -1,0 +1,4 @@
+Official adabmDCA synthetic pilot: 2048 sequences, 9 unique
+Energy checks: 9/9; total variation: 0.015731
+Sample call: 0.299 seconds; warnings: 2
+Saved E:\projects\proteinwork\examples\week02\output\adabmdca.json and E:\projects\proteinwork\examples\week02\output\adabmdca.fasta

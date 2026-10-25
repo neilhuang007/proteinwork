@@ -1,0 +1,21 @@
+{
+  "audit_date": "2026-10-08",
+  "source_url": "https://raw.githubusercontent.com/FrancescoCalvanese/DCA_Reintegration/433fda34132986d64db564bda867abb9ec9d46f2/DATA/Chorismate_Mutase.zip",
+  "archive_sha256": "193c7dc912b394df12f0662fc6fde70d265567e7c9265b5106c3cec3d5746329",
+  "member": "Chorismate_Mutase/CM_model_lambda_1.dat",
+  "parameter_sha256": "bf180a3ed43637ab082a0d398d6663ffbd2566e73b2232404519ac8e4f32a004",
+  "parameter_bytes": 44044380,
+  "record_counts": {
+    "J": 2010960,
+    "h": 2016
+  },
+  "number_of_positions": 96,
+  "position_min": 0,
+  "position_max": 95,
+  "observed_symbols_sorted": "-ACDEFGHIKLMNPQRSTVWY",
+  "nonfinite_counts": {
+    "h:-inf": 362
+  },
+  "positions_with_nonfinite_fields": 92,
+  "interpretation": "Structural audit only. Negative-infinity fields need support-semantics verification; parameters were not modified or loaded as a validated benchmark."
+}

@@ -1,0 +1,76 @@
+{
+  "retrieved_date": "2026-10-08",
+  "sources": [
+    {
+      "local_ignored_snapshot": "data/benchmark/raw/Chorismate_Mutase.zip",
+      "source_url": "https://raw.githubusercontent.com/FrancescoCalvanese/DCA_Reintegration/433fda34132986d64db564bda867abb9ec9d46f2/DATA/Chorismate_Mutase.zip",
+      "bytes": 13145579,
+      "sha256": "193c7dc912b394df12f0662fc6fde70d265567e7c9265b5106c3cec3d5746329"
+    },
+    {
+      "local_ignored_snapshot": "data/benchmark/raw/Notebook_implementation.ipynb",
+      "source_url": "https://raw.githubusercontent.com/FrancescoCalvanese/DCA_Reintegration/433fda34132986d64db564bda867abb9ec9d46f2/Notebook_Implementation/Notebook_implementation.ipynb",
+      "bytes": 63875,
+      "sha256": "c79d82fbf0f3c060f63fce2483c82d5f5197d1584e0014a4e3c86da550caf88a"
+    },
+    {
+      "local_ignored_snapshot": "data/benchmark/raw/Notebook_DATA.zip",
+      "source_url": "https://raw.githubusercontent.com/FrancescoCalvanese/DCA_Reintegration/433fda34132986d64db564bda867abb9ec9d46f2/Notebook_Implementation/Notebook_DATA.zip",
+      "bytes": 93649,
+      "sha256": "11030cdec0bdd6ecbb0c155905310ce1224e28b5d1f738c77e20eef7e4fcbc59"
+    },
+    {
+      "local_ignored_snapshot": "data/benchmark/raw/reintegration.py",
+      "source_url": "https://raw.githubusercontent.com/FrancescoCalvanese/DCA_Reintegration/433fda34132986d64db564bda867abb9ec9d46f2/Notebook_Implementation/Notebook_DATA.zip",
+      "bytes": 5001,
+      "sha256": "dd05142a668981b2977ce6a2092323829bef72099eb8e857d3609f4c759d0a07",
+      "archive_member": "reintegration.py"
+    },
+    {
+      "local_ignored_snapshot": "data/benchmark/raw/adabmDCA_utils.py",
+      "source_url": "https://raw.githubusercontent.com/spqb/adabmDCApy/c1e5e2b261444001eb48dd3a0d7c0cded9823f37/adabmDCA/utils.py",
+      "bytes": 10096,
+      "sha256": "c55937450cfae3048916e755b2cea9c650ee278843af134efca4812e8f7dfa0b"
+    },
+    {
+      "local_ignored_snapshot": "data/benchmark/raw/adabmDCA_statmech.py",
+      "source_url": "https://raw.githubusercontent.com/spqb/adabmDCApy/c1e5e2b261444001eb48dd3a0d7c0cded9823f37/adabmDCA/statmech.py",
+      "bytes": 9993,
+      "sha256": "1531fbffc4300b2b728ca2650294caf53d50ee93f8524fb89e2234285421b995"
+    },
+    {
+      "local_ignored_snapshot": "data/benchmark/raw/adabmDCA_io.py",
+      "source_url": "https://raw.githubusercontent.com/spqb/adabmDCApy/c1e5e2b261444001eb48dd3a0d7c0cded9823f37/adabmDCA/io.py",
+      "bytes": 19665,
+      "sha256": "833b365f17e893b1505106e546af7bdd9026ebd9096995da65695904c75d9f83"
+    },
+    {
+      "local_ignored_snapshot": "data/benchmark/raw/adabmDCA_sampling.py",
+      "source_url": "https://raw.githubusercontent.com/spqb/adabmDCApy/c1e5e2b261444001eb48dd3a0d7c0cded9823f37/adabmDCA/sampling.py",
+      "bytes": 14442,
+      "sha256": "6fa965026b840d4513b18e53d6d7c3f25797f48104f779fc6951421d5a474644"
+    },
+    {
+      "local_ignored_snapshot": "data/benchmark/raw/Q5SLA5.json",
+      "source_url": "https://rest.uniprot.org/uniprotkb/Q5SLA5.json",
+      "bytes": 9979,
+      "sha256": "a2aaede2632013c853b4457195df8bc202266edc77d910e624226eff687592a8",
+      "source_mutability": "Live page/API; frozen relevant metadata retained in reference_provenance.json"
+    },
+    {
+      "local_ignored_snapshot": "data/benchmark/raw/dsm579.html",
+      "source_url": "https://www.dsmz.de/collection/catalogue/details/culture/dsm-579",
+      "bytes": 49863,
+      "sha256": "4999915861367d36b948f9be487aac4f079aac8e20340d23efb88453145689e1",
+      "source_mutability": "Live page/API; frozen relevant metadata retained in reference_provenance.json"
+    }
+  ],
+  "execution": "Upstream code was read, not run; only repository stdlib inspector executed.",
+  "training_environment_limit": "Upstream notebook pip installation is unpinned; snapshots of inspected current source explain conventions without claiming exact training-version provenance.",
+  "failed_access": [
+    {
+      "source_url": "https://www.science.org/doi/suppl/10.1126/science.aba3304/suppl_file/aba3304_table_s1.xlsx",
+      "result": "HTTP403; reference mapping established independently from exact archived sequence and UniProt."
+    }
+  ]
+}

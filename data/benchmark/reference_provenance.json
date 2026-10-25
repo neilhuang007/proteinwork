@@ -1,0 +1,57 @@
+{
+  "retrieved_date": "2026-10-08",
+  "source_url": "https://rest.uniprot.org/uniprotkb/Q5SLA5.json",
+  "snapshot_sha256": "a2aaede2632013c853b4457195df8bc202266edc77d910e624226eff687592a8",
+  "uniprot_accession": "Q5SLA5",
+  "entry_audit": {
+    "firstPublicDate": "2004-12-21",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2004-12-21",
+    "entryVersion": 119,
+    "sequenceVersion": 1
+  },
+  "organism": {
+    "scientificName": "Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)",
+    "taxonId": 300852,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "BAD70211.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP000000532"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Thermotogati",
+      "Deinococcota",
+      "Deinococci",
+      "Thermales",
+      "Thermaceae",
+      "Thermus"
+    ]
+  },
+  "full_accession_sequence": "MDERIQALRKEVDRVNREILRLLSERGRLVQEIGRLQTELGLPHYDPKREEEMLAYLTAENPGPFPDETIRKLFKEIFKASLDLEERQDQKKFLYSKRHKPEPTRVRVKDVVFGEKPLLIAGPCSIESEEQIMATARFLAARGVRVLRGGAFKPRTSPYGFQGLGVEGLKLGRKAADAFGMVFVTEVMDTRDVEVVAEYADILQIGARNMQNFALLKEVGKARRPVLLKRGLSATMEEWFYAAEYILAQGNEQVILAERGIRTFERWTRNTLDLSAVALAKQETHLPVVVDVTHAAGRTDLLAPLARAALAVGADGVHVEVHPNPKVALSDNQQQMDFAQFDRFLEAIRDLLQAP",
+  "sequence_length": 355,
+  "sequence_md5_from_uniprot": "BEFAE9EF5767FA48914B516DE39C77F5",
+  "aligned_sequence": "---DERIQALRKEVDRVNREILRLLSERGRLVQEIGRLQTELGLPHYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+  "aligned_record_header": "sequence_2 functional_false",
+  "mapping_basis": "Exactly one full-accession substring match to the 89-residue ungapped archive sequence, residues2-90; gaps are unmapped. This is an explicit sequence-based coordinate inference, not a supplied upstream position-map file.",
+  "structure_corrobation_url": "https://www.rcsb.org/structure/2D8D",
+  "strain_context": {
+    "strain": "HB8",
+    "collection_aliases": [
+      "DSM 579",
+      "ATCC 27634"
+    ],
+    "source_url": "https://www.dsmz.de/collection/catalogue/details/culture/dsm-579",
+    "risk_group": 1,
+    "classification_basis": "German TRBA, as listed by DSMZ",
+    "snapshot_sha256": "4999915861367d36b948f9be487aac4f079aac8e20340d23efb88453145689e1",
+    "scope_limit": "Selected reference context only; does not classify all family homologs or artificial sequences."
+  }
+}

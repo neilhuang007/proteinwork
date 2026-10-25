@@ -1,0 +1,6 @@
+Hand score AC: 3.5; energy: -3.5
+Corrected stationarity error: 2.78e-17
+Wrong energy-only stationarity error: 0.107
+Wall stationarity error: 0
+Raw scripted states: [[1, 0], [1, 0], [1, 1], [1, 1], [1, 0]]
+Saved E:\projects\proteinwork\examples\week03\output\learning_checks.json

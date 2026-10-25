@@ -1,0 +1,52 @@
+{
+  "session_date": "2026-10-08",
+  "python_version": "3.13.5",
+  "python_implementation": "CPython",
+  "platform": "Windows-11-10.0.26220-SP0",
+  "python_executable": "E:\\projects\\proteinwork\\.venv\\Scripts\\python.exe",
+  "declared_project_dependencies": [],
+  "commands": [
+    {
+      "command": ".\\.venv\\Scripts\\python.exe -W error .\\examples\\week01\\model_reading.py",
+      "exit_code": 0,
+      "log": "docs/week01/exercise_run.log"
+    },
+    {
+      "command": ".\\.venv\\Scripts\\python.exe -W error -m unittest discover -s tests -p 'test_week01_model_reading.py' -v",
+      "exit_code": 0,
+      "log": "docs/week01/test_run.log"
+    }
+  ],
+  "unit_tests": {
+    "run": 12,
+    "failures": 0,
+    "errors": 0,
+    "reported_seconds": 0.003
+  },
+  "exercise": {
+    "states_checked": 9,
+    "reference_check_passed": true,
+    "partition_sum": 42.93997559065988,
+    "probability_sum": 1.0
+  },
+  "report_body_word_count_whitespace_delimited": 333,
+  "candidate_model_audit": "docs/week01/cm_parameter_audit.json",
+  "validation_limits": "Synthetic teaching implementation and read-only candidate-file audit. Full adabmDCA, thrml, biological-model scoring, sampling, and independent human reproduction were not performed.",
+  "sha256": {
+    "examples/week01/model_reading.py": "5bda949fe2f99f031088cafdf7892a9a2cf2039ddec67433ffc57693cf36c4ac",
+    "examples/week01/fixtures/two_site_params.dat": "5b0035dc0503e5a03ee6e7a52087ee12ff9001064921967bfaa13cf7fe9809ca",
+    "examples/week01/fixtures/two_site_metadata.json": "675cb374727f30d1cf7e555145fb162e81ceff146c5a846741a70b6f25d7bcba",
+    "examples/week01/output/results.json": "a703ecf87b14b26fa9498cc831a9643ebcdc233cb4988142a1c15880c5cae44b",
+    "tests/test_week01_model_reading.py": "91e45caa3c26c94acea0ba8a518749fc6f6dd9df27469ad78d5ac5c69a335ae9",
+    "docs/week01/test_run.log": "70c0a69bdae18394ba52730c69b3ba717257a8781e62d4e0e6854770caec0fe5",
+    "docs/week01/exercise_run.log": "43d48f582878d6acdf98ef6050a8d8faa61a6f8d47dc2698dcf558b66be3806e",
+    "docs/week01/cm_parameter_audit.json": "662e71e6fd604d6e30116326afc897734999795adf7efc52a19507c84f46e23e",
+    "reports/week01_report.txt": "839b372c5320723da1a2eab114d8af4e659567ca4a4f6b1124d450c93e7c4d0f"
+  },
+  "report_revision": {
+    "reason": "User requested concise reports; scientific results unchanged",
+    "previous_word_count": 748,
+    "previous_sha256": "4d83232b9948b89d6f0ee61f443e4908c5eabf99b2c36dc5258df5afe78c6b66",
+    "scope": "Week1 validation snapshot; later work is recorded in docs/validation_summary.json"
+  }
+}

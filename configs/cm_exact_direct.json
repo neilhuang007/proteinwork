@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "benchmark_config": "benchmark.json",
+  "evaluation_config": "evaluation.json",
+  "case_id": "cm_dev_exact_8_12",
+  "sampling": {
+    "method": "direct",
+    "seeds": [1101, 1102, 1103, 1104],
+    "draws": 4096,
+    "warmup": 256,
+    "sweeps_per_draw": 1,
+    "checkpoint_policy": "first_qualified"
+  },
+  "selection": {
+    "batch_size": 2,
+    "objective": "model_score",
+    "optimizer": "milp",
+    "max_pool": 4,
+    "max_seconds": 10
+  },
+  "allow_unqualified_export": false
+}

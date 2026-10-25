@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "frozen": true,
+  "model_sha256": "bf180a3ed43637ab082a0d398d6663ffbd2566e73b2232404519ac8e4f32a004",
+  "evaluation_sha256": "e279a7e4530fbd2c0f8d48dc7d7009b0101468959468ba64a0f1223021851cda",
+  "code_sha256": "75cd99758506e0c39169574e60c7e8d44299a7d9804aea305a748c14f69e1ff3",
+  "comparison_context_sha256": "eefb6e09b30dc5953d6a1ba3f212f7ce937350ac3b3d72bfa26d35ae7caeeb90",
+  "evidence": [
+    {
+      "manifest_path": "E:\\projects\\proteinwork\\output\\research\\cm_exact_direct_final\\manifest.json",
+      "manifest_sha256": "e72bc338f852f33f1ed62c9e2a3965e5e2f62f7d6cef4cc61673e3b6d8010ba6",
+      "case_id": "cm_dev_exact_8_12",
+      "status": "accuracy_passed",
+      "target_sha256": "71f442605b1e0e0a9944c92082ace334bb7a1ad92be77e132e76e43f6cca8742",
+      "method": "direct",
+      "sampling_parameters": {
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 1,
+        "checkpoint_policy": "first_qualified"
+      },
+      "kind": "exact_conditional",
+      "seconds": 31.05491460000121,
+      "budget_exceeded": false
+    },
+    {
+      "manifest_path": "E:\\projects\\proteinwork\\output\\research\\cm_exact_thrml_final\\manifest.json",
+      "manifest_sha256": "d18980a6f31b6cda3e4d56082c0b5c86b15414870befd6651f1b1f950a8168ac",
+      "case_id": "cm_dev_exact_8_12",
+      "status": "accuracy_passed",
+      "target_sha256": "71f442605b1e0e0a9944c92082ace334bb7a1ad92be77e132e76e43f6cca8742",
+      "method": "encoded",
+      "sampling_parameters": {
+        "backend": "thrml",
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 2,
+        "penalty": 1.0,
+        "max_spins": 128,
+        "max_edges": 10000,
+        "max_bytes": 536870912,
+        "checkpoint_policy": "first_qualified"
+      },
+      "kind": "exact_conditional",
+      "seconds": 38.51917840000169,
+      "budget_exceeded": false
+    }
+  ],
+  "choices": {
+    "exact_conditional": {
+      "method": "direct",
+      "sampling_parameters": {
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 1,
+        "checkpoint_policy": "first_qualified"
+      },
+      "median_seconds": 31.05491460000121,
+      "matched_targets": 1,
+      "measurements": 1
+    }
+  },
+  "fallback": "direct",
+  "scope": "Selection by declared case kind from development evidence; no within run adaptation.",
+  "limitations": "A frozen selection rule does not establish superiority or generalization.",
+  "plan_sha256": "a80fa30788047c4c5ca7cbd447b524985c7d2baf9ef95edce0c6251ab08b8962"
+}

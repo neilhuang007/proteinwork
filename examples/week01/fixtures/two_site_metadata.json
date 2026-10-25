@@ -1,0 +1,27 @@
+{
+  "model_status": "synthetic teaching fixture, hand-authored; not a trained biological model",
+  "alphabet": "-AC",
+  "alphabet_kind": "explicit custom subset of the protein alphabet",
+  "symbol_to_index": {"-": 0, "A": 1, "C": 2},
+  "official_protein_alphabet": "-ACDEFGHIKLMNPQRSTVWY",
+  "length": 2,
+  "position_index_base": 0,
+  "coupling_records": "i<j, counted once",
+  "missing_couplings": "zero",
+  "required_fields": "all positions and alphabet symbols, including zeros",
+  "score_definition": "S(x) = h_0(x_0) + h_1(x_1) + J_01(x_0,x_1)",
+  "energy_definition": "E(x) = -S(x)",
+  "weight_definition": "w(x) = exp(-E(x)/T)",
+  "temperature": 1.0,
+  "temperature_units": "dimensionless teaching scale; not laboratory kelvin",
+  "reference_method": "literal arithmetic for all nine sequences, separate from parsing and indexing",
+  "source_verified_on": "2026-10-08",
+  "official_source_commit": "c1e5e2b261444001eb48dd3a0d7c0cded9823f37",
+  "primary_sources": [
+    "https://github.com/spqb/adabmDCApy/blob/c1e5e2b261444001eb48dd3a0d7c0cded9823f37/adabmDCA/io.py#L347-L364",
+    "https://github.com/spqb/adabmDCApy/blob/c1e5e2b261444001eb48dd3a0d7c0cded9823f37/adabmDCA/alphabet.py#L2-L4",
+    "https://github.com/spqb/adabmDCApy/blob/c1e5e2b261444001eb48dd3a0d7c0cded9823f37/adabmDCA/statmech.py#L24-L33",
+    "https://github.com/spqb/adabmDCApy/blob/c1e5e2b261444001eb48dd3a0d7c0cded9823f37/adabmDCA/statmech.py#L124-L139"
+  ],
+  "validation_scope": "local teaching code and arithmetic checks; full adabmDCA not installed or executed"
+}

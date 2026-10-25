@@ -1,0 +1,116 @@
+{
+  "exercise": "week03_pinned_gibbsiq_synthetic_adapter",
+  "passed": true,
+  "python_version": "3.13.5",
+  "upstream_version": "0.2.0a1",
+  "source_checkout": "E:\\projects\\Gibbsiq",
+  "repository": "https://github.com/neilhuang007/Gibbsiq.git",
+  "commit": "06590b82ba509ecf721d8a7685ed27a319d6b0c1",
+  "upstream_tree_unchanged": true,
+  "vendored_code": false,
+  "license_scope": "MIT core; aggregate optional package MIT AND Apache-2.0; no Z1T adapter used",
+  "upstream_file_sha256": {
+    "LICENSE": "791eecf284aeec83d27433325ac514a9ade03633e4947a69f85498bbcd709c0d",
+    "pyproject.toml": "e5d5d87712aaddaefa47aaa2f4b655ff0ec366429f0465e765713bdcdb54d13b",
+    "src/gibbsiq/categorical.py": "191d90dd6d01da4996f4d4a08e8058f459a3a28eeae45e681760cafc3a7faad2",
+    "src/gibbsiq/domain_wall.py": "b21f6ca6d8b69f76c37cae26385ee6b9b65c407d92482e9e4b2931e8daa359cf",
+    "src/gibbsiq/reference_sampler.py": "442a953024494eb7d9fb47137f85ac5628edd68056d5fcd6db72ee770ecf0125",
+    "src/gibbsiq/verification.py": "5928b14ce66dac5eb86929aaa4511b95f1e5b8252eba66ec830d0b543ecd39ef"
+  },
+  "fixture_sha256": "5b0035dc0503e5a03ee6e7a52087ee12ff9001064921967bfaa13cf7fe9809ca",
+  "states_checked": [
+    {
+      "sequence": "--",
+      "energy": -0.0,
+      "wall_bits": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "sequence": "-A",
+      "energy": 0.5,
+      "wall_bits": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "sequence": "-C",
+      "energy": -0.5,
+      "wall_bits": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "sequence": "A-",
+      "energy": -1.0,
+      "wall_bits": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "sequence": "AA",
+      "energy": -0.75,
+      "wall_bits": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "sequence": "AC",
+      "energy": -3.5,
+      "wall_bits": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "sequence": "C-",
+      "energy": 1.0,
+      "wall_bits": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "sequence": "CA",
+      "energy": 2.5,
+      "wall_bits": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "sequence": "CC",
+      "energy": -0.25,
+      "wall_bits": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "valid_word_count": 9,
+  "invalid_word_count": 7,
+  "scope": "energy adapter and codec only; no encoded sampling or biology validation"
+}

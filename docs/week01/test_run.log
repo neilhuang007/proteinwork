@@ -1,0 +1,17 @@
+test_energy_score_sign_and_pair_count (test_week01_model_reading.EnergyConventionTests.test_energy_score_sign_and_pair_count) ... ok
+test_every_state_matches_literal_arithmetic (test_week01_model_reading.EnergyConventionTests.test_every_state_matches_literal_arithmetic) ... ok
+test_explicit_alphabet_mapping_and_reordering (test_week01_model_reading.EnergyConventionTests.test_explicit_alphabet_mapping_and_reordering) ... ok
+test_omitted_coupling_is_zero_and_zero_field_is_explicit (test_week01_model_reading.EnergyConventionTests.test_omitted_coupling_is_zero_and_zero_field_is_explicit) ... ok
+test_recorded_probabilities_cover_all_states (test_week01_model_reading.EnergyConventionTests.test_recorded_probabilities_cover_all_states) ... ok
+test_weight_order_and_temperature (test_week01_model_reading.EnergyConventionTests.test_weight_order_and_temperature) ... ok
+test_alphabet_must_be_explicit_unique_supported_symbols (test_week01_model_reading.TeachingInputTests.test_alphabet_must_be_explicit_unique_supported_symbols) ... ok
+test_blank_lines_and_full_line_comments_are_accepted (test_week01_model_reading.TeachingInputTests.test_blank_lines_and_full_line_comments_are_accepted) ... ok
+test_invalid_records_are_rejected_with_line_number (test_week01_model_reading.TeachingInputTests.test_invalid_records_are_rejected_with_line_number) ... ok
+test_missing_fields_and_empty_input_are_rejected (test_week01_model_reading.TeachingInputTests.test_missing_fields_and_empty_input_are_rejected) ... ok
+test_nonfinite_values_and_nonpositive_temperature_are_rejected (test_week01_model_reading.TeachingInputTests.test_nonfinite_values_and_nonpositive_temperature_are_rejected) ... ok
+test_sequence_length_symbols_and_case_are_strict (test_week01_model_reading.TeachingInputTests.test_sequence_length_symbols_and_case_are_strict) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.003s
+
+OK

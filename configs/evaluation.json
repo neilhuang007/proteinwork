@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "proposed_for_week04_human_review",
+  "development_case_ids": ["cm_dev_exact_8_12", "cm_dev_broad_8_12"],
+  "evaluation_case_ids": ["cm_eval_exact_16_24", "cm_eval_broad_16_24"],
+  "methods": ["direct", "fixed_corrected_encoded", "corrected_encoded_planning_disabled", "planner_selected"],
+  "temperature": 1.0,
+  "precision": "float64",
+  "chains_per_condition": 4,
+  "development_seeds": [1101, 1102, 1103, 1104],
+  "evaluation_seeds": [2401, 2402, 2403, 2404],
+  "reference_seeds": [9401, 9402, 9403, 9404],
+  "initialization": "Four independently randomized supported states; record actual states and RNG implementation. Do not initialize every chain from the common witness.",
+  "selected_pair_observables": {
+    "cm_dev_exact_8_12": [[8, 12]],
+    "cm_eval_exact_16_24": [[16, 24]],
+    "cm_dev_broad_8_12": [[12, 16]],
+    "cm_eval_broad_16_24": [[8, 24]]
+  },
+  "exact_kernel_checks": {
+    "maximum_row_sum_error": 1e-12,
+    "minimum_transition_probability": -1e-15,
+    "maximum_stationarity_error": 1e-12,
+    "note": "Numerical roundoff tolerance only; never silently clamp a materially negative probability. Detailed balance is required only when the chosen kernel claims reversibility."
+  },
+  "sampling_accuracy_targets": {
+    "exact_case_total_variation_max": 0.02,
+    "single_site_probability_absolute_error_max": 0.02,
+    "selected_pair_probability_absolute_error_max": 0.02,
+    "energy_mean_error_in_reference_standard_deviations_max": 0.05,
+    "hamming_mean_error_in_reference_standard_deviations_max": 0.05,
+    "rank_normalized_split_rhat_max_exclusive": 1.01,
+    "bulk_ess_min_inclusive": 400,
+    "tail_ess_min_inclusive": 400,
+    "diagnostic_scope": "Energy and Hamming distance, computed across four post-warmup chains. Record site and pair uncertainty separately. Diagnostics are necessary checks, not proof of convergence.",
+    "constant_observable_rule": "Waive variance-based diagnostics only when the target observable is provably constant; require its exact value. A constant sampled trace alone is insufficient."
+  },
+  "broad_case_reference": {
+    "method": "Separate long direct-sampler runs after the direct kernel passes exact-model checks",
+    "chains": 4,
+    "rank_normalized_split_rhat_max_exclusive": 1.01,
+    "bulk_and_tail_ess_min": 4000,
+    "frequency_mcse_max": 0.0025,
+    "mean_mcse_in_reference_standard_deviations_max": 0.01,
+    "status": "Not run; reference adequacy must be demonstrated before broad-case accuracy claims",
+    "uncertainty_rule": "Require absolute frequency error plus 1.96 times the combined candidate/reference MCSE to be at most 0.02. For means use 0.05 reference SD as the analogous upper bound. This is a fixed descriptive acceptance rule, not a simultaneous confidence guarantee."
+  },
+  "budget": {
+    "tuning_seconds_per_method_per_case": 120,
+    "measurement_seconds_per_condition": 900,
+    "reference_seconds_per_case_max": 3600,
+    "failure_rule": "Record accuracy_not_reached or reference_inadequate at the cap. Do not turn a timeout into a successful time-to-accuracy result."
+  },
+  "timing": {
+    "primary_metric": "Elapsed end-to-end time to the first predeclared checkpoint satisfying every applicable target across four chains",
+    "checkpoints_post_warmup_observations_per_chain": [512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072],
+    "include": ["load_and_validate", "encoding_and_compilation", "tuning", "initialization_and_warmup", "proposals", "correction", "transfers", "diagnostics_and_reporting"],
+    "synchronize_accelerators": true,
+    "hardware": "Same recorded host and device for every condition; record CPU/GPU, thread settings, OS and package lock",
+    "plan_policy": "Tune only on development cases; freeze before evaluation and hold fixed within each run."
+  },
+  "review_note": "These are concrete proposed design choices, not measured results or evidence of adviser approval. Revise explicitly before the Week13 freeze if the adviser review or development evidence warrants it; never tune thresholds using evaluation outcomes."
+}

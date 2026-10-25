@@ -1,0 +1,126 @@
+{
+  "case_id": "cm_dev_exact_8_12",
+  "natural_alignment_records": 1130,
+  "alignment_columns": 96,
+  "mapped_reference_residues": 89,
+  "accession": "Q5SLA5",
+  "focus_positions": [
+    {
+      "model_index_0based": 8,
+      "alignment_column_1based": 9,
+      "anchor_symbol": "A",
+      "uniprot_position_1based": 7
+    },
+    {
+      "model_index_0based": 12,
+      "alignment_column_1based": 13,
+      "anchor_symbol": "E",
+      "uniprot_position_1based": 11
+    }
+  ],
+  "natural_frequency_definition": "Unweighted count divided by nongap records at this aligned column",
+  "sample_frequency_definition": "Every post warmup observation of the restricted model, including repeats",
+  "chains": 4,
+  "draws_per_chain": 512,
+  "observations": 2048,
+  "unique_sampled_sequences": 3,
+  "repeated_adjacent_endpoints": 2028,
+  "sampling_status": "accuracy_passed",
+  "total_variation": 0.0005279204513499813,
+  "residue_frequencies": [
+    {
+      "accession_position": 7,
+      "model_index": 8,
+      "residue": "A",
+      "natural_count": 132,
+      "natural_nongap_count": 1128,
+      "natural_frequency": 0.11702127659574468,
+      "sampled_count": 2042,
+      "sampled_observations": 2048,
+      "sampled_frequency": 0.9970703125
+    },
+    {
+      "accession_position": 7,
+      "model_index": 8,
+      "residue": "C",
+      "natural_count": 8,
+      "natural_nongap_count": 1128,
+      "natural_frequency": 0.0070921985815602835,
+      "sampled_count": 6,
+      "sampled_observations": 2048,
+      "sampled_frequency": 0.0029296875
+    },
+    {
+      "accession_position": 11,
+      "model_index": 12,
+      "residue": "E",
+      "natural_count": 262,
+      "natural_nongap_count": 1129,
+      "natural_frequency": 0.2320637732506643,
+      "sampled_count": 2046,
+      "sampled_observations": 2048,
+      "sampled_frequency": 0.9990234375
+    },
+    {
+      "accession_position": 11,
+      "model_index": 12,
+      "residue": "F",
+      "natural_count": 4,
+      "natural_nongap_count": 1129,
+      "natural_frequency": 0.00354295837023915,
+      "sampled_count": 2,
+      "sampled_observations": 2048,
+      "sampled_frequency": 0.0009765625
+    }
+  ],
+  "pair_frequencies": [
+    {
+      "residue_pair": "AE",
+      "count": 2040,
+      "observed_probability": 0.99609375,
+      "exact_probability": 0.9956717942414582
+    },
+    {
+      "residue_pair": "AF",
+      "count": 2,
+      "observed_probability": 0.0009765625,
+      "exact_probability": 0.0008705978071917883
+    },
+    {
+      "residue_pair": "CE",
+      "count": 6,
+      "observed_probability": 0.0029296875,
+      "exact_probability": 0.003454196346453285
+    },
+    {
+      "residue_pair": "CF",
+      "count": 0,
+      "observed_probability": 0.0,
+      "exact_probability": 3.4116048967072213e-06
+    }
+  ],
+  "anchor_choices_excluded_by_model": [
+    {
+      "accession_position": 37,
+      "model_index": 38,
+      "residue": "Q",
+      "natural_count": 12,
+      "witness_residue": "E"
+    },
+    {
+      "accession_position": 44,
+      "model_index": 45,
+      "residue": "H",
+      "natural_count": 7,
+      "witness_residue": "A"
+    }
+  ],
+  "checks": {
+    "source_run_verified": true,
+    "full_model_scores_match_trace": true,
+    "all_states_in_exact_support": true,
+    "all_candidates_have_89_residues": true,
+    "all_sampling_accuracy_checks_passed": true,
+    "pair_counts_cover_all_observations": true
+  }
+}

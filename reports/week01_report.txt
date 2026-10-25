@@ -1,0 +1,29 @@
+Protein Sequence Sampling Project
+Week 1 Report
+
+Tasks completed
+
+This week, I focused on defining a manageable project and understanding how a protein model generates candidate sequences. My planned tasks were to review library-generation methods, compare two or three protein families, and begin the adabmDCA model-reading exercise. I completed a scope draft, compared chorismate mutase, GFP, and yeast ubiquitin, and built a small reading exercise. Together, these completed the planned technical work for Week 1.
+
+Outcomes and reflections
+
+The main thing I learned from the research is how different protein resources fit together. An alignment shows related sequences, trained parameters define the model's probabilities, and experimental measurements connect tested sequences to their biological function. Understanding these roles helped me choose resources for generating sequences and interpreting the results. It also gave me a clearer picture of the workflow, from selecting a model to evaluating its output.
+
+Chorismate mutase emerged as the strongest candidate because I found a public trained model and relevant sequence-generation research. GFP and ubiquitin provided useful experimental contexts for comparison. I focused the benchmark investigation on chorismate mutase, with model availability and clear position numbering guiding the next steps.
+
+For the coding exercise, I used two positions with three possible symbols each, giving nine sequences that I could check individually. All nine energy calculations matched the reference values, the probabilities added to one, and all 12 tests passed. Working through this small example helped me understand how position-specific preferences and interactions combine into a sequence score. It gives me a clear reference for checking more complicated code later.
+
+Challenges and responses
+
+Reviewing the exercise exposed two problems: it accepted invalid multi-character residue entries, and an extreme numerical case could overflow. I corrected both and added checks for them.
+
+The chorismate mutase model's 362 negative-infinity entries became the main issue to investigate. My next step is to establish what these values mean and map the model's positions to a biological reference. Preserving the original values will keep this investigation tied to the model's intended probabilities.
+
+Updates and adjustments
+
+I kept the original milestone order and used a synthetic model to build a clear foundation for the calculations. The project will use an existing trained model, and its main outcome will be a fair comparison of sampling methods. This keeps the scope manageable and connects the early exercises to the final goal.
+
+Upcoming tasks
+
+Next week, I will install the official tools, run an adabmDCA sequence-generation example and a tiny thrml model, and record their setup and outputs. I will also continue investigating the model's allowed states and biological numbering toward the Week 4 benchmark decision.
+

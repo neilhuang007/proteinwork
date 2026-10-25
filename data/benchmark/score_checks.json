@@ -1,0 +1,515 @@
+{
+  "method": "selected original h and i<j J terms; exact Decimal sums plus independent binary64 fsum",
+  "pair_count_per_full_sequence": 4560,
+  "role_limit": "one software inspection; not two independent lead attestations or production-loader verification",
+  "scores": {
+    "native_coordinate_anchor": {
+      "sequence": "---DERIQALRKEVDRVNREILRLLSERGRLVQEIGRLQTELGLPHYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+      "energy": "positive_infinity",
+      "forbidden_selected_fields": [
+        {
+          "model_index_0based": 38,
+          "symbol": "Q"
+        },
+        {
+          "model_index_0based": 45,
+          "symbol": "H"
+        }
+      ],
+      "selected_field_count": 96,
+      "selected_pair_count": 4560
+    },
+    "unmodified_finite_fixture": {
+      "sequence": "-TSENPLLALREKISALDEKLLALLAERRELAVEVGKAKLLSHRPVRDIDRERDLLERLITLGK-AHHLDAHYITRLFQLIIEDSVLTQQALLQQH",
+      "energy_decimal": "-57.358659772664",
+      "energy_binary64": -57.358659772664005,
+      "sum_selected_fields_decimal": "-45.43422150",
+      "sum_selected_upper_triangle_couplings_decimal": "102.792881272664",
+      "selected_field_count": 96,
+      "selected_pair_count": 4560,
+      "first_five_pair_terms": [
+        {
+          "i": 0,
+          "j": 1,
+          "a": "-",
+          "b": "T",
+          "J": "0.014321621"
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "a": "-",
+          "b": "S",
+          "J": "-0.02159357"
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "a": "-",
+          "b": "E",
+          "J": "-0.2278003"
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "a": "-",
+          "b": "N",
+          "J": "-0.027596962"
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "a": "-",
+          "b": "P",
+          "J": "-0.05320669"
+        }
+      ],
+      "forbidden_selected_fields": []
+    },
+    "computational_witness": {
+      "sequence": "---DERIQALRKEVDRVNREILRLLSERGRLVQEIGRLETELGLPAYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+      "energy_decimal": "135.208916945824",
+      "energy_binary64": 135.208916945824,
+      "sum_selected_fields_decimal": "-152.918305028",
+      "sum_selected_upper_triangle_couplings_decimal": "17.709388082176",
+      "selected_field_count": 96,
+      "selected_pair_count": 4560,
+      "first_five_pair_terms": [
+        {
+          "i": 0,
+          "j": 1,
+          "a": "-",
+          "b": "-",
+          "J": "1.5010283"
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "a": "-",
+          "b": "-",
+          "J": "0.98407507"
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "a": "-",
+          "b": "D",
+          "J": "-0.15845637"
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "a": "-",
+          "b": "E",
+          "J": "0.032892384"
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "a": "-",
+          "b": "R",
+          "J": "-0.15407683"
+        }
+      ],
+      "forbidden_selected_fields": []
+    },
+    "cm_dev_exact_8_12/state_0": {
+      "sequence": "---DERIQALRKEVDRVNREILRLLSERGRLVQEIGRLETELGLPAYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+      "energy_decimal": "135.208916945824",
+      "energy_binary64": 135.208916945824,
+      "sum_selected_fields_decimal": "-152.918305028",
+      "sum_selected_upper_triangle_couplings_decimal": "17.709388082176",
+      "selected_field_count": 96,
+      "selected_pair_count": 4560,
+      "first_five_pair_terms": [
+        {
+          "i": 0,
+          "j": 1,
+          "a": "-",
+          "b": "-",
+          "J": "1.5010283"
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "a": "-",
+          "b": "-",
+          "J": "0.98407507"
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "a": "-",
+          "b": "D",
+          "J": "-0.15845637"
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "a": "-",
+          "b": "E",
+          "J": "0.032892384"
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "a": "-",
+          "b": "R",
+          "J": "-0.15407683"
+        }
+      ],
+      "forbidden_selected_fields": []
+    },
+    "cm_dev_exact_8_12/state_1": {
+      "sequence": "---DERIQALRKFVDRVNREILRLLSERGRLVQEIGRLETELGLPAYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+      "energy_decimal": "142.250909793849",
+      "energy_binary64": 142.25090979384902,
+      "sum_selected_fields_decimal": "-163.571392728",
+      "sum_selected_upper_triangle_couplings_decimal": "21.320482934151",
+      "selected_field_count": 96,
+      "selected_pair_count": 4560,
+      "first_five_pair_terms": [
+        {
+          "i": 0,
+          "j": 1,
+          "a": "-",
+          "b": "-",
+          "J": "1.5010283"
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "a": "-",
+          "b": "-",
+          "J": "0.98407507"
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "a": "-",
+          "b": "D",
+          "J": "-0.15845637"
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "a": "-",
+          "b": "E",
+          "J": "0.032892384"
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "a": "-",
+          "b": "R",
+          "J": "-0.15407683"
+        }
+      ],
+      "forbidden_selected_fields": []
+    },
+    "cm_dev_exact_8_12/state_2": {
+      "sequence": "---DERIQCLRKEVDRVNREILRLLSERGRLVQEIGRLETELGLPAYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+      "energy_decimal": "140.872744801034",
+      "energy_binary64": 140.872744801034,
+      "sum_selected_fields_decimal": "-154.865967628",
+      "sum_selected_upper_triangle_couplings_decimal": "13.993222826966",
+      "selected_field_count": 96,
+      "selected_pair_count": 4560,
+      "first_five_pair_terms": [
+        {
+          "i": 0,
+          "j": 1,
+          "a": "-",
+          "b": "-",
+          "J": "1.5010283"
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "a": "-",
+          "b": "-",
+          "J": "0.98407507"
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "a": "-",
+          "b": "D",
+          "J": "-0.15845637"
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "a": "-",
+          "b": "E",
+          "J": "0.032892384"
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "a": "-",
+          "b": "R",
+          "J": "-0.15407683"
+        }
+      ],
+      "forbidden_selected_fields": []
+    },
+    "cm_dev_exact_8_12/state_3": {
+      "sequence": "---DERIQCLRKFVDRVNREILRLLSERGRLVQEIGRLETELGLPAYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+      "energy_decimal": "147.792907079459",
+      "energy_binary64": 147.792907079459,
+      "sum_selected_fields_decimal": "-165.519055328",
+      "sum_selected_upper_triangle_couplings_decimal": "17.726148248541",
+      "selected_field_count": 96,
+      "selected_pair_count": 4560,
+      "first_five_pair_terms": [
+        {
+          "i": 0,
+          "j": 1,
+          "a": "-",
+          "b": "-",
+          "J": "1.5010283"
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "a": "-",
+          "b": "-",
+          "J": "0.98407507"
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "a": "-",
+          "b": "D",
+          "J": "-0.15845637"
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "a": "-",
+          "b": "E",
+          "J": "0.032892384"
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "a": "-",
+          "b": "R",
+          "J": "-0.15407683"
+        }
+      ],
+      "forbidden_selected_fields": []
+    },
+    "cm_eval_exact_16_24/state_0": {
+      "sequence": "---DERIQALRKEVDRVNREILRLLSERGRLVQEIGRLETELGLPAYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+      "energy_decimal": "135.208916945824",
+      "energy_binary64": 135.208916945824,
+      "sum_selected_fields_decimal": "-152.918305028",
+      "sum_selected_upper_triangle_couplings_decimal": "17.709388082176",
+      "selected_field_count": 96,
+      "selected_pair_count": 4560,
+      "first_five_pair_terms": [
+        {
+          "i": 0,
+          "j": 1,
+          "a": "-",
+          "b": "-",
+          "J": "1.5010283"
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "a": "-",
+          "b": "-",
+          "J": "0.98407507"
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "a": "-",
+          "b": "D",
+          "J": "-0.15845637"
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "a": "-",
+          "b": "E",
+          "J": "0.032892384"
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "a": "-",
+          "b": "R",
+          "J": "-0.15407683"
+        }
+      ],
+      "forbidden_selected_fields": []
+    },
+    "cm_eval_exact_16_24/state_1": {
+      "sequence": "---DERIQALRKEVDRVNREILRLMSERGRLVQEIGRLETELGLPAYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+      "energy_decimal": "138.009106139224",
+      "energy_binary64": 138.009106139224,
+      "sum_selected_fields_decimal": "-145.721782028",
+      "sum_selected_upper_triangle_couplings_decimal": "7.712675888776",
+      "selected_field_count": 96,
+      "selected_pair_count": 4560,
+      "first_five_pair_terms": [
+        {
+          "i": 0,
+          "j": 1,
+          "a": "-",
+          "b": "-",
+          "J": "1.5010283"
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "a": "-",
+          "b": "-",
+          "J": "0.98407507"
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "a": "-",
+          "b": "D",
+          "J": "-0.15845637"
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "a": "-",
+          "b": "E",
+          "J": "0.032892384"
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "a": "-",
+          "b": "R",
+          "J": "-0.15407683"
+        }
+      ],
+      "forbidden_selected_fields": []
+    },
+    "cm_eval_exact_16_24/state_2": {
+      "sequence": "---DERIQALRKEVDRINREILRLLSERGRLVQEIGRLETELGLPAYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+      "energy_decimal": "133.840697918274",
+      "energy_binary64": 133.84069791827397,
+      "sum_selected_fields_decimal": "-139.076680728",
+      "sum_selected_upper_triangle_couplings_decimal": "5.235982809726",
+      "selected_field_count": 96,
+      "selected_pair_count": 4560,
+      "first_five_pair_terms": [
+        {
+          "i": 0,
+          "j": 1,
+          "a": "-",
+          "b": "-",
+          "J": "1.5010283"
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "a": "-",
+          "b": "-",
+          "J": "0.98407507"
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "a": "-",
+          "b": "D",
+          "J": "-0.15845637"
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "a": "-",
+          "b": "E",
+          "J": "0.032892384"
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "a": "-",
+          "b": "R",
+          "J": "-0.15407683"
+        }
+      ],
+      "forbidden_selected_fields": []
+    },
+    "cm_eval_exact_16_24/state_3": {
+      "sequence": "---DERIQALRKEVDRINREILRLMSERGRLVQEIGRLETELGLPAYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+      "energy_decimal": "137.203479681674",
+      "energy_binary64": 137.203479681674,
+      "sum_selected_fields_decimal": "-131.880157728",
+      "sum_selected_upper_triangle_couplings_decimal": "-5.323321953674",
+      "selected_field_count": 96,
+      "selected_pair_count": 4560,
+      "first_five_pair_terms": [
+        {
+          "i": 0,
+          "j": 1,
+          "a": "-",
+          "b": "-",
+          "J": "1.5010283"
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "a": "-",
+          "b": "-",
+          "J": "0.98407507"
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "a": "-",
+          "b": "D",
+          "J": "-0.15845637"
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "a": "-",
+          "b": "E",
+          "J": "0.032892384"
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "a": "-",
+          "b": "R",
+          "J": "-0.15407683"
+        }
+      ],
+      "forbidden_selected_fields": []
+    }
+  },
+  "exact_conditional_cases": {
+    "cm_dev_exact_8_12": {
+      "state_count": 4,
+      "beta": 1.0,
+      "probabilities_binary64": {
+        "cm_dev_exact_8_12/state_0": 0.9956717942414582,
+        "cm_dev_exact_8_12/state_1": 0.0008705978071917883,
+        "cm_dev_exact_8_12/state_2": 0.003454196346453285,
+        "cm_dev_exact_8_12/state_3": 3.4116048967072213e-06
+      }
+    },
+    "cm_eval_exact_16_24": {
+      "state_count": 4,
+      "beta": 1.0,
+      "probabilities_binary64": {
+        "cm_eval_exact_16_24/state_0": 0.1951135801155397,
+        "cm_eval_exact_16_24/state_1": 0.011862624483277894,
+        "cm_eval_exact_16_24/state_2": 0.7664740776901261,
+        "cm_eval_exact_16_24/state_3": 0.02654971771105633
+      }
+    }
+  }
+}

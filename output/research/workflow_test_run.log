@@ -1,0 +1,17 @@
+test_checkpoints_continue_states_and_only_warm_up_once (test_research_workflow.DiagnosticTests.test_checkpoints_continue_states_and_only_warm_up_once) ... ok
+test_independent_and_stuck_traces_are_distinguished (test_research_workflow.DiagnosticTests.test_independent_and_stuck_traces_are_distinguished) ... ok
+test_known_constant_target_and_wrong_value (test_research_workflow.DiagnosticTests.test_known_constant_target_and_wrong_value) ... ok
+test_stuck_sample_does_not_pass_exact_accuracy (test_research_workflow.DiagnosticTests.test_stuck_sample_does_not_pass_exact_accuracy) ... ok
+test_zero_variable_target_is_qualified_without_invented_ess (test_research_workflow.DiagnosticTests.test_zero_variable_target_is_qualified_without_invented_ess) ... ok
+test_duplicate_unknown_and_ambiguous_json_fail (test_research_workflow.InputRulesTests.test_duplicate_unknown_and_ambiguous_json_fail) ... ok
+test_numbering_conflicts_and_forbidden_requests_fail (test_research_workflow.InputRulesTests.test_numbering_conflicts_and_forbidden_requests_fail) ... ok
+test_windows_processor_identity_survives_empty_platform_probe (test_research_workflow.InputRulesTests.test_windows_processor_identity_survives_empty_platform_probe) ... ok
+test_complete_outputs_repeats_identity_and_assay_round_trip (test_research_workflow.WorkflowTests.test_complete_outputs_repeats_identity_and_assay_round_trip) ... ok
+test_evaluation_evidence_cannot_train_planner (test_research_workflow.WorkflowTests.test_evaluation_evidence_cannot_train_planner) ... ok
+test_planner_keeps_methods_separate_and_rejects_duplicate_evidence (test_research_workflow.WorkflowTests.test_planner_keeps_methods_separate_and_rejects_duplicate_evidence) ... ok
+test_unqualified_export_is_blocked_and_existing_run_is_preserved (test_research_workflow.WorkflowTests.test_unqualified_export_is_blocked_and_existing_run_is_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 23.357s
+
+OK

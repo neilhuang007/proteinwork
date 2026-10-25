@@ -1,0 +1,11 @@
+test_installed_adabmdca_agrees_with_all_hand_reference_energies (test_week02_pilots.OfficialToolkitEnergyTests.test_installed_adabmdca_agrees_with_all_hand_reference_energies) ... ok
+test_adabmdca_complete_sequences_energies_and_fasta (test_week02_pilots.RetainedArtifactTests.test_adabmdca_complete_sequences_energies_and_fasta) ... ok
+test_thrml_complete_returned_boolean_states_and_configuration (test_week02_pilots.RetainedArtifactTests.test_thrml_complete_returned_boolean_states_and_configuration) ... ok
+test_energy_probability_ratio_and_inverse_temperature (test_week02_pilots.ScientificConventionTests.test_energy_probability_ratio_and_inverse_temperature) ... ok
+test_frequency_comparison_preserves_duplicates_and_zero_count_states (test_week02_pilots.ScientificConventionTests.test_frequency_comparison_preserves_duplicates_and_zero_count_states) ... ok
+test_two_spin_energy_counts_the_edge_once_and_maps_false_to_minus_one (test_week02_pilots.ScientificConventionTests.test_two_spin_energy_counts_the_edge_once_and_maps_false_to_minus_one) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.204s
+
+OK

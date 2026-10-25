@@ -1,0 +1,30 @@
+Protein Sequence Sampling Project
+Week 4 Report
+
+Tasks completed
+
+This week, I worked on the updated project plan and benchmark requirements for review with both project leads and the adviser. I completed the technical package, including the model's source record, biological position map, allowed-residue rules, development and evaluation cases, accuracy targets, and review packet. This brought the earlier research and coding exercises together into concrete specifications for implementation.
+
+Outcomes and reflections
+
+The benchmark proposal uses the existing chorismate mutase model with 96 aligned positions. I verified the expected parameter entries and resolved the question raised in Week 1 about its 362 negative-infinity fields. These entries exclude particular symbols at particular positions by giving them zero probability. Understanding this lets me preserve the model's intended rules when building the loader.
+
+I also mapped the biological reference to residues 2–90 of UniProt Q5SLA5. Its 89 amino acids match exactly, while the remaining seven alignment positions are gaps without corresponding biological residue numbers. This gives me a clear way to connect a restriction in the code to the intended protein position.
+
+All four restriction cases contain allowed sequences. The two small cases each have four possible states, allowing exact checks that include the full model's interactions. I separated development cases from evaluation cases so choices made during tuning can later be assessed on different inputs. An independent arithmetic check gave the same sequence energy using two numerical calculation approaches, and all 10 benchmark validation tests passed. These results give me a checked set of inputs for implementing and testing the samplers.
+
+Challenges and responses
+
+One complication was that the biological reference itself contains two states the model forbids. I kept it as the numbering reference and documented a separate computational sequence that satisfies the restrictions. This helped me distinguish the sequence used to label positions from a valid starting point for sampling.
+
+The current adabmDCA loader also rejects non-finite fields. I made explicit handling of forbidden states a requirement for the Week 5 loader. I will use the review to explain this approach and walk through the distinction between the numbering reference and the computational starting sequence.
+
+Updates and adjustments
+
+I retained chorismate mutase and the original milestone order because the support and mapping questions now have documented answers. I set evaluation rules that exclude experimental labels already used to develop the model. I also set accuracy targets and equal runtime budgets to guide the review and keep the sampling comparisons consistent.
+
+Upcoming tasks
+
+Next, I will review the package with both project leads and the adviser, agree on the benchmark settings, and record their checks and decisions. In Week 5, I will implement the loader, test positional restrictions and score conventions, and complete the planned JAX array and compilation exercises. I will incorporate the review decisions into the specifications and checks as I move into implementation.
+
+Evidence: docs/week04/benchmark_contract.md; docs/week04/model_admission.json; data/benchmark/validation.json.

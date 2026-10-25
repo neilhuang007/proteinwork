@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "cm_lambda1_supported_v1",
+  "status": "technical_proposal_pending_human_review",
+  "inspection_date": "2026-10-08",
+  "archive": {
+    "url": "https://raw.githubusercontent.com/FrancescoCalvanese/DCA_Reintegration/433fda34132986d64db564bda867abb9ec9d46f2/DATA/Chorismate_Mutase.zip",
+    "commit": "433fda34132986d64db564bda867abb9ec9d46f2",
+    "sha256": "193c7dc912b394df12f0662fc6fde70d265567e7c9265b5106c3cec3d5746329",
+    "bytes": 13145579,
+    "local_path": "data/benchmark/raw/Chorismate_Mutase.zip",
+    "member": "Chorismate_Mutase/CM_model_lambda_1.dat",
+    "member_sha256": "bf180a3ed43637ab082a0d398d6663ffbd2566e73b2232404519ac8e4f32a004",
+    "member_bytes": 44044380
+  },
+  "model": {
+    "positions": 96,
+    "model_index_base": 0,
+    "alphabet": "-ACDEFGHIKLMNPQRSTVWY",
+    "layout": "complete_upper_triangle_J_i_lt_j_and_complete_h",
+    "energy": "E(s) = -sum_i h_i(s_i) - sum_{i<j} J_ij(s_i,s_j)",
+    "target": "p(s | case) proportional to exp(-beta*E(s)) on the case support",
+    "beta": 1.0,
+    "negative_infinity_field_semantics": "zero_probability_site_state",
+    "allowed_nonfinite": "h=-inf only; reject NaN,+inf and all nonfinite J",
+    "parameter_transformations": []
+  },
+  "coordinate_reference": {
+    "metadata": "data/benchmark/reference_provenance.json",
+    "archive_member": "Chorismate_Mutase/Natural_CM.faa",
+    "archive_header": "sequence_2 functional_false",
+    "uniprot_accession": "Q5SLA5",
+    "taxon_id": 300852,
+    "reference_position_base": 1,
+    "reference_span_in_full_accession": [2, 90],
+    "map": "data/benchmark/position_map.csv",
+    "gap_model_indices": [0, 1, 2, 63, 64, 94, 95],
+    "role": "biological coordinate and Hamming-distance anchor; not a supported initialization",
+    "native_anchor_energy": "positive_infinity"
+  },
+  "support": "data/benchmark/support.json",
+  "restriction_cases": "data/benchmark/restriction_cases.json",
+  "finite_score_fixture": {
+    "archive_member": "Chorismate_Mutase/Natural_CM.faa",
+    "archive_header": "sequence_1 functional_true",
+    "role": "unmodified computational arithmetic fixture; no nonpathogenic taxonomic claim"
+  },
+  "experimental_labels": {
+    "enabled_for_evaluation": false,
+    "reason": "P1 labels informed lambda1 training; independent mapped assay holdout not established"
+  },
+  "production_loader_status": "Week5 work; current adabmDCA1.0.0 rejects nonfinite fields"
+}

@@ -1,0 +1,26 @@
+Protein Sequence Sampling Project
+Week 2 Report
+
+Tasks completed
+
+This week, I moved from reading model parameters to running the official software. My planned tasks were to complete an adabmDCA sequence-generation example, run a tiny thrml model, and document both pilots so they could be repeated. I installed the packages in a separate Python 3.13.5 environment and saved the commands, versions, settings, outputs, and warnings. Both pilots ran successfully, completing the Week 2 technical milestone.
+
+Outcomes and reflections
+
+The adabmDCA pilot used the two-position model from Week 1 and returned 2,048 sequences, one from the end of each sampling chain. All nine possible sequence energies matched my reference calculations. The difference between the observed and exact probability distributions, measured by total variation distance, was about 0.0157. This gave me a practical check that the package interpreted the small model as expected.
+
+For thrml, I used two interacting binary variables, which have only four possible states. I saved all 4,096 returned observations, along with the starting state and random settings. Its total variation distance was about 0.00228. Six project tests passed, and the dependency check confirmed that all 61 installed packages were compatible.
+
+The most useful lesson was to interpret sample counts alongside how the samples were collected. adabmDCA returned final states from many chains, while thrml returned observations along one trajectory, where neighboring observations can be related. This helped me identify sampling layout and dependence as important parts of the later comparison. I also preserved repeated sequences because their frequency contributes to the probability estimate. Saving the full output gives me a reliable record to revisit when developing diagnostics.
+
+Challenges and responses
+
+During installation, the package manager switched to copying files because its cache and the project environment were on different drives. I updated the setup instructions to request copying explicitly. adabmDCA also produced two TorchScript deprecation warnings, which I saved alongside the successful run output. Recording these details makes the setup easier to understand and repeat.
+
+Updates and adjustments
+
+I kept the pilot dependencies separate and fixed their versions to make future runs easier to reproduce. I also continued using the synthetic protein model to connect the Week 1 calculations with the official tools. This gives me a stable setup for the upcoming production loader and project sampler.
+
+Upcoming tasks
+
+Next week, I will check score calculations and position numbering more closely, test the Gibbsiq components I may reuse, and study how encoding and sampling correction fit together. These checks will help me define what the Week 4 benchmark must require before implementation begins.

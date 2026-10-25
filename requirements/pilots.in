@@ -1,0 +1,4 @@
+# Week 2 official-toolkit CPU pilots. The resolved Windows/Python 3.13 lock
+# is pilots-win-py313.txt; do not install into the Week 1 standard-library env.
+adabmDCA==1.0.0
+thrml==0.1.4

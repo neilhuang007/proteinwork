@@ -1,0 +1,184 @@
+{
+  "exercise": "week01_synthetic_two_site_model_reading",
+  "metadata": {
+    "model_status": "synthetic teaching fixture, hand-authored; not a trained biological model",
+    "alphabet": "-AC",
+    "alphabet_kind": "explicit custom subset of the protein alphabet",
+    "symbol_to_index": {
+      "-": 0,
+      "A": 1,
+      "C": 2
+    },
+    "official_protein_alphabet": "-ACDEFGHIKLMNPQRSTVWY",
+    "length": 2,
+    "position_index_base": 0,
+    "coupling_records": "i<j, counted once",
+    "missing_couplings": "zero",
+    "required_fields": "all positions and alphabet symbols, including zeros",
+    "score_definition": "S(x) = h_0(x_0) + h_1(x_1) + J_01(x_0,x_1)",
+    "energy_definition": "E(x) = -S(x)",
+    "weight_definition": "w(x) = exp(-E(x)/T)",
+    "temperature": 1.0,
+    "temperature_units": "dimensionless teaching scale; not laboratory kelvin",
+    "reference_method": "literal arithmetic for all nine sequences, separate from parsing and indexing",
+    "source_verified_on": "2026-10-08",
+    "official_source_commit": "c1e5e2b261444001eb48dd3a0d7c0cded9823f37",
+    "primary_sources": [
+      "https://github.com/spqb/adabmDCApy/blob/c1e5e2b261444001eb48dd3a0d7c0cded9823f37/adabmDCA/io.py#L347-L364",
+      "https://github.com/spqb/adabmDCApy/blob/c1e5e2b261444001eb48dd3a0d7c0cded9823f37/adabmDCA/alphabet.py#L2-L4",
+      "https://github.com/spqb/adabmDCApy/blob/c1e5e2b261444001eb48dd3a0d7c0cded9823f37/adabmDCA/statmech.py#L24-L33",
+      "https://github.com/spqb/adabmDCApy/blob/c1e5e2b261444001eb48dd3a0d7c0cded9823f37/adabmDCA/statmech.py#L124-L139"
+    ],
+    "validation_scope": "local teaching code and arithmetic checks; full adabmDCA not installed or executed"
+  },
+  "fixture": {
+    "path": "examples/week01/fixtures/two_site_params.dat",
+    "sha256": "5b0035dc0503e5a03ee6e7a52087ee12ff9001064921967bfaa13cf7fe9809ca",
+    "field_record_count": 6,
+    "coupling_record_count": 4
+  },
+  "reference_check": {
+    "passed": true,
+    "states_checked": 9,
+    "absolute_tolerance": 1e-12
+  },
+  "partition_sum": 42.93997559065988,
+  "probability_sum": 1.0,
+  "states": [
+    {
+      "sequence": "--",
+      "encoded": [
+        0,
+        0
+      ],
+      "field_0": 0.0,
+      "field_1": 0.0,
+      "coupling_01": 0.0,
+      "score": 0.0,
+      "energy": -0.0,
+      "reference_energy": -0.0,
+      "boltzmann_weight": 1.0,
+      "probability": 0.023288322507046693
+    },
+    {
+      "sequence": "-A",
+      "encoded": [
+        0,
+        1
+      ],
+      "field_0": 0.0,
+      "field_1": -0.5,
+      "coupling_01": 0.0,
+      "score": -0.5,
+      "energy": 0.5,
+      "reference_energy": 0.5,
+      "boltzmann_weight": 0.6065306597126334,
+      "probability": 0.014125081613799599
+    },
+    {
+      "sequence": "-C",
+      "encoded": [
+        0,
+        2
+      ],
+      "field_0": 0.0,
+      "field_1": 0.5,
+      "coupling_01": 0.0,
+      "score": 0.5,
+      "energy": -0.5,
+      "reference_energy": -0.5,
+      "boltzmann_weight": 1.6487212707001282,
+      "probability": 0.038395952676292415
+    },
+    {
+      "sequence": "A-",
+      "encoded": [
+        1,
+        0
+      ],
+      "field_0": 1.0,
+      "field_1": 0.0,
+      "coupling_01": 0.0,
+      "score": 1.0,
+      "energy": -1.0,
+      "reference_energy": -1.0,
+      "boltzmann_weight": 2.718281828459045,
+      "probability": 0.06330422388619882
+    },
+    {
+      "sequence": "AA",
+      "encoded": [
+        1,
+        1
+      ],
+      "field_0": 1.0,
+      "field_1": -0.5,
+      "coupling_01": 0.25,
+      "score": 0.75,
+      "energy": -0.75,
+      "reference_energy": -0.75,
+      "boltzmann_weight": 2.117000016612675,
+      "probability": 0.049301379134299175
+    },
+    {
+      "sequence": "AC",
+      "encoded": [
+        1,
+        2
+      ],
+      "field_0": 1.0,
+      "field_1": 0.5,
+      "coupling_01": 2.0,
+      "score": 3.5,
+      "energy": -3.5,
+      "reference_energy": -3.5,
+      "boltzmann_weight": 33.11545195869231,
+      "probability": 0.7712033251806376
+    },
+    {
+      "sequence": "C-",
+      "encoded": [
+        2,
+        0
+      ],
+      "field_0": -1.0,
+      "field_1": 0.0,
+      "coupling_01": 0.0,
+      "score": -1.0,
+      "energy": 1.0,
+      "reference_energy": 1.0,
+      "boltzmann_weight": 0.36787944117144233,
+      "probability": 0.00856729506971266
+    },
+    {
+      "sequence": "CA",
+      "encoded": [
+        2,
+        1
+      ],
+      "field_0": -1.0,
+      "field_1": -0.5,
+      "coupling_01": -1.0,
+      "score": -2.5,
+      "energy": 2.5,
+      "reference_energy": 2.5,
+      "boltzmann_weight": 0.0820849986238988,
+      "probability": 0.0019116219209438393
+    },
+    {
+      "sequence": "CC",
+      "encoded": [
+        2,
+        2
+      ],
+      "field_0": -1.0,
+      "field_1": 0.5,
+      "coupling_01": 0.75,
+      "score": 0.25,
+      "energy": -0.25,
+      "reference_energy": -0.25,
+      "boltzmann_weight": 1.2840254166877414,
+      "probability": 0.029902798011069136
+    }
+  ]
+}

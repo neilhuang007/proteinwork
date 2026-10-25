@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "runs": [
+    {
+      "run": "E:\\projects\\proteinwork\\output\\research\\cm_exact_direct_final",
+      "method": "direct",
+      "backend": "jax",
+      "status": "accuracy_passed",
+      "elapsed_seconds": 31.05491460000121,
+      "raw_observations": 2048,
+      "exported_candidates": 2,
+      "eligible_for_timing_comparison": true,
+      "observed_time_ratio_to_fastest_direct": 1.0
+    },
+    {
+      "run": "E:\\projects\\proteinwork\\output\\research\\cm_exact_thrml_final",
+      "method": "encoded",
+      "backend": "thrml",
+      "status": "accuracy_passed",
+      "elapsed_seconds": 38.51917840000169,
+      "raw_observations": 2048,
+      "exported_candidates": 2,
+      "eligible_for_timing_comparison": true,
+      "observed_time_ratio_to_fastest_direct": 0.8062195480264929
+    }
+  ],
+  "timing_qualified_runs": 2,
+  "claims": "Observed ratios describe these runs only. Repeated sequential measurements are needed for a performance conclusion; no hardware or protein function improvement is established."
+}

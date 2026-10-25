@@ -1,0 +1,485 @@
+{
+  "semantics": "finite original h is permitted; -inf original h is forbidden",
+  "positions": [
+    {
+      "model_index_0based": 0,
+      "allowed_symbols": "-ACDEFGHIKLNQRSTVWY",
+      "forbidden_symbols": "MP"
+    },
+    {
+      "model_index_0based": 1,
+      "allowed_symbols": "-ACDEFGHIKLMNPQRSTVWY",
+      "forbidden_symbols": ""
+    },
+    {
+      "model_index_0based": 2,
+      "allowed_symbols": "-AEFGHIKLMNPQRSTVWY",
+      "forbidden_symbols": "CD"
+    },
+    {
+      "model_index_0based": 3,
+      "allowed_symbols": "-ADEFGHIKLMNPQRSTVWY",
+      "forbidden_symbols": "C"
+    },
+    {
+      "model_index_0based": 4,
+      "allowed_symbols": "-ADEFGHIKLMNPQRSTVY",
+      "forbidden_symbols": "CW"
+    },
+    {
+      "model_index_0based": 5,
+      "allowed_symbols": "-ACDEGHIKLMNPQRSTVW",
+      "forbidden_symbols": "FY"
+    },
+    {
+      "model_index_0based": 6,
+      "allowed_symbols": "-ACDEGHIKLMNPQRSTVY",
+      "forbidden_symbols": "FW"
+    },
+    {
+      "model_index_0based": 7,
+      "allowed_symbols": "-ACDEFGHIKLMNPQRSTVWY",
+      "forbidden_symbols": ""
+    },
+    {
+      "model_index_0based": 8,
+      "allowed_symbols": "-ACDEGHIKLMNPQRSTVY",
+      "forbidden_symbols": "FW"
+    },
+    {
+      "model_index_0based": 9,
+      "allowed_symbols": "ACDEFGHIKLMNPQRSVWY",
+      "forbidden_symbols": "-T"
+    },
+    {
+      "model_index_0based": 10,
+      "allowed_symbols": "-ACDEFHIKLNPQRSTVWY",
+      "forbidden_symbols": "GM"
+    },
+    {
+      "model_index_0based": 11,
+      "allowed_symbols": "-ACDEFGHIKLMNPQRSTVY",
+      "forbidden_symbols": "W"
+    },
+    {
+      "model_index_0based": 12,
+      "allowed_symbols": "-ACDEFHIKLMNPQRSTW",
+      "forbidden_symbols": "GVY"
+    },
+    {
+      "model_index_0based": 13,
+      "allowed_symbols": "-ADEGIKLMNPQRSVY",
+      "forbidden_symbols": "CFHTW"
+    },
+    {
+      "model_index_0based": 14,
+      "allowed_symbols": "-ADEGHKLMNPQRSTVWY",
+      "forbidden_symbols": "CFI"
+    },
+    {
+      "model_index_0based": 15,
+      "allowed_symbols": "-ACDEFGHIKLMNPQRSTVWY",
+      "forbidden_symbols": ""
+    },
+    {
+      "model_index_0based": 16,
+      "allowed_symbols": "-ACDEFGIKLMNRTVY",
+      "forbidden_symbols": "HPQSW"
+    },
+    {
+      "model_index_0based": 17,
+      "allowed_symbols": "-ACDFGHIKLMNPTVWY",
+      "forbidden_symbols": "EQRS"
+    },
+    {
+      "model_index_0based": 18,
+      "allowed_symbols": "ACDEFGHIKLMNPQRSTVWY",
+      "forbidden_symbols": "-"
+    },
+    {
+      "model_index_0based": 19,
+      "allowed_symbols": "ACDEFGHIKLMNPQRSTVY",
+      "forbidden_symbols": "-W"
+    },
+    {
+      "model_index_0based": 20,
+      "allowed_symbols": "AFILMPTV",
+      "forbidden_symbols": "-CDEGHKNQRSWY"
+    },
+    {
+      "model_index_0based": 21,
+      "allowed_symbols": "AEFGHIKLMPQRSTVY",
+      "forbidden_symbols": "-CDNW"
+    },
+    {
+      "model_index_0based": 22,
+      "allowed_symbols": "ACDEGHIKLNPQRSTVY",
+      "forbidden_symbols": "-FMW"
+    },
+    {
+      "model_index_0based": 23,
+      "allowed_symbols": "ACDEFGHIKLMNQRTVY",
+      "forbidden_symbols": "-PSW"
+    },
+    {
+      "model_index_0based": 24,
+      "allowed_symbols": "AFILMQSVWY",
+      "forbidden_symbols": "-CDEGHKNPRT"
+    },
+    {
+      "model_index_0based": 25,
+      "allowed_symbols": "ACDEFGHKLMNQRSTV",
+      "forbidden_symbols": "-IPWY"
+    },
+    {
+      "model_index_0based": 26,
+      "allowed_symbols": "-ADEGHIKLMNQRSTVY",
+      "forbidden_symbols": "CFPW"
+    },
+    {
+      "model_index_0based": 27,
+      "allowed_symbols": "LRV",
+      "forbidden_symbols": "-ACDEFGHIKMNPQSTWY"
+    },
+    {
+      "model_index_0based": 28,
+      "allowed_symbols": "ACEFGHIKLMNQRSTVWY",
+      "forbidden_symbols": "-DP"
+    },
+    {
+      "model_index_0based": 29,
+      "allowed_symbols": "ADEFHIKLMNQRSTVY",
+      "forbidden_symbols": "-CGPW"
+    },
+    {
+      "model_index_0based": 30,
+      "allowed_symbols": "ACDEFHIKLMNQRTVW",
+      "forbidden_symbols": "-GPSY"
+    },
+    {
+      "model_index_0based": 31,
+      "allowed_symbols": "ACFGIQSTV",
+      "forbidden_symbols": "-DEHKLMNPRWY"
+    },
+    {
+      "model_index_0based": 32,
+      "allowed_symbols": "ACDEGHIKLMNPQRSTVY",
+      "forbidden_symbols": "-FW"
+    },
+    {
+      "model_index_0based": 33,
+      "allowed_symbols": "ACDEFGHIKLMNPQRSTVY",
+      "forbidden_symbols": "-W"
+    },
+    {
+      "model_index_0based": 34,
+      "allowed_symbols": "EHILMQRTVY",
+      "forbidden_symbols": "-ACDFGKNPSW"
+    },
+    {
+      "model_index_0based": 35,
+      "allowed_symbols": "ACDEFGIKLMNQRVWY",
+      "forbidden_symbols": "-HPST"
+    },
+    {
+      "model_index_0based": 36,
+      "allowed_symbols": "ACDEFHIKLMNPQRSTVY",
+      "forbidden_symbols": "-GW"
+    },
+    {
+      "model_index_0based": 37,
+      "allowed_symbols": "ACDEFGHIKLMNQSTVWY",
+      "forbidden_symbols": "-PR"
+    },
+    {
+      "model_index_0based": 38,
+      "allowed_symbols": "EGIKLRS",
+      "forbidden_symbols": "-ACDFHMNPQTVWY"
+    },
+    {
+      "model_index_0based": 39,
+      "allowed_symbols": "-ACDEFGHIKLMNQRSTVWY",
+      "forbidden_symbols": "P"
+    },
+    {
+      "model_index_0based": 40,
+      "allowed_symbols": "-ACDEFGHIKLMNPQRSTVWY",
+      "forbidden_symbols": ""
+    },
+    {
+      "model_index_0based": 41,
+      "allowed_symbols": "-ACDEFGHIKLMNPQSTVWY",
+      "forbidden_symbols": "R"
+    },
+    {
+      "model_index_0based": 42,
+      "allowed_symbols": "ACDEFGHIKLMNPQRSTVY",
+      "forbidden_symbols": "-W"
+    },
+    {
+      "model_index_0based": 43,
+      "allowed_symbols": "AEFGHIKLMNPQRSTVY",
+      "forbidden_symbols": "-CDW"
+    },
+    {
+      "model_index_0based": 44,
+      "allowed_symbols": "ACDEFGIKLMNPQRSTVY",
+      "forbidden_symbols": "-HW"
+    },
+    {
+      "model_index_0based": 45,
+      "allowed_symbols": "ADEFGIKLMPQRSTVY",
+      "forbidden_symbols": "-CHNW"
+    },
+    {
+      "model_index_0based": 46,
+      "allowed_symbols": "ADEFGHILMNQRSTVWY",
+      "forbidden_symbols": "-CKP"
+    },
+    {
+      "model_index_0based": 47,
+      "allowed_symbols": "CDEGHLMNQRSVW",
+      "forbidden_symbols": "-AFIKPTY"
+    },
+    {
+      "model_index_0based": 48,
+      "allowed_symbols": "ADEFGHIKLMNPQRSTVY",
+      "forbidden_symbols": "-CW"
+    },
+    {
+      "model_index_0based": 49,
+      "allowed_symbols": "ADEGHIKLMNPQRSTVW",
+      "forbidden_symbols": "-CFY"
+    },
+    {
+      "model_index_0based": 50,
+      "allowed_symbols": "ADEGHIKLMPQRWY",
+      "forbidden_symbols": "-CFNSTV"
+    },
+    {
+      "model_index_0based": 51,
+      "allowed_symbols": "ACDEFGIKLMNQRWY",
+      "forbidden_symbols": "-HPSTV"
+    },
+    {
+      "model_index_0based": 52,
+      "allowed_symbols": "ADEHIKLMNQRSTVY",
+      "forbidden_symbols": "-CFGPW"
+    },
+    {
+      "model_index_0based": 53,
+      "allowed_symbols": "ACDEFHIKLNPQRSTVWY",
+      "forbidden_symbols": "-GM"
+    },
+    {
+      "model_index_0based": 54,
+      "allowed_symbols": "AEHIKLMNQSTVY",
+      "forbidden_symbols": "-CDFGPRW"
+    },
+    {
+      "model_index_0based": 55,
+      "allowed_symbols": "ACEFHIKLMQRTVWY",
+      "forbidden_symbols": "-DGNPS"
+    },
+    {
+      "model_index_0based": 56,
+      "allowed_symbols": "ACDEFGHIKLMNQRSTVWY",
+      "forbidden_symbols": "-P"
+    },
+    {
+      "model_index_0based": 57,
+      "allowed_symbols": "ACDEFGHIKLMNQRSTVY",
+      "forbidden_symbols": "-PW"
+    },
+    {
+      "model_index_0based": 58,
+      "allowed_symbols": "ACFGHIKLMNQRSTVWY",
+      "forbidden_symbols": "-DEP"
+    },
+    {
+      "model_index_0based": 59,
+      "allowed_symbols": "ACDEFGHIKLMNPQRSTVWY",
+      "forbidden_symbols": "-"
+    },
+    {
+      "model_index_0based": 60,
+      "allowed_symbols": "-ADEFGHIKLMNPQRSTVWY",
+      "forbidden_symbols": "C"
+    },
+    {
+      "model_index_0based": 61,
+      "allowed_symbols": "-ACDEFGHIKLMNQRSTVY",
+      "forbidden_symbols": "PW"
+    },
+    {
+      "model_index_0based": 62,
+      "allowed_symbols": "-ACDEGHIKLMNPRSV",
+      "forbidden_symbols": "FQTWY"
+    },
+    {
+      "model_index_0based": 63,
+      "allowed_symbols": "-ACDEFGHIKLMNPQRSTVY",
+      "forbidden_symbols": "W"
+    },
+    {
+      "model_index_0based": 64,
+      "allowed_symbols": "-ADEGHIKLMNPQRSTV",
+      "forbidden_symbols": "CFWY"
+    },
+    {
+      "model_index_0based": 65,
+      "allowed_symbols": "-ACDEFGHKLMNPQRSTVY",
+      "forbidden_symbols": "IW"
+    },
+    {
+      "model_index_0based": 66,
+      "allowed_symbols": "-ACDEFGHIKLMNQRSTVY",
+      "forbidden_symbols": "PW"
+    },
+    {
+      "model_index_0based": 67,
+      "allowed_symbols": "-ADEFGHIKLNPQRSTVY",
+      "forbidden_symbols": "CMW"
+    },
+    {
+      "model_index_0based": 68,
+      "allowed_symbols": "-ACDEFGIKLMNQRSTVY",
+      "forbidden_symbols": "HPW"
+    },
+    {
+      "model_index_0based": 69,
+      "allowed_symbols": "-ACDEFGHIKLMNPQRSTVY",
+      "forbidden_symbols": "W"
+    },
+    {
+      "model_index_0based": 70,
+      "allowed_symbols": "-ACDEGHIKLMNPQRSTVWY",
+      "forbidden_symbols": "F"
+    },
+    {
+      "model_index_0based": 71,
+      "allowed_symbols": "-ACDEFGHIKLMNPQRSVWY",
+      "forbidden_symbols": "T"
+    },
+    {
+      "model_index_0based": 72,
+      "allowed_symbols": "-ACDEFGIKLMNPQRSTVWY",
+      "forbidden_symbols": "H"
+    },
+    {
+      "model_index_0based": 73,
+      "allowed_symbols": "-AEFGHIKLMNRSTVY",
+      "forbidden_symbols": "CDPQW"
+    },
+    {
+      "model_index_0based": 74,
+      "allowed_symbols": "ACDEFGHIKLMNPQRSTVWY",
+      "forbidden_symbols": "-"
+    },
+    {
+      "model_index_0based": 75,
+      "allowed_symbols": "ACDEFGHIKLMNQRSTVY",
+      "forbidden_symbols": "-PW"
+    },
+    {
+      "model_index_0based": 76,
+      "allowed_symbols": "AFILMQSTVWY",
+      "forbidden_symbols": "-CDEGHKNPR"
+    },
+    {
+      "model_index_0based": 77,
+      "allowed_symbols": "-AEFILMRTVWY",
+      "forbidden_symbols": "CDGHKNPQS"
+    },
+    {
+      "model_index_0based": 78,
+      "allowed_symbols": "ACDEFGHIKLMNPQRSTVWY",
+      "forbidden_symbols": "-"
+    },
+    {
+      "model_index_0based": 79,
+      "allowed_symbols": "ACDEFGHILMNPQRSTVWY",
+      "forbidden_symbols": "-K"
+    },
+    {
+      "model_index_0based": 80,
+      "allowed_symbols": "ACFILMQRSTV",
+      "forbidden_symbols": "-DEGHKNPWY"
+    },
+    {
+      "model_index_0based": 81,
+      "allowed_symbols": "ADFGHILMNQTV",
+      "forbidden_symbols": "-CEKPRSWY"
+    },
+    {
+      "model_index_0based": 82,
+      "allowed_symbols": "ACDEFGIKLMNPQRSTVY",
+      "forbidden_symbols": "-HW"
+    },
+    {
+      "model_index_0based": 83,
+      "allowed_symbols": "ACDEFGHIKLMNPQRTVY",
+      "forbidden_symbols": "-SW"
+    },
+    {
+      "model_index_0based": 84,
+      "allowed_symbols": "-ACDFGHILMNRSTVW",
+      "forbidden_symbols": "EKPQY"
+    },
+    {
+      "model_index_0based": 85,
+      "allowed_symbols": "-ACEFGHIKLMNRTVY",
+      "forbidden_symbols": "DPQSW"
+    },
+    {
+      "model_index_0based": 86,
+      "allowed_symbols": "-ACDEFGHIKLMNQRSTVY",
+      "forbidden_symbols": "PW"
+    },
+    {
+      "model_index_0based": 87,
+      "allowed_symbols": "-ACEFGHIKLMNQRSTVWY",
+      "forbidden_symbols": "DP"
+    },
+    {
+      "model_index_0based": 88,
+      "allowed_symbols": "-ADEHIKLMNPQRSTVY",
+      "forbidden_symbols": "CFGW"
+    },
+    {
+      "model_index_0based": 89,
+      "allowed_symbols": "-ACDEGHIKLMNPQRSTVY",
+      "forbidden_symbols": "FW"
+    },
+    {
+      "model_index_0based": 90,
+      "allowed_symbols": "-ADEFGHIKLMNPQRSTVY",
+      "forbidden_symbols": "CW"
+    },
+    {
+      "model_index_0based": 91,
+      "allowed_symbols": "-ACDEFGHIKLMNPQRSTWY",
+      "forbidden_symbols": "V"
+    },
+    {
+      "model_index_0based": 92,
+      "allowed_symbols": "-ACDEFGHIKLMNPQRSTVY",
+      "forbidden_symbols": "W"
+    },
+    {
+      "model_index_0based": 93,
+      "allowed_symbols": "-ACDEFGHIKLMNQRSTVWY",
+      "forbidden_symbols": "P"
+    },
+    {
+      "model_index_0based": 94,
+      "allowed_symbols": "-ACDEFGHIKLMNPQRSTWY",
+      "forbidden_symbols": "V"
+    },
+    {
+      "model_index_0based": 95,
+      "allowed_symbols": "-ACDEFGHIKLMNPQRSVWY",
+      "forbidden_symbols": "T"
+    }
+  ]
+}

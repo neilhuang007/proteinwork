@@ -1,0 +1,2 @@
+# Preserve exact bytes so recorded file hashes remain valid after cloning.
+* -text

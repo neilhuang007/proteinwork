@@ -1,0 +1,6 @@
+versions {'adabmDCA': '1.0.0', 'thrml': '0.1.4', 'torch': '2.14.1', 'jax': '0.11.2', 'jaxlib': '0.11.2', 'numpy': '2.5.3', 'equinox': '0.13.8'}
+jax devices [CpuDevice(id=0)]
+energies [-3.5, 2.5, -0.0]
+E:\projects\proteinwork\.venv-pilots\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+samples ('AC', 'A-', 'AC', 'AC', 'AC', 'AC', 'AC', 'AC', 'AC', 'AC', 'AC', 'AC', 'CC', 'AC', 'AC', 'AC')

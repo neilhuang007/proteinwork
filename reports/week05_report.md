@@ -1,0 +1,31 @@
+Protein Sequence Sampling Project
+
+Week 5 Joint Report
+Neil and Daniel
+
+We started this week connecting Daniel's work on the protein sequences to my sampling code. The plan called for checking the reference positions, the allowed amino acids and the scores before completing a small sampling run. Daniel worked through the biological inputs, and I used them to check what the program was reading and producing. He needed the sequence counts and generated candidates to continue his analysis. I needed his work on the reference to make sure the code described the right positions.
+
+We began with the numbering issue from last week. The alignment had 96 columns, while the reference segment contained 89 amino acids. Daniel worked through the reference sequence, and I matched the positions used by the program to their locations in the protein. Computer indices 8 and 12 corresponded to protein positions 7 and 11. I put those protein positions into the output so Daniel could find each result in the sequence he was examining.
+
+Daniel then used a Python routine I had prepared to count amino acids across the 1,130 aligned sequences. His work on the alignment helped establish how the program should handle gaps. I counted those separately and calculated residue frequencies from the records that contained an amino acid at each position. The counting code began with:
+
+    counts = Counter(sequence[model_index] for sequence in sequences)
+    nongap = len(sequences) - counts["-"]
+
+At position 7, Daniel's analysis found 132 alanines and eight cysteines among 1,128 residues. The other two records contained gaps. Alanine accounted for 11.70% and cysteine for 0.71% of the residues at that position. He continued to position 11, where glutamate appeared much more often than phenylalanine. I saved the counts and frequencies together so he could use the results to examine variation at both positions. The same code counted residues in the remaining alignment columns.
+
+The next problem came from the reference sequence. Two of its amino acids were excluded by the saved model. Daniel checked the alignment and found those residues among the supplied proteins. I kept the reference unchanged for numbering and used the existing supported sequence for the sampling run. That sequence already contained two changes from the reference. We needed to distinguish those starting changes from anything the sampler changed later.
+
+I used that distinction to rewrite the candidate descriptions. Each record listed the changes already present in the starting sequence and the changes at the two positions we were varying. A7C identified alanine changing to cysteine at position 7. E11F identified glutamate changing to phenylalanine at position 11. Daniel could use those descriptions to inspect the substitutions, while I checked the program's position numbers and allowed residues against the same records.
+
+With the inputs checked, I ran the existing small development case. Position 7 allowed A or C, and position 11 allowed E or F. The other positions stayed fixed. Four independent sampling runs produced 2,048 observations after initialization. A at position 7 with E at position 11 appeared 2,040 times. C with E appeared six times, and A with F appeared twice.
+
+I compared those counts with the exact probabilities. The model assigned A with E about 99.57% of the probability, and the run returned it about 99.61% of the time. All the sampling accuracy checks passed. C with F remained an allowed combination, although it did not appear in this run. I kept it in the comparison so Daniel could see the full set of choices we had tested.
+
+I gave Daniel the three distinct sequences with their occurrence counts and descriptions of the substitutions. He could inspect each sequence once and see how often the sampler returned it. I kept all 2,048 observations for the probability calculations. I exported two candidates for further review. All three observed sequences contained 89 amino acids after removing the alignment gaps.
+
+We then compared Daniel's alignment results with the sampled sequences. His counts covered many different proteins. Our sampler varied two positions in one fixed sequence. We kept those conditions beside the results so the frequencies were clear. Daniel's analysis supplied the biological context for the comparison, and the sampling output gave him specific sequences and substitutions to examine.
+
+By the end of the week, we had completed the small case as planned. Daniel had residue counts and candidate descriptions to work from, and I had checked the sequence positions, restrictions and model scores. The tests for gaps, numbering and repeated observations passed. I added the residue counts and substitution descriptions to the output and kept the remaining milestone order unchanged.
+
+Next week, Daniel will use the residue counts to identify more positions for review and explain the biological reasons for any proposed restrictions. I will turn those choices into program inputs, run additional development cases and return the sequences and counts to him. His review of those results will guide which cases we examine next. We will continue this work within the direct sampling stage before moving to the planned encoded method comparison.

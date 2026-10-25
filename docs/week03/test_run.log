@@ -1,0 +1,14 @@
+test_asymmetric_ratio_matches_independent_hand_arithmetic (test_week03_learning_checks.Week03LearningChecks.test_asymmetric_ratio_matches_independent_hand_arithmetic) ... ok
+test_bad_mh_probabilities_and_temperatures_fail (test_week03_learning_checks.Week03LearningChecks.test_bad_mh_probabilities_and_temperatures_fail) ... ok
+test_bad_proposal_matrix_fails_before_calculation (test_week03_learning_checks.Week03LearningChecks.test_bad_proposal_matrix_fails_before_calculation) ... ok
+test_domain_boundary_and_malformed_words_fail (test_week03_learning_checks.Week03LearningChecks.test_domain_boundary_and_malformed_words_fail) ... ok
+test_every_small_word_is_valid_exactly_when_prefix_ones (test_week03_learning_checks.Week03LearningChecks.test_every_small_word_is_valid_exactly_when_prefix_ones) ... ok
+test_generic_correction_preserves_target_and_energy_only_rule_fails (test_week03_learning_checks.Week03LearningChecks.test_generic_correction_preserves_target_and_energy_only_rule_fails) ... ok
+test_invalid_wall_moves_become_self_mass_and_kernel_is_stationary (test_week03_learning_checks.Week03LearningChecks.test_invalid_wall_moves_become_self_mass_and_kernel_is_stationary) ... ok
+test_score_and_position_map_match_independent_literals (test_week03_learning_checks.Week03LearningChecks.test_score_and_position_map_match_independent_literals) ... ok
+test_trace_keeps_every_rejection_and_invalid_endpoint (test_week03_learning_checks.Week03LearningChecks.test_trace_keeps_every_rejection_and_invalid_endpoint) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK

@@ -1,0 +1,4 @@
+Official THRML CPU pilot: 4096 states, repeats retained
+Total variation: 0.002280; maximum probability error: 0.001362
+Sample call: 1.244 seconds; warnings: 0
+Saved E:\projects\proteinwork\examples\week02\output\thrml.json

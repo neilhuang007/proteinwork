@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-08",
+  "python": "3.13.5",
+  "dependencies": "stdlib only",
+  "command": "python -m unittest discover -s tests -p test_benchmark_admission.py -v",
+  "exit_code": 0,
+  "test_count": 10,
+  "result": "passed",
+  "log": "data/benchmark/admission_test_run.log",
+  "scope": "admission input validation and full-model inspection evidence; not production-loader or sampler tests"
+}

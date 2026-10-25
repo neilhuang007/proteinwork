@@ -1,0 +1,14 @@
+Synthetic teaching model: L=2, alphabet=-AC, T=1.0
+sequence  score  energy  weight     probability
+      --   0.00   -0.00   1.000000  0.023288
+      -A  -0.50    0.50   0.606531  0.014125
+      -C   0.50   -0.50   1.648721  0.038396
+      A-   1.00   -1.00   2.718282  0.063304
+      AA   0.75   -0.75   2.117000  0.049301
+      AC   3.50   -3.50  33.115452  0.771203
+      C-  -1.00    1.00   0.367879  0.008567
+      CA  -2.50    2.50   0.082085  0.001912
+      CC   0.25   -0.25   1.284025  0.029903
+Hand-reference check: 9/9 states passed
+Partition sum: 42.939976; probability sum: 1.000000
+Saved E:\projects\proteinwork\examples\week01\output\results.json

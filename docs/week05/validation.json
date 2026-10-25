@@ -1,0 +1,45 @@
+{
+  "checked_at_utc": "2026-10-25T21:22:21.752992+00:00",
+  "test_command": "./.venv-pilots/Scripts/python.exe -m unittest discover -s tests -p test_week05_shared_analysis.py -v",
+  "focused_tests": {
+    "run": 4,
+    "passed": 4,
+    "failures": 0,
+    "exit_code": 0
+  },
+  "analysis_checks": {
+    "source_run_verified": true,
+    "full_model_scores_match_trace": true,
+    "all_states_in_exact_support": true,
+    "all_candidates_have_89_residues": true,
+    "all_sampling_accuracy_checks_passed": true,
+    "pair_counts_cover_all_observations": true
+  },
+  "sampling_checks": {
+    "energy_diagnostics": true,
+    "hamming_diagnostics": true,
+    "exact_total_variation": true,
+    "energy_mean_accuracy": true,
+    "hamming_mean_accuracy": true,
+    "site_frequency_accuracy": true,
+    "pair_frequency_accuracy": true
+  },
+  "report_checks": {
+    "prose_words": 823,
+    "minimum_words": 300,
+    "no_dash_punctuation_in_prose": true,
+    "embedded_python_matches_implementation": true,
+    "narrative_sampling_numbers_match_results": true,
+    "plain_text_matches_markdown": true,
+    "report_scope": "Joint work narrated from Neil's perspective",
+    "presentation": "Plain narrative connecting Daniel's biological input, Neil's implementation, and Daniel's analysis of the output",
+    "named_roles": {
+      "biology_lead": "Daniel",
+      "computer_lead": "Neil"
+    }
+  },
+  "artifacts_verified": 23,
+  "report_sha256": "459ce07c7f13542e7ff04c254e6834dd7ba28b19a0a18ac1e0123a9ba658196e",
+  "analysis_summary_sha256": "e515a37393b852ea199e0a111468985e3a05d93e46d6b0f6c7cf4c99411d69d5",
+  "report_rechecked_at_utc": "2026-10-25T22:58:31.371526+00:00"
+}

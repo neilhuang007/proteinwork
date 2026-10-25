@@ -1,0 +1,15 @@
+test_checksum_size_and_altered_bytes_rejected (test_benchmark_admission.AdmissionChecks.test_checksum_size_and_altered_bytes_rejected) ... ok
+test_dense_key_coverage_rejects_duplicates_and_missing_keys (test_benchmark_admission.AdmissionChecks.test_dense_key_coverage_rejects_duplicates_and_missing_keys) ... ok
+test_exact_reference_map_uses_full_accession_numbering_and_null_gaps (test_benchmark_admission.AdmissionChecks.test_exact_reference_map_uses_full_accession_numbering_and_null_gaps) ... ok
+test_fasta_has_no_sequence_before_header_or_duplicate_ids (test_benchmark_admission.AdmissionChecks.test_fasta_has_no_sequence_before_header_or_duplicate_ids) ... ok
+test_frozen_case_support_mapping_and_full_model_evidence (test_benchmark_admission.AdmissionChecks.test_frozen_case_support_mapping_and_full_model_evidence) ... ok
+test_only_literal_negative_infinity_fields_are_admitted (test_benchmark_admission.AdmissionChecks.test_only_literal_negative_infinity_fields_are_admitted) ... ok
+test_position_and_symbol_errors_rejected (test_benchmark_admission.AdmissionChecks.test_position_and_symbol_errors_rejected) ... ok
+test_probabilities_respect_temperature (test_benchmark_admission.AdmissionChecks.test_probabilities_respect_temperature) ... ok
+test_requested_forbidden_or_conflicting_case_restrictions_rejected (test_benchmark_admission.AdmissionChecks.test_requested_forbidden_or_conflicting_case_restrictions_rejected) ... ok
+test_selected_field_scoring_preserves_exact_infinite_support (test_benchmark_admission.AdmissionChecks.test_selected_field_scoring_preserves_exact_infinite_support) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.011s
+
+OK

@@ -1,0 +1,78 @@
+# Biological relevance, current methods and impact assessment
+
+Research date: **2026-10-10**. This is a targeted primary-source review and an assessment of the existing repository, not a sampler result or a record of human approval. Recommendations below are proposed work. No interviews, independent assay holdout or hardware measurements were supplied.
+
+## Verdict
+
+Proceed as a **bounded computational methods study**. Its defensible contribution is a verified way to obtain samples from an existing, restricted protein model, with evidence about when an encoded proposal saves total time and when direct sampling is preferable. The proposed biological benchmark is credible enough to investigate this question, subject to its recorded human reviews and production implementation. There is currently no evidence of speedup, better protein function or a practical sampling bottleneck. [Current plan](../project_plan.md), [admission status](../week04/model_admission.json).
+
+The central limit is mathematical: two correct methods sampling the same target have the same marginal probability of any biological property at stationarity. Faster mixing can reduce statistical uncertainty and provide more effective exploration within a fixed budget; it does not improve the underlying model's estimate of which proteins work. A larger or less correlated candidate collection may be useful, but needs a specified downstream purpose. Changing temperature, using a classifier to filter samples or retraining would answer a different question.
+
+For an educational or reproducibility project, a carefully verified negative result is valuable. For a broadly influential biology paper or useful research tool, one small model and two broad restriction cases offer limited evidence. A stronger claim requires measured need, a competitive direct baseline, meaningful held-out workloads and eventually independent biological evaluation. Those additional claims should be conditional milestones, not promised outcomes.
+
+## What the biological literature actually supports
+
+**CM is a justified example, not a functional guarantee.** Russ et al. experimentally tested family-model designs and showed that statistical models can generate active chorismate mutases. Their assay measured complementation in a particular host context; even natural family members did not all pass it. The study also varied computational temperature. Therefore its results support studying this model family, but do not certify this repository's checkpoint, gap restrictions, temperature or generated sequences. Computational temperature is a distribution-setting parameter, not an incubation temperature. [Russ et al., Science, 24 July 2020](https://www.phys.ens.fr/~monasson/Articles/a125.pdf).
+
+**Model quality and sampler quality are separate.** The later feedback-reintegration study modifies a DCA model using experimental labels. Its CM result reports a classifier-estimated functional fraction, increasing from 36.6% to 66.3%; those generated CM sequences were not newly assayed in that study. The classifier used labelled natural variants, which the authors distinguish from the artificial-sequence labels used for reintegration. Its new experimental validation concerned RNA ribozymes. This is evidence that improved data can improve a model, not evidence for the proposed encoded sampler. Do not apply RNA assay improvements to this protein benchmark. [Calvanese et al., Nucleic Acids Research, 3 September 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12407104/).
+
+**The repository has already resolved important early blockers.** Week 1 described uncertain support and coordinates; Week 4 provides source evidence, a supported computational state and a map from 96 aligned columns to an 89-residue segment, Q5SLA5 residues 2–90. The structural record independently supports the HB8 CM domain context. These are not reasons to restart family selection, but neither are they a completed production sampler or biological validation. [Week 4 evidence](../week04/benchmark_evidence.md), [RCSB 2D8D](https://www.rcsb.org/structure/2D8D).
+
+Three consequences need to remain prominent:
+
+- The biological coordinate anchor is outside model support at two positions. Its energy is positive infinity. It can define numbering and Hamming distance, but cannot initialize the sampler. An energy difference against this anchor is not a useful mutation-fitness score.
+- The supported witness is an explicitly constructed computational state. Its two substitutions are not a biological recommendation. The 89-residue export is a domain segment, not the complete 355-residue accession.
+- The current restriction sites are computational stress cases without an asserted functional rationale. Technical validity of a restriction does not establish biological usefulness. [Benchmark contract](../week04/benchmark_contract.md), [reference provenance](../../data/benchmark/reference_provenance.json).
+
+## Relevant technology as of October 2026
+
+| Technology and primary evidence | Decision for this project |
+| --- | --- |
+| **adabmDCA:** the method is called 2.0; its Python package's current PyPI release is **1.0.0, 10 September 2026**. It includes CPU/GPU execution, Metropolis/Gibbs sampling, diagnostics and structured exports; optional BF16 kernels are advertised. [PyPI release and capabilities](https://pypi.org/project/adabmDCA/), [2025 methods paper](https://arxiv.org/abs/2501.18456). | Reuse model conventions and compare against a well-implemented direct categorical method. Do not justify a new sampler by comparison with an unoptimized teaching script. The repository already pins 1.0.0; no upgrade is needed solely for recency. BF16 is outside the current binary64 comparison and needs a separate accuracy study if added. |
+| **ProteinGym:** the official repository identifies v1.3 as its latest data release and distributes experimental tables, model scores, alignments and evaluation splits separately. [Official resource inventory](https://github.com/OATML-Markslab/ProteinGym#resources). | Useful for assay provenance and future compatible benchmarks. A score download is not a trained Potts checkpoint; an assay table is not evidence that arbitrary generated sequences have labels. ProteinGym is a fitness-prediction resource, not an equilibrium-sampling oracle for this checkpoint. |
+| **RFdiffusion3:** training and inference became available through Foundry in December 2025; it supports atom-level structure generation with design constraints. [Rosetta Commons release, 22 December 2025](https://rosettacommons.org/2025/12/22/rfdiffusion3-is-now-available-in-foundry/), [official implementation](https://github.com/RosettaCommons/foundry/blob/production/models/rfd3/README.md). | Relevant context if a future collaborator actually needs structure-conditioned design. It changes the model and objective, so it is not a same-target speed baseline or a necessary dependency for this project. |
+| **BoltzGen:** the authors' public system performs all-atom conditional design and produces ranked design collections through a larger design pipeline. [Official repository and 2025 report citation](https://github.com/HannesStark/boltzgen). | Shows why “generates proteins with constraints” alone is insufficient novelty. Its design specification and separation of raw designs from ranked selections are useful interface precedents. Do not add its model or claim superiority without a different, biological design benchmark. |
+
+These are selected relevant technologies, not an exhaustive ranking. None of the cited design-system results establishes a speed comparison against the immutable CM distribution used here.
+
+## What would make the project impactful
+
+The following are **proposed decision gates**. They should be agreed before held-out results are examined.
+
+1. **Establish an actual job to do.** The biology lead documents two conversations with intended users or advisers: what existing model they use, which residues they need to fix, how often they regenerate libraries, the usual collection size, current waiting time, and what a faster result would let them do. If conversations are unavailable, label the need as a hypothesis. Do not invent quotes, users or timings.
+2. **Check where time is spent.** Once the direct method exists, measure preparation, sampling, diagnostics and export separately on the intended machine. Use the actual job frequency and absolute time saved. A large microbenchmark speedup can be practically unimportant if sampling is already a negligible part of the workflow.
+3. **Make a fair performance claim.** Require both methods to pass the same target-accuracy checks, count tuning and compilation, preserve rejection repeats and report capped failures. Report absolute seconds as well as a ratio. A proposed stretch goal might be at least a twofold end-to-end improvement on a declared useful workload, but this is a project choice, not a published or achieved threshold. Retain direct selection when it wins.
+4. **Test the planner's stated scope.** The present four cases are enough for initial correctness and integration, not evidence of general method selection across proteins. If development evidence warrants expansion, predeclare additional within-family restriction patterns with biological rationales and keep their evaluation timing hidden during tuning. Changes require a benchmark revision; a second model is a future generalization study unless scope and hours are explicitly changed.
+5. **Separate computational success from biological success.** Without a documented independent measured dataset, finish with computational conclusions. An independent assay study could later test whether the model's candidate distribution is useful, but should not be silently added to this no-lab project.
+
+The most credible near-term reusable outputs may be the support-aware loader, coordinate/restriction checks, exact-target test fixtures, complete run records and a clear direct-versus-encoded comparison. Their usefulness survives an unfavorable speed result.
+
+## Assay evidence and leakage rules
+
+Keep the project's existing experimental-evaluation setting disabled until a suitable independent dataset is documented. Artificial-sequence labels used in checkpoint reintegration cannot be independent tests of that checkpoint. Complementary classifier-training labels are not automatically an independent project holdout either: establish their exact use, overlap, selection and mapping before making such a claim. The current repository explicitly reports no established independent holdout. [Admission evidence](../week04/benchmark_evidence.md).
+
+For any candidate dataset, record the accession, complete measured construct/domain, sequence, numbering, measurement endpoint, units or normalization, relevant assay context, replicate information, and all uses in model or classifier development. A measured label belongs to its measured sequence and context. Do not transfer it from a nearest sequence, assign it from a model score, or treat a structure prediction as an assay.
+
+An optional retrospective match must report all denominators: generated sequences, unique sequences, sequences satisfying the coordinate/construct checks, exact measured matches and exclusions. A tiny or selected matched subset cannot estimate the functional fraction of all generated samples. A large DMS table does not solve the issue if it covers only local mutations around another reference. This is a proposed interpretation rule, not a claim that assay coverage has been measured here.
+
+## Practical handoff for a biology lead who does not program
+
+Use **Markdown for explanations and review decisions; a spreadsheet exported as CSV for repeated rows**. Markdown is ordinary text with headings and checkboxes; CSV is an exchange format for a table. The biology lead can work in Word or a spreadsheet first, and the systems lead can transfer the content. Learning Git, JSON, Python or software installation is not a prerequisite.
+
+Suggested minimal handoff, to be created by the main implementation plan:
+
+| File | Biology lead supplies | Why it matters / completion check |
+| --- | --- | --- |
+| `biology/brief.md` | Five sentences: intended user, biological question, reference protein/domain, what would be useful, and what this study cannot establish. Include links and mark unknowns. | Prevents optimizing an artificial task without a use case. Adviser can read and approve the scope. |
+| `biology/position_review.csv` | Review the existing position map rather than rebuilding it; record accession, biological residue number, expected residue, corresponding model column, evidence and review status for requested positions and boundary/gap checks. | Prevents restricting the wrong residue. Use one-based biological numbering; the systems lead handles zero-based indices. Preserve gaps as unmapped. |
+| `biology/restriction_requests.csv` | One row per requested position: case ID, accession, biological position, allowed letters, required/optional, reason, source, certainty and reviewer. Classify requests as biological or numerical stress tests. | Converts biological reasoning into testable rules. A named chemical class needs an explicit amino-acid list. Systems lead checks original support and conflicts before acceptance. |
+| `biology/assay_inventory.csv` | Dataset URL/version, measured sequence/construct, readout, units, higher-is-better meaning, context, known development use, overlap status and eligibility reason. “Unknown” and “none found” are valid. | Stops predictions and training labels being presented as independent measurements. The systems lead performs exact sequence joins and coverage counting. |
+| `biology/review_log.md` | Dated decisions and open questions, actual reviewer names, source-backed claim corrections, and the two user-need notes when conducted. | Records genuine agreement and ensures the final report's wording matches the evidence. |
+
+First-session checklist: read the one-page scope; confirm the exact domain and numbering; review the currently proposed restrictions; identify which have a real biological reason; record the assay-data limitation. After systems work begins, review a small displayed sample with its aligned/ungapped representations, source run and honest label. The biology lead does not need to derive Metropolis-Hastings, hand-sum millions of model parameters or implement a sampler.
+
+Useful terminology for that handoff: **checkpoint** = saved trained model; **provenance** = where a file or claim came from; **alignment** = sequences arranged into corresponding columns, sometimes with gaps; **support** = sequences the model allows a nonzero probability; **restriction** = a smaller set of permitted residue choices; **sampling** = drawing candidates according to the model's probabilities; **energy** = a model score, not measured protein stability; **effective sample size** = how much independent information a correlated sample collection contains; **holdout** = evidence reserved from development; **leakage** = reusing development information as if it were an independent test.
+
+## Remaining unknowns
+
+No practical workload or stakeholder demand has been demonstrated. No method's CM mixing time, total runtime or trace-storage cost has been measured. The proposed restriction sites lack biological justification. The current project has no independently mapped assay holdout. The selected feedback-informed checkpoint's original training environment is incompletely recorded. None of these unknowns prevents a bounded computational study; each limits the claims its final report can make.

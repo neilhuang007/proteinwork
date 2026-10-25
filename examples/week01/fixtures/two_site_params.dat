@@ -1,0 +1,12 @@
+# Synthetic, hand-authored learning fixture; never trained on biological data.
+# Current adabmDCA symbol format; positions start at zero; omitted J = zero.
+J 0 1 A A 0.25
+J 0 1 A C 2.0
+J 0 1 C A -1.0
+J 0 1 C C 0.75
+h 0 - 0.0
+h 0 A 1.0
+h 0 C -1.0
+h 1 - 0.0
+h 1 A -0.5
+h 1 C 0.5
