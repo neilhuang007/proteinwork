@@ -1,0 +1,54 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+\hypersetup{
+  pdftitle={Protein Sequence Sampling Project: Week 6 Joint Report},
+  pdfauthor={Neil, computer lead; Daniel, biology lead},
+  pdfsubject={Corrected sampling, method comparison, and candidate selection}
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\widowpenalty=10000
+\clubpenalty=10000
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Protein Sequence Sampling Project}
+\fancyhead[R]{\small Week 6}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+\begin{document}
+\thispagestyle{plain}
+
+{\LARGE\bfseries Week 6 Joint Report\par}
+\vspace{3pt}
+{\large Protein Sequence Sampling Project\par}
+\vspace{5pt}
+{\normalsize Neil, computer lead \qquad Daniel, biology lead\par}
+\vspace{10pt}
+
+By the end of Week 5, Daniel's analysis of amino acid frequencies had helped us interpret the substitutions in our small sampling example. To carry that understanding into a larger workflow, Neil first built the position mapping and allowed amino acid rules into the software. Once those rules were preserved, he simplified the calculation by removing fixed positions from the active problem without losing their effects on sequence scores. We could then test another sampling method against the same model.
+
+For this comparison, Neil represented amino acid choices as binary switches and used the THRML software simulator to propose changes. Some switch combinations could not describe a valid protein sequence, so he added checks and a probability correction. When a proposal was rejected, the sampler recorded the previous sequence again. Those repeats preserved the frequency information Daniel would need to interpret the output. Before passing on any candidates, however, we needed to check that this new representation reproduced the intended probabilities.
+
+To find out, we tested both methods on the same four possible sequences. Each produced 2,048 observations and passed all seven accuracy and diagnostic checks. Direct sampling took 31.05 seconds, compared with 38.52 seconds for the encoded method, including setup, checks, and export. Although one comparison cannot establish a general advantage, this result gave Neil a reason to choose direct sampling for a separate evaluation case. That run also passed the checks and produced two candidates for Daniel to examine, giving us a tested starting point for a broader search.
+
+The broader run returned 8,192 distinct sequences, which expanded the material available for Daniel's review but introduced another problem: we still needed to establish how accurately it represented the larger target distribution. Because the run did not pass the full accuracy assessment and an adequate independent reference was missing, we treated its candidates as exploratory. We could use them to investigate substitutions, provided we kept that limitation attached to the results.
+
+With that limitation clear, the immediate task was to make the output manageable for Daniel. Neil narrowed the selection problem to 32 candidates and selected a batch of eight using model scores and sequence diversity. Each selected pair had to differ at five or more aligned positions. THRML's batch search did not improve on the initial selection, built by adding candidates one at a time, so we retained that batch. A separate optimizer confirmed its objective value as optimal within the same pool of 32. We therefore had a small set ready for review, with the basis for its selection explained.
+
+To support that review, Neil linked each candidate to its score and original observation, then added a way to attach future experimental measurements to the exact sequence. Daniel can now assess the substitutions and propose biological restrictions that Neil will use in the next run. That feedback will guide the next round of sampling checks. No new biological measurements were collected this week; we reached the point where the computational results could return to Daniel as specific candidates to examine.
+
+\end{document}

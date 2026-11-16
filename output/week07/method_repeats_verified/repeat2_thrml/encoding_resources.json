@@ -1,0 +1,12 @@
+{
+  "encoding": "one_hot",
+  "mutable_sites": 2,
+  "logical_spins": 4,
+  "nonzero_cross_site_edges": 4,
+  "within_site_penalty_edges": 2,
+  "logical_edges": 6,
+  "dense_matrix_bytes_float64": 128,
+  "physical_device_available": false,
+  "physical_execution": false,
+  "embedding_status": "Not established; a dense logical graph is not a hardware embedding"
+}

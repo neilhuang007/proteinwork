@@ -1,0 +1,1542 @@
+{
+  "schema_version": 1,
+  "status": "accuracy_passed",
+  "checks": {
+    "energy_diagnostics": true,
+    "hamming_diagnostics": true,
+    "exact_total_variation": true,
+    "energy_mean_accuracy": true,
+    "hamming_mean_accuracy": true,
+    "site_frequency_accuracy": true,
+    "pair_frequency_accuracy": true
+  },
+  "observables": {
+    "energy": {
+      "mean": 135.2199791096037,
+      "sd": 0.25012470473370046,
+      "chains": 4,
+      "draws_per_chain": 512,
+      "rhat": 1.0059347702036956,
+      "ess_bulk": 1028.0312490313074,
+      "ess_tail": 1028.0312490313074,
+      "mcse": 0.007801056636248207,
+      "constant_proven": false,
+      "status": "computed"
+    },
+    "hamming": {
+      "mean": 2.001953125,
+      "sd": 0.04416177735762528,
+      "chains": 4,
+      "draws_per_chain": 512,
+      "rhat": 1.0059347702036956,
+      "ess_bulk": 1028.0312490313074,
+      "ess_tail": 1028.0312490313074,
+      "mcse": 0.0013773470585043003,
+      "constant_proven": false,
+      "status": "computed"
+    }
+  },
+  "frequencies": [
+    {
+      "key": "site:0:0",
+      "kind": "site",
+      "model_indices": [
+        0
+      ],
+      "symbols": "-",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:1:0",
+      "kind": "site",
+      "model_indices": [
+        1
+      ],
+      "symbols": "-",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:2:0",
+      "kind": "site",
+      "model_indices": [
+        2
+      ],
+      "symbols": "-",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:3:3",
+      "kind": "site",
+      "model_indices": [
+        3
+      ],
+      "symbols": "D",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:4:4",
+      "kind": "site",
+      "model_indices": [
+        4
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:5:15",
+      "kind": "site",
+      "model_indices": [
+        5
+      ],
+      "symbols": "R",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:6:8",
+      "kind": "site",
+      "model_indices": [
+        6
+      ],
+      "symbols": "I",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:7:14",
+      "kind": "site",
+      "model_indices": [
+        7
+      ],
+      "symbols": "Q",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:8:1",
+      "kind": "site",
+      "model_indices": [
+        8
+      ],
+      "symbols": "A",
+      "probability": 0.998046875,
+      "mcse": 0.0013773470585043003,
+      "target_constant": false,
+      "reference_probability": 0.99654239204865,
+      "absolute_error": 0.0015044829513499725,
+      "error_upper_bound": 0.0015044829513499725
+    },
+    {
+      "key": "site:8:2",
+      "kind": "site",
+      "model_indices": [
+        8
+      ],
+      "symbols": "C",
+      "probability": 0.001953125,
+      "mcse": 0.0013773470585043003,
+      "target_constant": false,
+      "reference_probability": 0.0034576079513499924,
+      "absolute_error": 0.0015044829513499924,
+      "error_upper_bound": 0.0015044829513499924
+    },
+    {
+      "key": "site:9:10",
+      "kind": "site",
+      "model_indices": [
+        9
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:10:15",
+      "kind": "site",
+      "model_indices": [
+        10
+      ],
+      "symbols": "R",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:11:9",
+      "kind": "site",
+      "model_indices": [
+        11
+      ],
+      "symbols": "K",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:12:4",
+      "kind": "site",
+      "model_indices": [
+        12
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": null,
+      "target_constant": false,
+      "reference_probability": 0.9991259905879115,
+      "absolute_error": 0.0008740094120884834,
+      "error_upper_bound": 0.0008740094120884834
+    },
+    {
+      "key": "site:12:5",
+      "kind": "site",
+      "model_indices": [
+        12
+      ],
+      "symbols": "F",
+      "probability": 0.0,
+      "mcse": null,
+      "target_constant": false,
+      "reference_probability": 0.0008740094120884955,
+      "absolute_error": 0.0008740094120884955,
+      "error_upper_bound": 0.0008740094120884955
+    },
+    {
+      "key": "site:13:18",
+      "kind": "site",
+      "model_indices": [
+        13
+      ],
+      "symbols": "V",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:14:3",
+      "kind": "site",
+      "model_indices": [
+        14
+      ],
+      "symbols": "D",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:15:15",
+      "kind": "site",
+      "model_indices": [
+        15
+      ],
+      "symbols": "R",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:16:18",
+      "kind": "site",
+      "model_indices": [
+        16
+      ],
+      "symbols": "V",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:17:12",
+      "kind": "site",
+      "model_indices": [
+        17
+      ],
+      "symbols": "N",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:18:15",
+      "kind": "site",
+      "model_indices": [
+        18
+      ],
+      "symbols": "R",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:19:4",
+      "kind": "site",
+      "model_indices": [
+        19
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:20:8",
+      "kind": "site",
+      "model_indices": [
+        20
+      ],
+      "symbols": "I",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:21:10",
+      "kind": "site",
+      "model_indices": [
+        21
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:22:15",
+      "kind": "site",
+      "model_indices": [
+        22
+      ],
+      "symbols": "R",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:23:10",
+      "kind": "site",
+      "model_indices": [
+        23
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:24:10",
+      "kind": "site",
+      "model_indices": [
+        24
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:25:16",
+      "kind": "site",
+      "model_indices": [
+        25
+      ],
+      "symbols": "S",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:26:4",
+      "kind": "site",
+      "model_indices": [
+        26
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:27:15",
+      "kind": "site",
+      "model_indices": [
+        27
+      ],
+      "symbols": "R",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:28:6",
+      "kind": "site",
+      "model_indices": [
+        28
+      ],
+      "symbols": "G",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:29:15",
+      "kind": "site",
+      "model_indices": [
+        29
+      ],
+      "symbols": "R",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:30:10",
+      "kind": "site",
+      "model_indices": [
+        30
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:31:18",
+      "kind": "site",
+      "model_indices": [
+        31
+      ],
+      "symbols": "V",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:32:14",
+      "kind": "site",
+      "model_indices": [
+        32
+      ],
+      "symbols": "Q",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:33:4",
+      "kind": "site",
+      "model_indices": [
+        33
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:34:8",
+      "kind": "site",
+      "model_indices": [
+        34
+      ],
+      "symbols": "I",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:35:6",
+      "kind": "site",
+      "model_indices": [
+        35
+      ],
+      "symbols": "G",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:36:15",
+      "kind": "site",
+      "model_indices": [
+        36
+      ],
+      "symbols": "R",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:37:10",
+      "kind": "site",
+      "model_indices": [
+        37
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:38:4",
+      "kind": "site",
+      "model_indices": [
+        38
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:39:17",
+      "kind": "site",
+      "model_indices": [
+        39
+      ],
+      "symbols": "T",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:40:4",
+      "kind": "site",
+      "model_indices": [
+        40
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:41:10",
+      "kind": "site",
+      "model_indices": [
+        41
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:42:6",
+      "kind": "site",
+      "model_indices": [
+        42
+      ],
+      "symbols": "G",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:43:10",
+      "kind": "site",
+      "model_indices": [
+        43
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:44:13",
+      "kind": "site",
+      "model_indices": [
+        44
+      ],
+      "symbols": "P",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:45:1",
+      "kind": "site",
+      "model_indices": [
+        45
+      ],
+      "symbols": "A",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:46:20",
+      "kind": "site",
+      "model_indices": [
+        46
+      ],
+      "symbols": "Y",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:47:3",
+      "kind": "site",
+      "model_indices": [
+        47
+      ],
+      "symbols": "D",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:48:13",
+      "kind": "site",
+      "model_indices": [
+        48
+      ],
+      "symbols": "P",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:49:9",
+      "kind": "site",
+      "model_indices": [
+        49
+      ],
+      "symbols": "K",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:50:15",
+      "kind": "site",
+      "model_indices": [
+        50
+      ],
+      "symbols": "R",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:51:4",
+      "kind": "site",
+      "model_indices": [
+        51
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:52:4",
+      "kind": "site",
+      "model_indices": [
+        52
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:53:4",
+      "kind": "site",
+      "model_indices": [
+        53
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:54:11",
+      "kind": "site",
+      "model_indices": [
+        54
+      ],
+      "symbols": "M",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:55:10",
+      "kind": "site",
+      "model_indices": [
+        55
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:56:1",
+      "kind": "site",
+      "model_indices": [
+        56
+      ],
+      "symbols": "A",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:57:20",
+      "kind": "site",
+      "model_indices": [
+        57
+      ],
+      "symbols": "Y",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:58:10",
+      "kind": "site",
+      "model_indices": [
+        58
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:59:17",
+      "kind": "site",
+      "model_indices": [
+        59
+      ],
+      "symbols": "T",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:60:1",
+      "kind": "site",
+      "model_indices": [
+        60
+      ],
+      "symbols": "A",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:61:4",
+      "kind": "site",
+      "model_indices": [
+        61
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:62:12",
+      "kind": "site",
+      "model_indices": [
+        62
+      ],
+      "symbols": "N",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:63:0",
+      "kind": "site",
+      "model_indices": [
+        63
+      ],
+      "symbols": "-",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:64:0",
+      "kind": "site",
+      "model_indices": [
+        64
+      ],
+      "symbols": "-",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:65:13",
+      "kind": "site",
+      "model_indices": [
+        65
+      ],
+      "symbols": "P",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:66:6",
+      "kind": "site",
+      "model_indices": [
+        66
+      ],
+      "symbols": "G",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:67:13",
+      "kind": "site",
+      "model_indices": [
+        67
+      ],
+      "symbols": "P",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:68:5",
+      "kind": "site",
+      "model_indices": [
+        68
+      ],
+      "symbols": "F",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:69:13",
+      "kind": "site",
+      "model_indices": [
+        69
+      ],
+      "symbols": "P",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:70:3",
+      "kind": "site",
+      "model_indices": [
+        70
+      ],
+      "symbols": "D",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:71:4",
+      "kind": "site",
+      "model_indices": [
+        71
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:72:17",
+      "kind": "site",
+      "model_indices": [
+        72
+      ],
+      "symbols": "T",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:73:8",
+      "kind": "site",
+      "model_indices": [
+        73
+      ],
+      "symbols": "I",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:74:15",
+      "kind": "site",
+      "model_indices": [
+        74
+      ],
+      "symbols": "R",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:75:9",
+      "kind": "site",
+      "model_indices": [
+        75
+      ],
+      "symbols": "K",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:76:10",
+      "kind": "site",
+      "model_indices": [
+        76
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:77:5",
+      "kind": "site",
+      "model_indices": [
+        77
+      ],
+      "symbols": "F",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:78:9",
+      "kind": "site",
+      "model_indices": [
+        78
+      ],
+      "symbols": "K",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:79:4",
+      "kind": "site",
+      "model_indices": [
+        79
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:80:8",
+      "kind": "site",
+      "model_indices": [
+        80
+      ],
+      "symbols": "I",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:81:5",
+      "kind": "site",
+      "model_indices": [
+        81
+      ],
+      "symbols": "F",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:82:9",
+      "kind": "site",
+      "model_indices": [
+        82
+      ],
+      "symbols": "K",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:83:1",
+      "kind": "site",
+      "model_indices": [
+        83
+      ],
+      "symbols": "A",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:84:16",
+      "kind": "site",
+      "model_indices": [
+        84
+      ],
+      "symbols": "S",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:85:10",
+      "kind": "site",
+      "model_indices": [
+        85
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:86:3",
+      "kind": "site",
+      "model_indices": [
+        86
+      ],
+      "symbols": "D",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:87:10",
+      "kind": "site",
+      "model_indices": [
+        87
+      ],
+      "symbols": "L",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:88:4",
+      "kind": "site",
+      "model_indices": [
+        88
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:89:4",
+      "kind": "site",
+      "model_indices": [
+        89
+      ],
+      "symbols": "E",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:90:15",
+      "kind": "site",
+      "model_indices": [
+        90
+      ],
+      "symbols": "R",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:91:14",
+      "kind": "site",
+      "model_indices": [
+        91
+      ],
+      "symbols": "Q",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:92:3",
+      "kind": "site",
+      "model_indices": [
+        92
+      ],
+      "symbols": "D",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:93:14",
+      "kind": "site",
+      "model_indices": [
+        93
+      ],
+      "symbols": "Q",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:94:0",
+      "kind": "site",
+      "model_indices": [
+        94
+      ],
+      "symbols": "-",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "site:95:0",
+      "kind": "site",
+      "model_indices": [
+        95
+      ],
+      "symbols": "-",
+      "probability": 1.0,
+      "mcse": 0.0,
+      "target_constant": true,
+      "reference_probability": 1.0,
+      "absolute_error": 0.0,
+      "error_upper_bound": 0.0
+    },
+    {
+      "key": "pair:8:12:1:4",
+      "kind": "pair",
+      "model_indices": [
+        8,
+        12
+      ],
+      "symbols": "AE",
+      "probability": 0.998046875,
+      "mcse": 0.0013773470585043003,
+      "target_constant": false,
+      "reference_probability": 0.9956717942414582,
+      "absolute_error": 0.002375080758541759,
+      "error_upper_bound": 0.002375080758541759
+    },
+    {
+      "key": "pair:8:12:1:5",
+      "kind": "pair",
+      "model_indices": [
+        8,
+        12
+      ],
+      "symbols": "AF",
+      "probability": 0.0,
+      "mcse": null,
+      "target_constant": false,
+      "reference_probability": 0.0008705978071917883,
+      "absolute_error": 0.0008705978071917883,
+      "error_upper_bound": 0.0008705978071917883
+    },
+    {
+      "key": "pair:8:12:2:4",
+      "kind": "pair",
+      "model_indices": [
+        8,
+        12
+      ],
+      "symbols": "CE",
+      "probability": 0.001953125,
+      "mcse": 0.0013773470585043003,
+      "target_constant": false,
+      "reference_probability": 0.003454196346453285,
+      "absolute_error": 0.001501071346453285,
+      "error_upper_bound": 0.001501071346453285
+    },
+    {
+      "key": "pair:8:12:2:5",
+      "kind": "pair",
+      "model_indices": [
+        8,
+        12
+      ],
+      "symbols": "CF",
+      "probability": 0.0,
+      "mcse": null,
+      "target_constant": false,
+      "reference_probability": 3.4116048967072213e-06,
+      "absolute_error": 3.4116048967072213e-06,
+      "error_upper_bound": 3.4116048967072213e-06
+    }
+  ],
+  "comparison": {
+    "kind": "exact",
+    "total_variation": 0.0023750807585417697,
+    "state_count": 4,
+    "state_probabilities": [
+      {
+        "state": [
+          1,
+          4
+        ],
+        "exact": 0.9956717942414582,
+        "observed": 0.998046875
+      },
+      {
+        "state": [
+          1,
+          5
+        ],
+        "exact": 0.0008705978071917883,
+        "observed": 0.0
+      },
+      {
+        "state": [
+          2,
+          4
+        ],
+        "exact": 0.003454196346453285,
+        "observed": 0.001953125
+      },
+      {
+        "state": [
+          2,
+          5
+        ],
+        "exact": 3.4116048967072213e-06,
+        "observed": 0.0
+      }
+    ],
+    "energy": {
+      "reference_mean": 135.23465459444247,
+      "reference_sd": 0.39224667543185987,
+      "absolute_mean_error": 0.014675484838761577,
+      "reference_mcse": 0.0
+    },
+    "hamming": {
+      "reference_mean": 2.0043316173634387,
+      "reference_sd": 0.06572425476373742,
+      "absolute_mean_error": 0.002378492363438678,
+      "reference_mcse": 0.0
+    },
+    "site_maximum_error_bound": 0.0015044829513499924,
+    "pair_maximum_error_bound": 0.002375080758541759
+  },
+  "reference_qualification": {
+    "qualified": false,
+    "checks": {
+      "energy_diagnostics": false,
+      "hamming_diagnostics": false,
+      "frequency_uncertainty": false,
+      "energy_mean_uncertainty": false,
+      "hamming_mean_uncertainty": false
+    }
+  },
+  "diagnostic_library": "arviz_stats.base.array_stats",
+  "limitations": [
+    "Diagnostics do not prove convergence or biological function.",
+    "An unobserved nonconstant indicator has unknown MCSE and cannot qualify a broad reference.",
+    "An observation is a complete sweep for direct sampling and a corrected attempt for encoded sampling."
+  ]
+}

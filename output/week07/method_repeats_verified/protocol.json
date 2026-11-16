@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "declared_at_utc": "2026-11-09T19:19:33.504832+00:00",
+  "code_sha256": "0ca4cfbbdfbe7f500459f7c9f486e7b88dd9efb80ad18f1df12c6277dbb0b5b9",
+  "runner_sha256": "28a517ee0d1b406d909fe19fb27c2e6e89e018ec382e2a49774af37788deecd8",
+  "schedule": [
+    {
+      "name": "repeat1_direct",
+      "method": "direct",
+      "repetition": 1,
+      "seeds": [
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "request_sha256": "27204ba916d05d8127ba9f3970b46ef08694c8fcbcba0f3dc3e392039e4f5104"
+    },
+    {
+      "name": "repeat1_thrml",
+      "method": "thrml",
+      "repetition": 1,
+      "seeds": [
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "request_sha256": "505389b751e6f530ae5214496c737ac588f059196261565ba80a6718bfab7ace"
+    },
+    {
+      "name": "repeat2_thrml",
+      "method": "thrml",
+      "repetition": 2,
+      "seeds": [
+        3201,
+        3202,
+        3203,
+        3204
+      ],
+      "request_sha256": "07daf6778d5c8c0f0de4c45fa62522e45dfb4c7519dfaf1d2241c34cf2ed47b3"
+    },
+    {
+      "name": "repeat2_direct",
+      "method": "direct",
+      "repetition": 2,
+      "seeds": [
+        3201,
+        3202,
+        3203,
+        3204
+      ],
+      "request_sha256": "35c13a065d13d048a29ecd49abca69a26a305ee20564737979d69cf4ecef763b"
+    },
+    {
+      "name": "repeat3_direct",
+      "method": "direct",
+      "repetition": 3,
+      "seeds": [
+        3301,
+        3302,
+        3303,
+        3304
+      ],
+      "request_sha256": "2a15fd7d662d1b5e30c9fefa4a06985ff2d35f25d33dced62e42f052aa1c462b"
+    },
+    {
+      "name": "repeat3_thrml",
+      "method": "thrml",
+      "repetition": 3,
+      "seeds": [
+        3301,
+        3302,
+        3303,
+        3304
+      ],
+      "request_sha256": "d0093dc3eeaec4a5df95d080357ff7a7416c672855c7898f1bccb305c9cd3776"
+    }
+  ],
+  "runtime_snapshot": {
+    "python": "3.13.5 (main, Jun 12 2025, 12:42:35) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26320-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "jax": "0.11.2",
+      "jaxlib": "0.11.2",
+      "thrml": "0.1.4",
+      "adabmDCA": "1.0.0",
+      "arviz-stats": "1.3.3",
+      "scikit-learn": "1.9.1"
+    },
+    "thread_settings": {
+      "OMP_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "XLA_FLAGS": null
+    }
+  },
+  "processor_identity_policy": "Capture the observed processor identifier once and pass it unchanged to every subprocess.",
+  "case_id": "cm_dev_exact_8_12",
+  "purpose": "development_repetition",
+  "execution_policy": "Fresh sequential CLI processes. Alternate method order between repetitions. Do not run other sampling or test jobs concurrently.",
+  "settings_policy": "Existing exact development requests with distinct seeds per repetition. No parameter search or threshold changes.",
+  "reporting_policy": "Retain every result and failure. Report median and range of qualified complete run times, never count failures as successful capped times.",
+  "scope": "Small conditional development case only. Not a final held out comparison or a general performance claim."
+}

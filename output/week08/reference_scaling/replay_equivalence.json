@@ -1,0 +1,10 @@
+{
+  "all_trace_arrays_identical": true,
+  "diagnostics_identical": true,
+  "baseline_artifact_bytes": 94465955,
+  "replay_artifact_bytes": 12638863,
+  "artifact_bytes_saved": 81827092,
+  "artifact_reduction_fraction": 0.8662072171926913,
+  "baseline_manifest_sha256": "fd87234bac06bb28d437fd78ceac4df12e74f0a9d54b86ede777177236a4d1bd",
+  "replay_manifest_sha256": "b7692290aa940e2bd0a80d085faf16969a6bec074dfe47ae49a2fc489dbcac5d"
+}

@@ -13,6 +13,8 @@ from typing import TYPE_CHECKING, Sequence
 
 import numpy as np
 
+from .validation import _integerControl
+
 if TYPE_CHECKING:
     from proteinwork.model import ReducedModel
 
@@ -22,10 +24,7 @@ class EncodingBudgetError(ValueError):
 
 
 def _positiveInteger(value, name, *, allowZero=False):
-    minimum = 0 if allowZero else 1
-    if isinstance(value, (bool, np.bool_)) or not isinstance(value, (int, np.integer)) or value < minimum:
-        raise ValueError(f"{name} must be an integer at least {minimum}")
-    return int(value)
+    return _integerControl(value, name, 0 if allowZero else 1)
 
 
 def _positiveNumber(value, name, *, allowZero=False):
@@ -77,8 +76,7 @@ class EncodedModel:
         return values[..., self.bitSites] == self.bitTokens
 
     def decode(self, bits):
-        values = _binaryArray(bits, self.nSpins)
-        states, isValid = self.decodeChecked(values)
+        states, isValid = self.decodeChecked(bits)
         if not np.all(isValid):
             raise ValueError("invalid encoded endpoint: every site must contain exactly one active bit")
         return states

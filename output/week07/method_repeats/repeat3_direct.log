@@ -1,0 +1,8 @@
+{
+  "status": "qualified_library",
+  "method": "direct",
+  "raw_observations": 2048,
+  "unique_candidates": 3,
+  "exported_candidates": 2,
+  "elapsed_seconds": 18.718353799999022
+}

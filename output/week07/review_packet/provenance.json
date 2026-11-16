@@ -1,0 +1,17 @@
+{
+  "source_manifest_sha256": "206a6c3860a3bcebaddaf6d0f36c432638ef3e544916de96f424755b34ca664c",
+  "reference_manifest_sha256": "fd87234bac06bb28d437fd78ceac4df12e74f0a9d54b86ede777177236a4d1bd",
+  "script_sha256": "8d3f2afce8cc18a96270b772884b48a78bee537e6bdd3a8996c98d2d3a4959d6",
+  "analysis_helpers_sha256": "c5782e744bfb61cb5211e53ac0c32f55dc3fa58f0ce59abbb08597960e5c83f1",
+  "alignment_sha256": "60e45ab3c9a7059b9e21d23413e67c7a321ac109c01dc87ed6773f85fee698f3",
+  "benchmark_sha256": "9171f53a00dd06c8e2e0ae700c04dbd3e98c257b535f94f28646f9d056a59fda",
+  "artifacts": {
+    "candidate_annotations.csv": "c75f427ead801fc6060704fc11dd22dc76ad0170271b71b5499974be43e422a4",
+    "pairwise_distances.csv": "2892772c3d7bb79f506ee065e79e81686dc3568352ceb70b2858e2fe274a0430",
+    "reference_frequency_blockers.csv": "93f8e79bfac2dfa83c065af7e041e1f873fd7425422820e9ffe70707a6545569",
+    "review_worksheet.csv": "7f7dd83802eaa075c4b28d1c63a46231a4ea12715ee4e4a924b6ee4c63aa61b4",
+    "source_frequency_blockers.csv": "a10e0e08a5fa1027c03156456bf9d5efe3c948f0390614b6b1b47ecba18f68ea",
+    "substitutions.csv": "e1d49b7355e507361b4d24bf8415c08ae579feea36104c1894bc663dc40b27c7",
+    "summary.json": "f406cab27358ae71c183fef9dab2c77d3227a5ea5bbc11d8bea4cb6f4cdb8dd7"
+  }
+}

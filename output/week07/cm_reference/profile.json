@@ -1,0 +1,29 @@
+{
+  "load_validate_reduce_seconds": 13.695358199998736,
+  "sampler_total_seconds": 127.12769409999964,
+  "sampler_breakdown": {
+    "segments": [
+      {
+        "compile_seconds": 3.0751247000007425,
+        "warmup_seconds": 13.826452499997686,
+        "sampling_seconds": 96.42458629999965,
+        "energy_seconds": 8.392243499998585,
+        "total_seconds": 127.12763320000158,
+        "setup_seconds": 5.409226200004923
+      }
+    ]
+  },
+  "diagnostics_seconds": 17.830001500002254,
+  "score_verify_select_seconds": 21.712116299997433,
+  "export_seconds": 21.32310829999915,
+  "elapsed_before_final_manifest_seconds": 201.71794410000075,
+  "optimizations": {
+    "fixed_sites_removed": 8,
+    "full_categorical_sites": 96,
+    "mutable_categorical_sites": 88,
+    "full_pair_blocks": 4560,
+    "reduced_pair_blocks": 3828,
+    "original_scores_reused_for_repeats": 0
+  },
+  "comparison_limit": "Time to accuracy is established only for first_qualified runs; neither single nor unmatched runs establish speedup."
+}

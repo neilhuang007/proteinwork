@@ -1,5 +1,9 @@
 # Protein candidate research workflow
 
+The latest [Week 8 work](docs/week08/README.md) reduces reference output by 86.6% with identical trace arrays and diagnostics. A larger run completed 131,072 observations and identified the remaining residue frequency limitations. The broad reference still does not qualify.
+
+The [following weeks development record](docs/following_weeks.md) covers the latest code cleanup, repeated method comparison, independent broad reference attempt and candidate review packet. The full suite passes 120 tests. The new broad reference remains inadequate, so the broad candidate library retains its exploratory status and biological review is still pending.
+
 The project now includes a working computational workflow for chorismate mutase candidate libraries: validated model loading, exact residue restrictions, optimized direct sampling, corrected encoded sampling through THRML, diagnostics, constrained candidate selection, FASTA export and an assay data round trip. Physical Extropic device access is not configured. No new biological measurements or improved protein function are claimed.
 
 Read the [research workflow and engineering decisions](docs/research_workflow.md) for the complete input and output contract, applied rules, optimization choices, limits and commands. The [encoded method](docs/encoded_method.md) states the sampler correction and its tests. The [Extropic review](docs/research/extropic_engineering_2026_10_23.md) explains the hardware boundary and reusable libraries.

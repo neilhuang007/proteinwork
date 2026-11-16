@@ -1,0 +1,8 @@
+{
+  "status": "reference_inadequate",
+  "method": "direct",
+  "raw_observations": 131072,
+  "unique_candidates": 131072,
+  "exported_candidates": 0,
+  "elapsed_seconds": 189.90141860000222
+}

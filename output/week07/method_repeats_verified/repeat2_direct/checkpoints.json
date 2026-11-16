@@ -1,0 +1,26 @@
+{
+  "policy": "first_qualified",
+  "records": [
+    {
+      "draws_per_chain": 512,
+      "segment_seeds": [
+        3201,
+        3202,
+        3203,
+        3204
+      ],
+      "status": "accuracy_passed",
+      "checks": {
+        "energy_diagnostics": true,
+        "hamming_diagnostics": true,
+        "exact_total_variation": true,
+        "energy_mean_accuracy": true,
+        "hamming_mean_accuracy": true,
+        "site_frequency_accuracy": true,
+        "pair_frequency_accuracy": true
+      },
+      "elapsed_through_diagnostics_seconds": 17.060209700000996,
+      "predeclared_checkpoint": true
+    }
+  ]
+}

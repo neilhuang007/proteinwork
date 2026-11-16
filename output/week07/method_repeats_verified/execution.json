@@ -1,0 +1,28 @@
+{
+  "runs": [
+    {
+      "name": "repeat1_direct",
+      "returncode": 0
+    },
+    {
+      "name": "repeat1_thrml",
+      "returncode": 0
+    },
+    {
+      "name": "repeat2_thrml",
+      "returncode": 0
+    },
+    {
+      "name": "repeat2_direct",
+      "returncode": 0
+    },
+    {
+      "name": "repeat3_direct",
+      "returncode": 0
+    },
+    {
+      "name": "repeat3_thrml",
+      "returncode": 0
+    }
+  ]
+}

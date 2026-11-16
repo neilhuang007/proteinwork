@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "declared_at_utc": "2026-11-09T19:40:33.525720+00:00",
+  "baseline_manifest_sha256": "fd87234bac06bb28d437fd78ceac4df12e74f0a9d54b86ede777177236a4d1bd",
+  "code_sha256": "d5ac2bcd646e77fd97ffcc639b7dc9a0331995093f1e6037de016c35cb452b42",
+  "runner_sha256": "f3b28ac948d8ed6f2216e476c75f513f4ce5a2f2a200edfd6a13bd4ac165f651",
+  "runtime_snapshot": {
+    "python": "3.13.5 (main, Jun 12 2025, 12:42:35) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26320-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "jax": "0.11.2",
+      "jaxlib": "0.11.2",
+      "thrml": "0.1.4",
+      "adabmDCA": "1.0.0",
+      "arviz-stats": "1.3.3",
+      "scikit-learn": "1.9.1"
+    },
+    "thread_settings": {
+      "OMP_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "XLA_FLAGS": null
+    }
+  },
+  "jobs": [
+    {
+      "name": "reference_replay",
+      "draws_per_chain": 16384,
+      "seeds": [
+        9401,
+        9402,
+        9403,
+        9404
+      ],
+      "raw_observations": 65536,
+      "request_sha256": "698ffc19f9a8d182997bf1255cc9244e709451a59071612a1cf4d513e2dd19e4",
+      "trace_memory_estimate_bytes": 98041856
+    },
+    {
+      "name": "reference_32768",
+      "draws_per_chain": 32768,
+      "seeds": [
+        9501,
+        9502,
+        9503,
+        9504
+      ],
+      "raw_observations": 131072,
+      "request_sha256": "e99c023d5588364c5344c81ea0d431a05079341afcdfb87aedbf9a58876b7e22",
+      "trace_memory_estimate_bytes": 196083712
+    }
+  ],
+  "policy": "Run sequentially. Confirm replay equality before the larger run. Preserve the model, restrictions, beta, warmup, sweep count and all accuracy thresholds. No tuning or candidate selection.",
+  "resource_policy": "Keep the existing 512 MiB trace allocation guard and 3,600 second CLI cap per run. The trace estimate is not a peak process memory guarantee. Doubling observations is a bounded development attempt, not a promise of qualification.",
+  "stop_rule": "Stop after the declared 32,768 draw attempt, whether it qualifies or fails. Retain failures and every raw observation. Do not invent uncertainty for unobserved indicators.",
+  "timing_policy": "Record complete CLI process wall time separately from the workflow timer. Replay storage equality is the primary optimization check; single runs on different dates do not establish a runtime speedup."
+}

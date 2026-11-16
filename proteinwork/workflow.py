@@ -82,23 +82,22 @@ def _reference(path, *, target_sha256, current_seeds, evaluation_sha256):
 
 
 def _encoding_estimate(reduced):
-    sizes = [len(d) for d in reduced.domains]
-    bits = sum(sizes)
-    within = sum(n * (n - 1) // 2 for n in sizes)
-    cross = 0
-    for i, left in enumerate(reduced.domains):
-        for j in range(i + 1, reduced.n_sites):
-            block = reduced.couplings[i, j][np.ix_(left, reduced.domains[j])]
-            cross += int(np.count_nonzero(block))
-    return {"encoding": "one_hot", "mutable_sites": reduced.n_sites, "logical_spins": bits,
-            "nonzero_cross_site_edges": cross, "within_site_penalty_edges": within,
-            "logical_edges": cross + within, "dense_matrix_bytes_float64": bits * bits * 8,
+    domainSizes = [len(domain) for domain in reduced.domains]
+    spinCount = sum(domainSizes)
+    withinSiteEdges = sum(size * (size - 1) // 2 for size in domainSizes)
+    crossSiteEdges = 0
+    for leftSite, leftDomain in enumerate(reduced.domains):
+        for rightSite in range(leftSite + 1, reduced.n_sites):
+            block = reduced.couplings[leftSite, rightSite][np.ix_(leftDomain, reduced.domains[rightSite])]
+            crossSiteEdges += int(np.count_nonzero(block))
+    return {"encoding": "one_hot", "mutable_sites": reduced.n_sites, "logical_spins": spinCount,
+            "nonzero_cross_site_edges": crossSiteEdges, "within_site_penalty_edges": withinSiteEdges,
+            "logical_edges": crossSiteEdges + withinSiteEdges, "dense_matrix_bytes_float64": spinCount * spinCount * 8,
             "physical_device_available": False, "physical_execution": False,
             "embedding_status": "Not established; a dense logical graph is not a hardware embedding"}
 
 
-def validate_request(request_path):
-    request, base = load_request(request_path)
+def _prepareTarget(request, base):
     evaluation = load_evaluation(base / request["evaluation_config"])
     inputs = load_benchmark(base / request["benchmark_config"])
     domains, applied = apply_residue_requests(inputs, benchmark_domains(inputs, request["case_id"]),
@@ -107,20 +106,36 @@ def validate_request(request_path):
     if (evaluation.get("precision") != "float64" or evaluation.get("chains_per_condition") != 4
             or not math.isclose(beta * evaluation["temperature"], 1.0, rel_tol=1e-12)):
         raise ValueError("Request and evaluation contract differ in precision, chains or temperature")
-    reduced = restrict_model(inputs.model, domains)
+    return evaluation, inputs, domains, applied, beta, restrict_model(inputs.model, domains)
+
+
+def _prepareSelection(request, base, inputs):
+    from .design import validate_design_inputs
+
     settings = dict(request["selection"])
     if "allowed_residues" in settings:
         raise ValueError("Selection cannot override original model support")
-    settings["allowed_residues"] = ["".join(inputs.model.alphabet[t] for t in np.flatnonzero(np.isfinite(row)))
+    settings["allowed_residues"] = ["".join(inputs.model.alphabet[token] for token in np.flatnonzero(np.isfinite(row)))
                                    for row in inputs.model.fields]
-    from .design import validate_design_inputs
     preflight = validate_design_inputs(anchor=inputs.anchor, alphabet=inputs.model.alphabet, settings=settings,
-                                       assays_path=(base / request["assays"]) if "assays" in request else None)
+                                       assays_path=(base / request["assays"]).resolve() if "assays" in request else None)
+    return settings, preflight
+
+
+def _validateTraceBudget(inputs, reduced, sampling):
+    traceBytes = 4 * sampling["draws"] * (inputs.model.n_sites + reduced.n_sites + 3) * 8
+    if traceBytes > sampling.get("max_bytes", 536870912):
+        raise ValueError("Requested trace exceeds its memory budget")
+    return traceBytes
+
+
+def validate_request(request_path):
+    request, base = load_request(request_path)
+    _, inputs, domains, applied, beta, reduced = _prepareTarget(request, base)
+    _, preflight = _prepareSelection(request, base, inputs)
     estimate = _encoding_estimate(reduced)
     sampling = request["sampling"]
-    trace_bytes = 4 * sampling["draws"] * (inputs.model.n_sites + reduced.n_sites + 3) * 8
-    if trace_bytes > sampling.get("max_bytes", 536870912):
-        raise ValueError("Requested trace exceeds its memory budget")
+    trace_bytes = _validateTraceBudget(inputs, reduced, sampling)
     if sampling["method"] == "encoded":
         if estimate["logical_spins"] > sampling.get("max_spins", 2048) or estimate["logical_edges"] > sampling.get("max_edges", 2000000):
             raise ValueError("Encoded problem exceeds its declared graph budget")
@@ -133,7 +148,10 @@ def validate_request(request_path):
             "physical_execution": False}
 
 
-def _sample_with_checkpoints(reduced, *, sampling, beta, anchor, selected_pairs, evaluation, reference, started, budget_seconds):
+def _sample_with_checkpoints(reduced, *, sampling, beta, anchor, selected_pairs, evaluation, reference, started, budget_seconds,
+                             qualification_goal="sampling"):
+    if qualification_goal not in ("sampling", "reference"):
+        raise ValueError("Unknown checkpoint qualification goal")
     checkpoints = [n for n in evaluation["timing"]["checkpoints_post_warmup_observations_per_chain"]
                    if n <= sampling["draws"]]
     use_checkpoints = sampling.get("checkpoint_policy", "final") == "first_qualified"
@@ -172,17 +190,20 @@ def _sample_with_checkpoints(reduced, *, sampling, beta, anchor, selected_pairs,
             segment = sample_encoded(reduced, beta=beta, **controls, **extras)
         sample_seconds += time.perf_counter() - begin
         segments.append(segment)
-        result = SamplingResult(np.concatenate([s.states for s in segments], axis=1),
-            np.concatenate([s.energies for s in segments], axis=1), segments[0].initial_states,
-            np.concatenate([s.accepted for s in segments], axis=1), dict(segment.metadata),
+        result = SamplingResult(segment.states if len(segments) == 1 else np.concatenate([s.states for s in segments], axis=1),
+            segment.energies if len(segments) == 1 else np.concatenate([s.energies for s in segments], axis=1), segments[0].initial_states,
+            segment.accepted if len(segments) == 1 else np.concatenate([s.accepted for s in segments], axis=1), dict(segment.metadata),
             {"segments": [s.timings for s in segments]})
         begin = time.perf_counter()
         diagnosis = diagnose(reduced, result, beta=beta, anchor=anchor, selected_pairs=selected_pairs,
                              evaluation=evaluation, reference=reference)
         diagnostic_seconds += time.perf_counter() - begin
         is_declared = endpoint in evaluation["timing"]["checkpoints_post_warmup_observations_per_chain"]
+        qualified = (diagnosis["reference_qualification"]["qualified"] if qualification_goal == "reference"
+                     else diagnosis["status"] == "accuracy_passed")
         records.append({"draws_per_chain": endpoint, "segment_seeds": seeds,
                         "status": diagnosis["status"], "checks": diagnosis["checks"],
+                        "qualification_goal": qualification_goal, "qualified": qualified,
                         "elapsed_through_diagnostics_seconds": time.perf_counter() - started,
                         "predeclared_checkpoint": is_declared})
         previous = endpoint
@@ -190,7 +211,7 @@ def _sample_with_checkpoints(reduced, *, sampling, beta, anchor, selected_pairs,
             diagnosis["status"] = "accuracy_not_reached"
             diagnosis["checks"]["elapsed_budget"] = False
             break
-        if use_checkpoints and diagnosis["status"] == "accuracy_passed" and is_declared:
+        if use_checkpoints and qualified and is_declared:
             break
     result.metadata["checkpoint_segments"] = records
     result.metadata["segment_randomness"] = "Independent deterministic substreams; state continues across boundaries; only the first segment warms up"
@@ -204,20 +225,10 @@ def run_workflow(request_path, output_path):
     if output.exists():
         raise ValueError("Output path already exists; use a new run directory to preserve evidence")
     request, base = load_request(request_path)
+    is_reference = request.get("purpose") == "reference"
     request_hash = request.source_sha256
     resolve = lambda name: (base / request[name]).resolve()
-    benchmark_path = resolve("benchmark_config")
-    evaluation_path = resolve("evaluation_config")
-    evaluation = load_evaluation(evaluation_path)
-    if evaluation.get("precision") != "float64" or evaluation.get("chains_per_condition") != 4:
-        raise ValueError("This release requires the recorded float64 four chain evaluation protocol")
-    inputs = load_benchmark(benchmark_path)
-    domains = benchmark_domains(inputs, request["case_id"])
-    domains, residue_rules = apply_residue_requests(inputs, domains, request.get("restrictions", []))
-    beta = request.get("beta", inputs.config["model"]["beta"])
-    if not math.isclose(beta * evaluation["temperature"], 1.0, rel_tol=1e-12):
-        raise ValueError("Request beta and evaluation temperature specify different targets")
-    reduced = restrict_model(inputs.model, domains)
+    evaluation, inputs, domains, residue_rules, beta, reduced = _prepareTarget(request, base)
     case = next(c for c in inputs.cases if c["case_id"] == request["case_id"])
     expected_split = ("development" if case["case_id"] in evaluation["development_case_ids"] else
                       "evaluation" if case["case_id"] in evaluation["evaluation_case_ids"] else None)
@@ -241,30 +252,21 @@ def run_workflow(request_path, output_path):
             elif key in ("backend", "penalty", "proposal_beta", "coefficient_scale", "quantization_step"):
                 sampling.pop(key, None)
     # Check traces before allocating. This is independent of encoded graph storage.
-    estimated_trace_bytes = 4 * sampling["draws"] * (inputs.model.n_sites + reduced.n_sites + 3) * 8
-    if estimated_trace_bytes > sampling.get("max_bytes", 536870912):
-        raise ValueError("Requested trace exceeds the explicit host memory budget")
+    _validateTraceBudget(inputs, reduced, sampling)
     reference = reference_provenance = None
     if "reference_run" in request:
         reference, reference_provenance = _reference(resolve("reference_run"), target_sha256=target_hash,
             current_seeds=sampling["seeds"], evaluation_sha256=evaluation_hash)
     selected_pairs = evaluation["selected_pair_observables"].get(case["case_id"], [])
-    settings = dict(request["selection"])
-    if "allowed_residues" in settings:
-        raise ValueError("Selection support is inferred from original model fields and cannot be overridden")
-    original_support = ["".join(inputs.model.alphabet[t] for t in np.flatnonzero(np.isfinite(row)))
-                        for row in inputs.model.fields]
-    settings["allowed_residues"] = original_support
-    from .design import validate_design_inputs
-    preflight = validate_design_inputs(anchor=inputs.anchor, alphabet=inputs.model.alphabet, settings=settings,
-                                       assays_path=resolve("assays") if "assays" in request else None)
+    settings, preflight = _prepareSelection(request, base, inputs)
     encoded_report = _encoding_estimate(reduced)
     prep_seconds = time.perf_counter() - start
     budget_key = "reference_seconds_per_case_max" if request.get("purpose") == "reference" else "measurement_seconds_per_condition"
     budget = evaluation["budget"][budget_key]
     result, diagnostics, sample_seconds, diagnostics_seconds, checkpoint_records = _sample_with_checkpoints(
         reduced, sampling=sampling, beta=beta, anchor=inputs.anchor, selected_pairs=selected_pairs,
-        evaluation=evaluation, reference=reference, started=start, budget_seconds=budget)
+        evaluation=evaluation, reference=reference, started=start, budget_seconds=budget,
+        qualification_goal="reference" if is_reference else "sampling")
     candidate_start = time.perf_counter()
     full = reduced.expand(result.states)
     unique, first, inverse, counts = np.unique(full.reshape(-1, inputs.model.n_sites), axis=0,
@@ -276,7 +278,9 @@ def run_workflow(request_path, output_path):
         if not np.all(np.isin(unique[:, site], allowed)):
             raise ValueError("A sampled sequence violates an enforced residue restriction")
     pool = []
-    for state, flat_index, count, energy in zip(unique, first, counts, original_energies):
+    unique_count = len(unique)
+    candidate_rows = () if is_reference else zip(unique, first, counts, original_energies)
+    for state, flat_index, count, energy in candidate_rows:
         aligned = inputs.model.decode(state)
         sequence_hash = hashlib.sha256(aligned.encode()).hexdigest()
         pool.append({"candidate_id": "cm_" + sequence_hash[:16], "sequence_sha256": sequence_hash,
@@ -287,7 +291,11 @@ def run_workflow(request_path, output_path):
     if len({r["candidate_id"] for r in pool}) != len(pool):
         raise ValueError("Candidate identifier collision")
     from .design import design_library
-    if time.perf_counter() - start >= budget:
+    if is_reference:
+        design = {"status": "not_applicable_reference", "selected": [], "all_candidates": [], "exclusions": [],
+                  "evidence": {"reason": "Independent reference runs retain complete traces and skip candidate materialization",
+                               "unique_observed_sequences": unique_count}}
+    elif time.perf_counter() - start >= budget:
         design = {"status": "skipped_runtime_budget", "selected": [], "all_candidates": pool, "exclusions": [], "evidence": {}}
     else:
         design = design_library(pool, anchor=inputs.anchor, alphabet=inputs.model.alphabet, settings=settings,
@@ -339,7 +347,8 @@ def run_workflow(request_path, output_path):
              "allowed_symbols_by_model_index": ["".join(inputs.model.alphabet[t] for t in d) for d in domains],
              "all_sampled_original_scores": "verified", "all_sampled_residue_constraints": "verified",
              "sampling_repeats": "retained", "selection_rules": request["selection"],
-             "selection_changes_sampling_distribution": True, "biological_function_verified": False,
+             "selection_changes_sampling_distribution": not is_reference, "candidate_pool_materialized": not is_reference,
+             "biological_function_verified": False,
              "independent_assay_holdout_for_potts_model": False,
              "physical_device_execution": False, "human_review_status": "Prior review records preserved; no new adviser review asserted"}
     save_json(work / "rules.json", rules)
@@ -358,7 +367,7 @@ def run_workflow(request_path, output_path):
             (work / "candidates_aligned.fasta").write_text("", encoding="ascii")
     checkpoints = evaluation["timing"]["checkpoints_post_warmup_observations_per_chain"]
     measured_checkpoint = result.states.shape[1] in checkpoints
-    eligible_time = diagnostics["status"] == "accuracy_passed" and measured_checkpoint and not budget_exceeded
+    eligible_time = not is_reference and diagnostics["status"] == "accuracy_passed" and measured_checkpoint and not budget_exceeded
     profile = {"load_validate_reduce_seconds": prep_seconds, "sampler_total_seconds": sample_seconds,
                "sampler_breakdown": result.timings, "diagnostics_seconds": diagnostics_seconds,
                "score_verify_select_seconds": selection_seconds, "export_seconds": export_seconds,
@@ -367,7 +376,9 @@ def run_workflow(request_path, output_path):
                     "full_categorical_sites": inputs.model.n_sites, "mutable_categorical_sites": reduced.n_sites,
                     "full_pair_blocks": inputs.model.n_sites * (inputs.model.n_sites - 1) // 2,
                     "reduced_pair_blocks": reduced.n_sites * (reduced.n_sites - 1) // 2,
-                    "original_scores_reused_for_repeats": full.shape[0] * full.shape[1] - len(pool)},
+                    "original_scores_reused_for_repeats": full.shape[0] * full.shape[1] - unique_count,
+                    "candidate_records_materialized": len(pool),
+                    "candidate_records_avoided_for_reference": unique_count if is_reference else 0},
                "comparison_limit": "Time to accuracy is established only for first_qualified runs; neither single nor unmatched runs establish speedup."}
     save_json(work / "profile.json", profile)
     status = ("qualified_library" if diagnostics["status"] == "accuracy_passed" and selected else
@@ -388,7 +399,7 @@ def run_workflow(request_path, output_path):
         "qualified_checkpoint_elapsed_seconds": elapsed if eligible_time else None,
         "first_time_to_accuracy_established": eligible_time and sampling.get("checkpoint_policy") == "first_qualified",
         "raw_observations": int(full.shape[0] * full.shape[1]),
-        "unique_candidates": len(pool), "exported_candidates": len(selected),
+        "unique_candidates": unique_count, "candidate_pool_materialized": not is_reference, "exported_candidates": len(selected),
         "export_permission": "explicit_exploratory" if request.get("allow_unqualified_export", False) else "qualified_only",
         "assay_source": {"path": str(resolve("assays")), "sha256": preflight["assays"]["sha256"]} if "assays" in request else None,
         "sequence_scope": {"accession": inputs.config["coordinate_reference"]["uniprot_accession"],
@@ -397,10 +408,11 @@ def run_workflow(request_path, output_path):
         "claim_limits": {"improved_function": False, "hardware_speedup": False, "independent_potts_assay_validation": False}}
     report = (f"# Protein candidate run\n\nStatus: {status}.\n\n"
               f"Case: `{case['case_id']}`. Method: `{sampling['method']}`. "
-              f"Recorded {manifest['raw_observations']} observations in four chains and {len(pool)} distinct sequences.\n\n"
+              f"Recorded {manifest['raw_observations']} observations in four chains and {unique_count} distinct sequences.\n\n"
               f"Sampling assessment: `{diagnostics['status']}`. Exported library: {len(selected)} candidates. "
               f"Complete measured work before the final manifest took {elapsed:.3f} seconds.\n\n"
-              "Every candidate is linked to its original chain and draw. Raw traces retain repeated states. "
+              "Raw traces retain repeated states. Reference runs skip candidate materialization and selection. "
+              "Every exported candidate is linked to its original chain and draw. "
               "The library applies separate selection rules and does not represent equilibrium frequencies.\n\n"
               "The exported sequence is the modeled CM segment corresponding to Q5SLA5 residues 2 through 90. "
               "Its model score is not measured activity or stability. No physical Extropic device was used.\n\n"

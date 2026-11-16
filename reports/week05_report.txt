@@ -1,7 +1,6 @@
 Protein Sequence Sampling Project
 
 Week 5 Joint Report
-Neil and Daniel
 
 We started this week connecting Daniel's work on the protein sequences to my sampling code. The plan called for checking the reference positions, the allowed amino acids and the scores before completing a small sampling run. Daniel worked through the biological inputs, and I used them to check what the program was reading and producing. He needed the sequence counts and generated candidates to continue his analysis. I needed his work on the reference to make sure the code described the right positions.
 

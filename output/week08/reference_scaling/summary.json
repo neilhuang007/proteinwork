@@ -1,0 +1,167 @@
+{
+  "runs": {
+    "baseline": {
+      "sampling_status": "accuracy_not_reached",
+      "failed_sampling_checks": [
+        "independent_accuracy_reference",
+        "site_frequency_accuracy",
+        "pair_frequency_accuracy"
+      ],
+      "reference_qualified": false,
+      "failed_reference_checks": [
+        "energy_diagnostics",
+        "frequency_uncertainty",
+        "energy_mean_uncertainty",
+        "hamming_mean_uncertainty"
+      ],
+      "frequency_observables": 1482,
+      "unknown_frequency_mcse": 13,
+      "frequency_mcse_above_limit": 184,
+      "observables": {
+        "energy": {
+          "mean": -0.25574544671187005,
+          "sd": 18.367546646755784,
+          "chains": 4,
+          "draws_per_chain": 16384,
+          "rhat": 1.000472967715352,
+          "ess_bulk": 3036.7444146649254,
+          "ess_tail": 6838.78636562068,
+          "mcse": 0.3391162383777381,
+          "constant_proven": false,
+          "status": "computed"
+        },
+        "hamming": {
+          "mean": 58.12947082519531,
+          "sd": 3.8940896737160022,
+          "chains": 4,
+          "draws_per_chain": 16384,
+          "rhat": 1.0001081580789994,
+          "ess_bulk": 4209.2997092951355,
+          "ess_tail": 10512.880633269215,
+          "mcse": 0.060098564585481094,
+          "constant_proven": false,
+          "status": "computed"
+        }
+      },
+      "run_status": "reference_inadequate",
+      "raw_observations": 65536,
+      "draws_per_chain": 16384,
+      "recorded_workflow_seconds": 201.71794410000075,
+      "budget_exceeded": false,
+      "artifact_bytes": 94465955,
+      "manifest_sha256": "fd87234bac06bb28d437fd78ceac4df12e74f0a9d54b86ede777177236a4d1bd"
+    },
+    "reference_replay": {
+      "sampling_status": "accuracy_not_reached",
+      "failed_sampling_checks": [
+        "independent_accuracy_reference",
+        "site_frequency_accuracy",
+        "pair_frequency_accuracy"
+      ],
+      "reference_qualified": false,
+      "failed_reference_checks": [
+        "energy_diagnostics",
+        "frequency_uncertainty",
+        "energy_mean_uncertainty",
+        "hamming_mean_uncertainty"
+      ],
+      "frequency_observables": 1482,
+      "unknown_frequency_mcse": 13,
+      "frequency_mcse_above_limit": 184,
+      "observables": {
+        "energy": {
+          "mean": -0.25574544671187005,
+          "sd": 18.367546646755784,
+          "chains": 4,
+          "draws_per_chain": 16384,
+          "rhat": 1.000472967715352,
+          "ess_bulk": 3036.7444146649254,
+          "ess_tail": 6838.78636562068,
+          "mcse": 0.3391162383777381,
+          "constant_proven": false,
+          "status": "computed"
+        },
+        "hamming": {
+          "mean": 58.12947082519531,
+          "sd": 3.8940896737160022,
+          "chains": 4,
+          "draws_per_chain": 16384,
+          "rhat": 1.0001081580789994,
+          "ess_bulk": 4209.2997092951355,
+          "ess_tail": 10512.880633269215,
+          "mcse": 0.060098564585481094,
+          "constant_proven": false,
+          "status": "computed"
+        }
+      },
+      "run_status": "reference_inadequate",
+      "raw_observations": 65536,
+      "draws_per_chain": 16384,
+      "recorded_workflow_seconds": 151.6587894999975,
+      "budget_exceeded": false,
+      "artifact_bytes": 12638863,
+      "manifest_sha256": "b7692290aa940e2bd0a80d085faf16969a6bec074dfe47ae49a2fc489dbcac5d"
+    },
+    "reference_32768": {
+      "sampling_status": "accuracy_not_reached",
+      "failed_sampling_checks": [
+        "independent_accuracy_reference",
+        "site_frequency_accuracy",
+        "pair_frequency_accuracy"
+      ],
+      "reference_qualified": false,
+      "failed_reference_checks": [
+        "frequency_uncertainty",
+        "energy_mean_uncertainty",
+        "hamming_mean_uncertainty"
+      ],
+      "frequency_observables": 1482,
+      "unknown_frequency_mcse": 11,
+      "frequency_mcse_above_limit": 121,
+      "observables": {
+        "energy": {
+          "mean": 0.0261566736535937,
+          "sd": 18.24747501737423,
+          "chains": 4,
+          "draws_per_chain": 32768,
+          "rhat": 1.000904552750496,
+          "ess_bulk": 5833.077128482196,
+          "ess_tail": 13061.676020008272,
+          "mcse": 0.2432137482815441,
+          "constant_proven": false,
+          "status": "computed"
+        },
+        "hamming": {
+          "mean": 58.26929473876953,
+          "sd": 3.8743036580522188,
+          "chains": 4,
+          "draws_per_chain": 32768,
+          "rhat": 1.0005785679759667,
+          "ess_bulk": 8489.845872680939,
+          "ess_tail": 21436.87429784812,
+          "mcse": 0.042117241489087645,
+          "constant_proven": false,
+          "status": "computed"
+        }
+      },
+      "run_status": "reference_inadequate",
+      "raw_observations": 131072,
+      "draws_per_chain": 32768,
+      "recorded_workflow_seconds": 189.90141860000222,
+      "budget_exceeded": false,
+      "artifact_bytes": 24918810,
+      "manifest_sha256": "9e824231d0c99dc86293317410d9488260a7c06bdcfde8a36ec0210b23ef881f"
+    }
+  },
+  "replay_equivalence": {
+    "all_trace_arrays_identical": true,
+    "diagnostics_identical": true,
+    "baseline_artifact_bytes": 94465955,
+    "replay_artifact_bytes": 12638863,
+    "artifact_bytes_saved": 81827092,
+    "artifact_reduction_fraction": 0.8662072171926913,
+    "baseline_manifest_sha256": "fd87234bac06bb28d437fd78ceac4df12e74f0a9d54b86ede777177236a4d1bd",
+    "replay_manifest_sha256": "b7692290aa940e2bd0a80d085faf16969a6bec074dfe47ae49a2fc489dbcac5d"
+  },
+  "claim_limit": "Reference qualification uses unchanged criteria. Passing general chain diagnostics alone does not qualify a reference or establish biological function."
+}

@@ -14,6 +14,8 @@ import zipfile
 
 import numpy as np
 
+from .validation import _uniqueObjectPairs
+
 
 def _validateArrays(alphabet, fields, couplings):
     if not isinstance(alphabet, str) or not alphabet or len(set(alphabet)) != len(alphabet):
@@ -54,12 +56,13 @@ def _selectedEnergy(fields, couplings, states):
     if nSites == 0:
         return np.zeros(outputShape, dtype=np.float64)
     flatStates = states.reshape(-1, nSites)
+    siteIndices = np.arange(nSites)
     pairI, pairJ = np.triu_indices(nSites, 1)
     energies = np.empty(len(flatStates), dtype=np.float64)
     batchSize = max(1, 1_000_000 // max(1, len(pairI)))
     for start in range(0, len(flatStates), batchSize):
         selected = flatStates[start:start + batchSize]
-        fieldValues = fields[np.arange(nSites), selected]
+        fieldValues = fields[siteIndices, selected]
         supported = np.all(np.isfinite(fieldValues), axis=1)
         supportedStates = selected[supported]
         pairValues = couplings[pairI, pairJ, supportedStates[:, pairI], supportedStates[:, pairJ]]
@@ -99,7 +102,8 @@ class PottsModel:
             raise ValueError("Sequence length must match the model")
         if set(sequence) - set(self.alphabet):
             raise ValueError("Sequence contains an unknown symbol")
-        return np.array([self.alphabet.index(symbol) for symbol in sequence], dtype=np.int64)
+        symbolTokens = {symbol: token for token, symbol in enumerate(self.alphabet)}
+        return np.array([symbolTokens[symbol] for symbol in sequence], dtype=np.int64)
 
     def decode(self, states):
         stateArray = _validateStates(states, self.n_sites, self.q)
@@ -307,14 +311,7 @@ class BenchmarkInputs:
 
 
 def _readJson(path):
-    def uniqueObject(pairs):
-        result = {}
-        for key, value in pairs:
-            if key in result:
-                raise ValueError(f"Duplicate JSON key: {key}")
-            result[key] = value
-        return result
-    return json.loads(Path(path).read_text(encoding="utf-8"), object_pairs_hook=uniqueObject)
+    return json.loads(Path(path).read_text(encoding="utf-8"), object_pairs_hook=_uniqueObjectPairs)
 
 
 def _parseFasta(data):

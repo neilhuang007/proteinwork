@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "frozen": true,
+  "model_sha256": "bf180a3ed43637ab082a0d398d6663ffbd2566e73b2232404519ac8e4f32a004",
+  "evaluation_sha256": "e279a7e4530fbd2c0f8d48dc7d7009b0101468959468ba64a0f1223021851cda",
+  "code_sha256": "0ca4cfbbdfbe7f500459f7c9f486e7b88dd9efb80ad18f1df12c6277dbb0b5b9",
+  "comparison_context_sha256": "2a6d2ec81451d0dc6ef04e08293d90d080ecf2e4892efffb06b76741d54ac913",
+  "evidence": [
+    {
+      "manifest_path": "E:\\projects\\proteinwork\\output\\week07\\method_repeats_verified\\repeat1_direct\\manifest.json",
+      "manifest_sha256": "898dde0975f8f9db1137892b5e9fce3b17425d73e9f7fdcc09a5472af7c2444e",
+      "case_id": "cm_dev_exact_8_12",
+      "status": "accuracy_passed",
+      "target_sha256": "71f442605b1e0e0a9944c92082ace334bb7a1ad92be77e132e76e43f6cca8742",
+      "method": "direct",
+      "sampling_parameters": {
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 1,
+        "checkpoint_policy": "first_qualified"
+      },
+      "kind": "exact_conditional",
+      "seconds": 18.25119939999786,
+      "budget_exceeded": false
+    },
+    {
+      "manifest_path": "E:\\projects\\proteinwork\\output\\week07\\method_repeats_verified\\repeat1_thrml\\manifest.json",
+      "manifest_sha256": "a1dd5f97804867d4b45ae8bb1577989ff17c60442cfdf364bd1b5cb688293050",
+      "case_id": "cm_dev_exact_8_12",
+      "status": "accuracy_passed",
+      "target_sha256": "71f442605b1e0e0a9944c92082ace334bb7a1ad92be77e132e76e43f6cca8742",
+      "method": "encoded",
+      "sampling_parameters": {
+        "backend": "thrml",
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 2,
+        "penalty": 1.0,
+        "max_spins": 128,
+        "max_edges": 10000,
+        "max_bytes": 536870912,
+        "checkpoint_policy": "first_qualified"
+      },
+      "kind": "exact_conditional",
+      "seconds": 27.86941289999959,
+      "budget_exceeded": false
+    },
+    {
+      "manifest_path": "E:\\projects\\proteinwork\\output\\week07\\method_repeats_verified\\repeat2_direct\\manifest.json",
+      "manifest_sha256": "3299b16ac7e25429ab3bdc0ffd5c348bf9a661f30114328dac4bc8eb195c0827",
+      "case_id": "cm_dev_exact_8_12",
+      "status": "accuracy_passed",
+      "target_sha256": "71f442605b1e0e0a9944c92082ace334bb7a1ad92be77e132e76e43f6cca8742",
+      "method": "direct",
+      "sampling_parameters": {
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 1,
+        "checkpoint_policy": "first_qualified"
+      },
+      "kind": "exact_conditional",
+      "seconds": 17.29290640000181,
+      "budget_exceeded": false
+    },
+    {
+      "manifest_path": "E:\\projects\\proteinwork\\output\\week07\\method_repeats_verified\\repeat2_thrml\\manifest.json",
+      "manifest_sha256": "726edb430a36b0bc688b22a7d2147ef482d98bf16536264aea05631c1a4d0ed8",
+      "case_id": "cm_dev_exact_8_12",
+      "status": "accuracy_passed",
+      "target_sha256": "71f442605b1e0e0a9944c92082ace334bb7a1ad92be77e132e76e43f6cca8742",
+      "method": "encoded",
+      "sampling_parameters": {
+        "backend": "thrml",
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 2,
+        "penalty": 1.0,
+        "max_spins": 128,
+        "max_edges": 10000,
+        "max_bytes": 536870912,
+        "checkpoint_policy": "first_qualified"
+      },
+      "kind": "exact_conditional",
+      "seconds": 26.75441580000188,
+      "budget_exceeded": false
+    },
+    {
+      "manifest_path": "E:\\projects\\proteinwork\\output\\week07\\method_repeats_verified\\repeat3_direct\\manifest.json",
+      "manifest_sha256": "d2cac4215538f856ba0dceb108a836d42c997b49f88713504f7a3ad9101622e1",
+      "case_id": "cm_dev_exact_8_12",
+      "status": "accuracy_passed",
+      "target_sha256": "71f442605b1e0e0a9944c92082ace334bb7a1ad92be77e132e76e43f6cca8742",
+      "method": "direct",
+      "sampling_parameters": {
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 1,
+        "checkpoint_policy": "first_qualified"
+      },
+      "kind": "exact_conditional",
+      "seconds": 17.884817800000747,
+      "budget_exceeded": false
+    },
+    {
+      "manifest_path": "E:\\projects\\proteinwork\\output\\week07\\method_repeats_verified\\repeat3_thrml\\manifest.json",
+      "manifest_sha256": "9c0fbd8af17ee13cd604bbc9ca6e3d1ef30a3a19b5cba0ded70c2e0386aaa3a4",
+      "case_id": "cm_dev_exact_8_12",
+      "status": "accuracy_passed",
+      "target_sha256": "71f442605b1e0e0a9944c92082ace334bb7a1ad92be77e132e76e43f6cca8742",
+      "method": "encoded",
+      "sampling_parameters": {
+        "backend": "thrml",
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 2,
+        "penalty": 1.0,
+        "max_spins": 128,
+        "max_edges": 10000,
+        "max_bytes": 536870912,
+        "checkpoint_policy": "first_qualified"
+      },
+      "kind": "exact_conditional",
+      "seconds": 23.232606300000043,
+      "budget_exceeded": false
+    }
+  ],
+  "choices": {
+    "exact_conditional": {
+      "method": "direct",
+      "sampling_parameters": {
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 1,
+        "checkpoint_policy": "first_qualified"
+      },
+      "median_seconds": 17.884817800000747,
+      "matched_targets": 1,
+      "measurements": 3
+    }
+  },
+  "fallback": "direct",
+  "scope": "Selection by declared case kind from development evidence; no within run adaptation.",
+  "limitations": "A frozen selection rule does not establish superiority or generalization.",
+  "plan_sha256": "3e5cd57bddf45ba5aa4b6bc99d8e8c70be751a773cbee8545f9e0f31ccd5f304"
+}

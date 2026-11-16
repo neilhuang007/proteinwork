@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "runs": [
+    {
+      "run": "E:\\projects\\proteinwork\\output\\week07\\method_repeats_verified\\repeat1_direct",
+      "method": "direct",
+      "manifest_sha256": "898dde0975f8f9db1137892b5e9fce3b17425d73e9f7fdcc09a5472af7c2444e",
+      "seeds": [
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "sampling_parameters": {
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 1,
+        "checkpoint_policy": "first_qualified"
+      },
+      "backend": "jax",
+      "status": "accuracy_passed",
+      "elapsed_seconds": 18.25119939999786,
+      "raw_observations": 2048,
+      "exported_candidates": 2,
+      "eligible_for_timing_comparison": true,
+      "observed_time_ratio_to_fastest_direct": 0.9474942452277323
+    },
+    {
+      "run": "E:\\projects\\proteinwork\\output\\week07\\method_repeats_verified\\repeat1_thrml",
+      "method": "encoded",
+      "manifest_sha256": "a1dd5f97804867d4b45ae8bb1577989ff17c60442cfdf364bd1b5cb688293050",
+      "seeds": [
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "sampling_parameters": {
+        "backend": "thrml",
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 2,
+        "penalty": 1.0,
+        "max_spins": 128,
+        "max_edges": 10000,
+        "max_bytes": 536870912,
+        "checkpoint_policy": "first_qualified"
+      },
+      "backend": "thrml",
+      "status": "accuracy_passed",
+      "elapsed_seconds": 27.86941289999959,
+      "raw_observations": 2048,
+      "exported_candidates": 2,
+      "eligible_for_timing_comparison": true,
+      "observed_time_ratio_to_fastest_direct": 0.6204976926515042
+    },
+    {
+      "run": "E:\\projects\\proteinwork\\output\\week07\\method_repeats_verified\\repeat2_thrml",
+      "method": "encoded",
+      "manifest_sha256": "726edb430a36b0bc688b22a7d2147ef482d98bf16536264aea05631c1a4d0ed8",
+      "seeds": [
+        3201,
+        3202,
+        3203,
+        3204
+      ],
+      "sampling_parameters": {
+        "backend": "thrml",
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 2,
+        "penalty": 1.0,
+        "max_spins": 128,
+        "max_edges": 10000,
+        "max_bytes": 536870912,
+        "checkpoint_policy": "first_qualified"
+      },
+      "backend": "thrml",
+      "status": "accuracy_passed",
+      "elapsed_seconds": 26.75441580000188,
+      "raw_observations": 2048,
+      "exported_candidates": 2,
+      "eligible_for_timing_comparison": true,
+      "observed_time_ratio_to_fastest_direct": 0.6463570922001068
+    },
+    {
+      "run": "E:\\projects\\proteinwork\\output\\week07\\method_repeats_verified\\repeat2_direct",
+      "method": "direct",
+      "manifest_sha256": "3299b16ac7e25429ab3bdc0ffd5c348bf9a661f30114328dac4bc8eb195c0827",
+      "seeds": [
+        3201,
+        3202,
+        3203,
+        3204
+      ],
+      "sampling_parameters": {
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 1,
+        "checkpoint_policy": "first_qualified"
+      },
+      "backend": "jax",
+      "status": "accuracy_passed",
+      "elapsed_seconds": 17.29290640000181,
+      "raw_observations": 2048,
+      "exported_candidates": 2,
+      "eligible_for_timing_comparison": true,
+      "observed_time_ratio_to_fastest_direct": 1.0
+    },
+    {
+      "run": "E:\\projects\\proteinwork\\output\\week07\\method_repeats_verified\\repeat3_direct",
+      "method": "direct",
+      "manifest_sha256": "d2cac4215538f856ba0dceb108a836d42c997b49f88713504f7a3ad9101622e1",
+      "seeds": [
+        3301,
+        3302,
+        3303,
+        3304
+      ],
+      "sampling_parameters": {
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 1,
+        "checkpoint_policy": "first_qualified"
+      },
+      "backend": "jax",
+      "status": "accuracy_passed",
+      "elapsed_seconds": 17.884817800000747,
+      "raw_observations": 2048,
+      "exported_candidates": 2,
+      "eligible_for_timing_comparison": true,
+      "observed_time_ratio_to_fastest_direct": 0.9669042532824176
+    },
+    {
+      "run": "E:\\projects\\proteinwork\\output\\week07\\method_repeats_verified\\repeat3_thrml",
+      "method": "encoded",
+      "manifest_sha256": "9c0fbd8af17ee13cd604bbc9ca6e3d1ef30a3a19b5cba0ded70c2e0386aaa3a4",
+      "seeds": [
+        3301,
+        3302,
+        3303,
+        3304
+      ],
+      "sampling_parameters": {
+        "backend": "thrml",
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 2,
+        "penalty": 1.0,
+        "max_spins": 128,
+        "max_edges": 10000,
+        "max_bytes": 536870912,
+        "checkpoint_policy": "first_qualified"
+      },
+      "backend": "thrml",
+      "status": "accuracy_passed",
+      "elapsed_seconds": 23.232606300000043,
+      "raw_observations": 2048,
+      "exported_candidates": 2,
+      "eligible_for_timing_comparison": true,
+      "observed_time_ratio_to_fastest_direct": 0.744337771522508
+    }
+  ],
+  "timing_qualified_runs": 6,
+  "repeated_measurements": [
+    {
+      "method": "direct",
+      "sampling_parameters_sha256": "aa73511dd433bb062e7b62bfe0dd68f2acb3fd0770790b909078264317dbcd6b",
+      "sampling_parameters": {
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 1,
+        "checkpoint_policy": "first_qualified"
+      },
+      "runs": 3,
+      "qualified_runs": 3,
+      "unqualified_runs": 0,
+      "disjoint_seeds_within_method": true,
+      "median_qualified_seconds": 17.884817800000747,
+      "minimum_qualified_seconds": 17.29290640000181,
+      "maximum_qualified_seconds": 18.25119939999786
+    },
+    {
+      "method": "encoded",
+      "sampling_parameters_sha256": "de66fa15399eefc16177a849ce98843dcddd33cc9a37aa1d95b508c51027dfe3",
+      "sampling_parameters": {
+        "backend": "thrml",
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 2,
+        "penalty": 1.0,
+        "max_spins": 128,
+        "max_edges": 10000,
+        "max_bytes": 536870912,
+        "checkpoint_policy": "first_qualified"
+      },
+      "runs": 3,
+      "qualified_runs": 3,
+      "unqualified_runs": 0,
+      "disjoint_seeds_within_method": true,
+      "median_qualified_seconds": 26.75441580000188,
+      "minimum_qualified_seconds": 23.232606300000043,
+      "maximum_qualified_seconds": 27.86941289999959
+    }
+  ],
+  "failed_runs": 0,
+  "claims": "Observed ratios describe these runs only. Repetition summaries group identical method settings and report qualified times only, with failures retained separately. Shared seeds are flagged. Timing order and machine contention must be controlled by the experiment. No hardware or protein function improvement is established."
+}

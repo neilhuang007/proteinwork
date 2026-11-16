@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "benchmark_config": "benchmark.json",
+  "evaluation_config": "evaluation.json",
+  "case_id": "cm_eval_exact_16_24",
+  "planner": "../output/week07/frozen_plan.json",
+  "sampling": {
+    "method": "planner",
+    "seeds": [
+      4401,
+      4402,
+      4403,
+      4404
+    ],
+    "draws": 4096,
+    "warmup": 256,
+    "sweeps_per_draw": 1,
+    "checkpoint_policy": "first_qualified"
+  },
+  "selection": {
+    "batch_size": 2,
+    "objective": "model_score",
+    "optimizer": "milp",
+    "max_pool": 4,
+    "max_seconds": 10
+  },
+  "allow_unqualified_export": false
+}

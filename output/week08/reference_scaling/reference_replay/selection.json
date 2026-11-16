@@ -1,0 +1,10 @@
+{
+  "status": "not_applicable_reference",
+  "selected": [],
+  "all_candidates": [],
+  "exclusions": [],
+  "evidence": {
+    "reason": "Independent reference runs retain complete traces and skip candidate materialization",
+    "unique_observed_sequences": 65536
+  }
+}

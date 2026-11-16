@@ -102,6 +102,8 @@ The pool cap is a declared approximation to the full selection search. MILP opti
 
 ## Artifacts and interpretation
 
+Reference runs now skip candidate materialization and batch selection. They require `purpose=reference`, direct sampling, `batch_size=0`, the model score objective, no assays, no supplied reference and no exploratory export. All raw observations, original score verification, residue checks, diagnostics and hashes remain. Candidate CSV and worksheet files contain headers only, FASTA files are empty, and `selection.json` records `not_applicable_reference`. The manifest's `unique_candidates` still counts distinct observed sequences; `candidate_pool_materialized=false` explains why there are no candidate pool rows. Reference checkpoints stop only when the stricter reference qualification passes. Their checkpoint records identify `qualification_goal=reference`.
+
 `trace.npz` and `trace.csv.gz` contain every retained observation, including rejections. `sampler_event` has the semantics declared by its sampler: Gibbs endpoint movement for direct sampling and MH acceptance for encoded sampling. A valid encoded self proposal can be accepted. The CSV additionally records actual movement between consecutive observations.
 
 `candidate_pool.csv` contains candidate scores and exclusions. `candidates.csv` and both FASTA files contain only the admitted library. An insufficient pool or impossible batch produces a shortfall status and an empty library. Equilibrium qualification never implies that every possible rare sequence has appeared. `selection.json` explains the objective, finite pool, constraints, assay model, optimizer and incumbent source.

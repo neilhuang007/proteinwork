@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-09T19:19:56.333476+00:00",
+  "status": "qualified_library",
+  "purpose": "candidate_library",
+  "case": {
+    "case_id": "cm_dev_exact_8_12",
+    "split": "development",
+    "kind": "exact_conditional",
+    "positional_restrictions": [
+      {
+        "model_index_0based": 8,
+        "allowed_symbols": "AC"
+      },
+      {
+        "model_index_0based": 12,
+        "allowed_symbols": "EF"
+      }
+    ],
+    "other_positions": "fixed to computational_witness",
+    "purpose": "Full-model conditional arithmetic/correctness check with 4 states",
+    "biological_restriction_approval": "pending"
+  },
+  "model_sha256": "bf180a3ed43637ab082a0d398d6663ffbd2566e73b2232404519ac8e4f32a004",
+  "target_sha256": "71f442605b1e0e0a9944c92082ace334bb7a1ad92be77e132e76e43f6cca8742",
+  "evaluation_sha256": "e279a7e4530fbd2c0f8d48dc7d7009b0101468959468ba64a0f1223021851cda",
+  "code_sha256": "0ca4cfbbdfbe7f500459f7c9f486e7b88dd9efb80ad18f1df12c6277dbb0b5b9",
+  "request_sha256": "27204ba916d05d8127ba9f3970b46ef08694c8fcbcba0f3dc3e392039e4f5104",
+  "comparison_context_sha256": "2a6d2ec81451d0dc6ef04e08293d90d080ecf2e4892efffb06b76741d54ac913",
+  "source_provenance": {
+    "archive_sha256": "193c7dc912b394df12f0662fc6fde70d265567e7c9265b5106c3cec3d5746329",
+    "parameter_sha256": "bf180a3ed43637ab082a0d398d6663ffbd2566e73b2232404519ac8e4f32a004",
+    "config_sha256": "9171f53a00dd06c8e2e0ae700c04dbd3e98c257b535f94f28646f9d056a59fda",
+    "reference": {
+      "retrieved_date": "2026-10-08",
+      "source_url": "https://rest.uniprot.org/uniprotkb/Q5SLA5.json",
+      "snapshot_sha256": "a2aaede2632013c853b4457195df8bc202266edc77d910e624226eff687592a8",
+      "uniprot_accession": "Q5SLA5",
+      "entry_audit": {
+        "firstPublicDate": "2004-12-21",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2004-12-21",
+        "entryVersion": 119,
+        "sequenceVersion": 1
+      },
+      "organism": {
+        "scientificName": "Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)",
+        "taxonId": 300852,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "BAD70211.1"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Proteomes",
+            "id": "UP000000532"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Thermotogati",
+          "Deinococcota",
+          "Deinococci",
+          "Thermales",
+          "Thermaceae",
+          "Thermus"
+        ]
+      },
+      "full_accession_sequence": "MDERIQALRKEVDRVNREILRLLSERGRLVQEIGRLQTELGLPHYDPKREEEMLAYLTAENPGPFPDETIRKLFKEIFKASLDLEERQDQKKFLYSKRHKPEPTRVRVKDVVFGEKPLLIAGPCSIESEEQIMATARFLAARGVRVLRGGAFKPRTSPYGFQGLGVEGLKLGRKAADAFGMVFVTEVMDTRDVEVVAEYADILQIGARNMQNFALLKEVGKARRPVLLKRGLSATMEEWFYAAEYILAQGNEQVILAERGIRTFERWTRNTLDLSAVALAKQETHLPVVVDVTHAAGRTDLLAPLARAALAVGADGVHVEVHPNPKVALSDNQQQMDFAQFDRFLEAIRDLLQAP",
+      "sequence_length": 355,
+      "sequence_md5_from_uniprot": "BEFAE9EF5767FA48914B516DE39C77F5",
+      "aligned_sequence": "---DERIQALRKEVDRVNREILRLLSERGRLVQEIGRLQTELGLPHYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+      "aligned_record_header": "sequence_2 functional_false",
+      "mapping_basis": "Exactly one full-accession substring match to the 89-residue ungapped archive sequence, residues2-90; gaps are unmapped. This is an explicit sequence-based coordinate inference, not a supplied upstream position-map file.",
+      "structure_corrobation_url": "https://www.rcsb.org/structure/2D8D",
+      "strain_context": {
+        "strain": "HB8",
+        "collection_aliases": [
+          "DSM 579",
+          "ATCC 27634"
+        ],
+        "source_url": "https://www.dsmz.de/collection/catalogue/details/culture/dsm-579",
+        "risk_group": 1,
+        "classification_basis": "German TRBA, as listed by DSMZ",
+        "snapshot_sha256": "4999915861367d36b948f9be487aac4f079aac8e20340d23efb88453145689e1",
+        "scope_limit": "Selected reference context only; does not classify all family homologs or artificial sequences."
+      }
+    },
+    "restriction_data": {
+      "schema_version": 1,
+      "status": "technical_proposal_pending_human_review",
+      "model_index_base": 0,
+      "reference_position_base": 1,
+      "model_parameter_transformations": [],
+      "common_constraints": {
+        "fixed_gap_model_indices": [
+          0,
+          1,
+          2,
+          63,
+          64,
+          94,
+          95
+        ],
+        "fixed_gap_symbol": "-",
+        "nongap_columns_exclude_gap": true,
+        "finite_original_field_support_required": true,
+        "role": "Define a conditional computational target with this anchor gap pattern; no biological function claim."
+      },
+      "computational_witness": {
+        "sequence": "---DERIQALRKEVDRVNREILRLLSERGRLVQEIGRLETELGLPAYDPKREEEMLAYLTAEN--PGPFPDETIRKLFKEIFKASLDLEERQDQ--",
+        "role": "Constructed support witness and exact-case background; not a native T.thermophilus protein or experimental record.",
+        "construction": "Keep coordinate anchor symbols where supported; replace its two forbidden states by the first allowed amino-acid symbol in canonical alphabet order.",
+        "substitutions": [
+          {
+            "model_index_0based": 38,
+            "uniprot_position_1based": 37,
+            "anchor_symbol": "Q",
+            "witness_symbol": "E"
+          },
+          {
+            "model_index_0based": 45,
+            "uniprot_position_1based": 44,
+            "anchor_symbol": "H",
+            "witness_symbol": "A"
+          }
+        ]
+      },
+      "split_semantics": "Frozen restriction-input split for future computational planner tuning; not assay-label or sequence-training holdout. Evaluation inputs must not tune the planner.",
+      "cases": [
+        {
+          "case_id": "cm_dev_exact_8_12",
+          "split": "development",
+          "kind": "exact_conditional",
+          "positional_restrictions": [
+            {
+              "model_index_0based": 8,
+              "allowed_symbols": "AC"
+            },
+            {
+              "model_index_0based": 12,
+              "allowed_symbols": "EF"
+            }
+          ],
+          "other_positions": "fixed to computational_witness",
+          "purpose": "Full-model conditional arithmetic/correctness check with 4 states",
+          "biological_restriction_approval": "pending"
+        },
+        {
+          "case_id": "cm_dev_broad_8_12",
+          "split": "development",
+          "kind": "broad_conditional",
+          "positional_restrictions": [
+            {
+              "model_index_0based": 8,
+              "allowed_symbols": "A"
+            },
+            {
+              "model_index_0based": 12,
+              "allowed_symbols": "EF"
+            }
+          ],
+          "other_positions": "common gap pattern and finite original field support",
+          "purpose": "Broad support conditional case for later runtime/quality comparison",
+          "biological_restriction_approval": "pending"
+        },
+        {
+          "case_id": "cm_eval_exact_16_24",
+          "split": "evaluation",
+          "kind": "exact_conditional",
+          "positional_restrictions": [
+            {
+              "model_index_0based": 16,
+              "allowed_symbols": "VI"
+            },
+            {
+              "model_index_0based": 24,
+              "allowed_symbols": "LM"
+            }
+          ],
+          "other_positions": "fixed to computational_witness",
+          "purpose": "Full-model conditional arithmetic/correctness check with 4 states",
+          "biological_restriction_approval": "pending"
+        },
+        {
+          "case_id": "cm_eval_broad_16_24",
+          "split": "evaluation",
+          "kind": "broad_conditional",
+          "positional_restrictions": [
+            {
+              "model_index_0based": 16,
+              "allowed_symbols": "V"
+            },
+            {
+              "model_index_0based": 24,
+              "allowed_symbols": "LM"
+            }
+          ],
+          "other_positions": "common gap pattern and finite original field support",
+          "purpose": "Broad support conditional case for later runtime/quality comparison",
+          "biological_restriction_approval": "pending"
+        }
+      ]
+    },
+    "finite_fixture": "-TSENPLLALREKISALDEKLLALLAERRELAVEVGKAKLLSHRPVRDIDRERDLLERLITLGK-AHHLDAHYITRLFQLIIEDSVLTQQALLQQH"
+  },
+  "beta": 1.0,
+  "precision": "float64",
+  "method": "direct",
+  "sampling_parameters": {
+    "draws": 4096,
+    "warmup": 256,
+    "sweeps_per_draw": 1,
+    "checkpoint_policy": "first_qualified"
+  },
+  "seeds": [
+    3101,
+    3102,
+    3103,
+    3104
+  ],
+  "sampler_metadata": {
+    "backend": "jax",
+    "jax_version": "0.11.2",
+    "device": "cpu:0",
+    "prng": "threefry2x32",
+    "float64": true,
+    "local_field_refresh_sweeps": 128,
+    "method": "direct_categorical_gibbs",
+    "schedule": "systematic ascending site order",
+    "observation_unit": "complete sweeps",
+    "sweeps_per_draw": 1,
+    "warmup_sweeps": 256,
+    "seeds": [
+      3101,
+      3102,
+      3103,
+      3104
+    ],
+    "beta": 1.0,
+    "repeats_retained": true,
+    "accepted_semantics": "endpoint differs from the preceding observation or final warmup state",
+    "initialization": "NumPy PCG64 SeedSequence with spawn key (0,), independent of transition keys",
+    "checkpoint_segments": [
+      {
+        "draws_per_chain": 512,
+        "segment_seeds": [
+          3101,
+          3102,
+          3103,
+          3104
+        ],
+        "status": "accuracy_passed",
+        "checks": {
+          "energy_diagnostics": true,
+          "hamming_diagnostics": true,
+          "exact_total_variation": true,
+          "energy_mean_accuracy": true,
+          "hamming_mean_accuracy": true,
+          "site_frequency_accuracy": true,
+          "pair_frequency_accuracy": true
+        },
+        "elapsed_through_diagnostics_seconds": 18.017226899999514,
+        "predeclared_checkpoint": true
+      }
+    ],
+    "segment_randomness": "Independent deterministic substreams; state continues across boundaries; only the first segment warms up",
+    "draws_per_chain": 512
+  },
+  "planner_decision": null,
+  "runtime": {
+    "python": "3.13.5 (main, Jun 12 2025, 12:42:35) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26320-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "jax": "0.11.2",
+      "jaxlib": "0.11.2",
+      "thrml": "0.1.4",
+      "adabmDCA": "1.0.0",
+      "arviz-stats": "1.3.3",
+      "scikit-learn": "1.9.1"
+    },
+    "thread_settings": {
+      "OMP_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "XLA_FLAGS": null
+    }
+  },
+  "reference": null,
+  "physical_execution": false,
+  "elapsed_seconds": 18.25119939999786,
+  "budget_seconds": 900,
+  "budget_exceeded": false,
+  "predeclared_checkpoint": true,
+  "qualified_checkpoint_elapsed_seconds": 18.25119939999786,
+  "first_time_to_accuracy_established": true,
+  "raw_observations": 2048,
+  "unique_candidates": 3,
+  "exported_candidates": 2,
+  "export_permission": "qualified_only",
+  "assay_source": null,
+  "sequence_scope": {
+    "accession": "Q5SLA5",
+    "span": [
+      2,
+      90
+    ],
+    "description": "Modeled domain segment, not the full accession construct"
+  },
+  "claim_limits": {
+    "improved_function": false,
+    "hardware_speedup": false,
+    "independent_potts_assay_validation": false
+  },
+  "artifacts": {
+    "assay_worksheet.csv": "ec1c3f08031064c267094c7e6d839fc323b8adcfae57bca643f955aecacc6004",
+    "benchmark.json": "797b81b5cb26850bb86ba451f5d0f616c63b64c7dac2e021e16fe942c683f24a",
+    "candidate_pool.csv": "909ec37f2efcb36dfb8dac9b9493585f750d254d222e176a3a546fecc22f2ba5",
+    "candidates.csv": "63a37b2da532d55b51a7adda3323985710f27b3eac398f207c533ffe0e63709a",
+    "candidates.fasta": "0a81c0fca4ae22fc710dfd84e7d69d751c375ee5aa4ce1140520499ac7f923f7",
+    "candidates_aligned.fasta": "d5b0a13e84e719df9258f121f211466110d8b606a50f0ac2aad08f690a610e08",
+    "checkpoints.json": "85d6f84337e08a29dbaa41b44238bea1231f993495be0dbe797f2cba5891a970",
+    "diagnostics.json": "263acd48fafa2dcf544375bd7706b6507cf48f2dbaeea74801f7712bd42ca4de",
+    "encoding_resources.json": "31c140c4e445b909ae3c3935355449ac63c319724023ba9a23b368e15ed2c836",
+    "evaluation.json": "0b266f4399e3778cafafd91df7d353ec99e01642166e043dba0709fafe8a18c2",
+    "position_map.csv": "d976da09881eb74e6d602d43383c1d294a0f63d067c9ff8e9860e428c68ba777",
+    "profile.json": "5a3acc6e5c8d608f9e8db2a1c7c1272afa5a7a26e721c51fa9e75183793add3b",
+    "report.md": "e2d0271f38de8fcda99df4dd12c93c7919c68dfcf6f499ae974e26a515cf72c7",
+    "request.json": "27204ba916d05d8127ba9f3970b46ef08694c8fcbcba0f3dc3e392039e4f5104",
+    "rules.json": "0530e58b2008492455fbf5ffd959f737a43b3a1875e18584af96b69878a1579e",
+    "selection.json": "beb516a4e111f0496e3eb0bbd74d90e4ddf80facca0db71abbe20a7484290c2f",
+    "trace.csv.gz": "1ef5dc636e5b56dc040423001bd91afbca4f9d00daaf12c5ce623b4b71d2bfcd",
+    "trace.npz": "9bde72c241fcf47dfd722e7a0ce2391754a079d738cc3c3a3ae91ddd66644125"
+  }
+}

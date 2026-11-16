@@ -1,0 +1,13 @@
+{
+  "code_sha256": "d5ac2bcd646e77fd97ffcc639b7dc9a0331995093f1e6037de016c35cb452b42",
+  "runner_sha256": "f3b28ac948d8ed6f2216e476c75f513f4ce5a2f2a200edfd6a13bd4ac165f651",
+  "summary_sha256": "26d6968872887b33fb39b8843e45367f9cafe1f5245dff57e9ded2db223186df",
+  "protocol_sha256": "b5d3d307d55c1b358f43bf10d2bc8e3d5c20ab4c264c5c079ebf578aaca92f9a",
+  "execution_sha256": "07ebcefb5749c03ffd00fe9715e55dc8c31863e6f6abebc53d5480aff126afd1",
+  "replay_equivalence_sha256": "815b5bbffd7f471e8d42f055ffe329f9b64f29c69ecb8758d98e905ead564f76",
+  "frequency_tables": {
+    "baseline_frequency_blockers.csv": "02fbf813009157f7e3f05e106bec1afb8bdf700184f2a59a5a256bc9e85cee38",
+    "reference_32768_frequency_blockers.csv": "fcf05a405266fee0831880f9a24285143f3e1b928b67a103cff38550d052d2fa",
+    "reference_replay_frequency_blockers.csv": "02fbf813009157f7e3f05e106bec1afb8bdf700184f2a59a5a256bc9e85cee38"
+  }
+}

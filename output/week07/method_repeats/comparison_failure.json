@@ -1,0 +1,5 @@
+{
+  "status": "comparison_rejected",
+  "reason": "First run recorded AMD64 while the other five recorded Intel64 Family 6 Model 170 Stepping 4, GenuineIntel. Comparison context fingerprints differ. Source manifests preserved.",
+  "replacement_experiment": "output/week07/method_repeats_verified"
+}

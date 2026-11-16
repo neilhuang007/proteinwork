@@ -1,0 +1,85 @@
+{
+  "validation_date": "2026-11-09",
+  "command": ".venv-pilots/Scripts/python.exe -m unittest discover -s tests -v",
+  "passed": 120,
+  "failed": 0,
+  "reported_seconds": 49.296,
+  "log": "docs/week07/test_run.log",
+  "log_sha256": "e21d1efad7fcd16917e078def4a91a11a2eda9732c5c1ae216507334a5f7d937",
+  "reference_run": "output/week07/cm_reference",
+  "reference_manifest_sha256": "fd87234bac06bb28d437fd78ceac4df12e74f0a9d54b86ede777177236a4d1bd",
+  "review_packet": "output/week07/review_packet",
+  "review_provenance_sha256": "af7143e351d44509bacab3d490931b3bb104f1dbc594f1a8d9770536a1bdd222",
+  "new_tests": [
+    "tests/test_comparison.py",
+    "tests/test_review_packet.py"
+  ],
+  "claim_limits": {
+    "new_biological_measurements": false,
+    "physical_device_execution": false,
+    "broad_reference_qualified": false
+  },
+  "code_sha256": "0ca4cfbbdfbe7f500459f7c9f486e7b88dd9efb80ad18f1df12c6277dbb0b5b9",
+  "comparison_sha256": "98634a415aaf14aca99c7e52d27b5840a7575838cf05dbece8909e82278a5759",
+  "comparison_qualified_runs": 6,
+  "comparison_repeated_measurements": [
+    {
+      "method": "direct",
+      "sampling_parameters_sha256": "aa73511dd433bb062e7b62bfe0dd68f2acb3fd0770790b909078264317dbcd6b",
+      "sampling_parameters": {
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 1,
+        "checkpoint_policy": "first_qualified"
+      },
+      "runs": 3,
+      "qualified_runs": 3,
+      "unqualified_runs": 0,
+      "disjoint_seeds_within_method": true,
+      "median_qualified_seconds": 17.884817800000747,
+      "minimum_qualified_seconds": 17.29290640000181,
+      "maximum_qualified_seconds": 18.25119939999786
+    },
+    {
+      "method": "encoded",
+      "sampling_parameters_sha256": "de66fa15399eefc16177a849ce98843dcddd33cc9a37aa1d95b508c51027dfe3",
+      "sampling_parameters": {
+        "backend": "thrml",
+        "draws": 4096,
+        "warmup": 256,
+        "sweeps_per_draw": 2,
+        "penalty": 1.0,
+        "max_spins": 128,
+        "max_edges": 10000,
+        "max_bytes": 536870912,
+        "checkpoint_policy": "first_qualified"
+      },
+      "runs": 3,
+      "qualified_runs": 3,
+      "unqualified_runs": 0,
+      "disjoint_seeds_within_method": true,
+      "median_qualified_seconds": 26.75441580000188,
+      "minimum_qualified_seconds": 23.232606300000043,
+      "maximum_qualified_seconds": 27.86941289999959
+    }
+  ],
+  "planner_sha256": "f38d5fea7ac0a43920b31cb67a7c697932c6a7be2b67546b159d826dd2ca751f",
+  "planner_evaluation_manifest_sha256": "f95bf5577a48da7f80b3d959e7106847f6bb2b7abc2b6df048acb3afd82a2782",
+  "planner_evaluation_checks": {
+    "energy_diagnostics": true,
+    "hamming_diagnostics": true,
+    "exact_total_variation": true,
+    "energy_mean_accuracy": true,
+    "hamming_mean_accuracy": true,
+    "site_frequency_accuracy": true,
+    "pair_frequency_accuracy": true
+  },
+  "planner_evaluation_observations": 2048,
+  "review_packet_artifact_hashes_verified": true,
+  "artifact_code": {
+    "scripts\\build_review_packet.py": "8d3f2afce8cc18a96270b772884b48a78bee537e6bdd3a8996c98d2d3a4959d6",
+    "scripts\\run_method_repeats.py": "28a517ee0d1b406d909fe19fb27c2e6e89e018ec382e2a49774af37788deecd8",
+    "tests\\test_comparison.py": "1b16711ce8dca257d72592e85c4f93ebcb87845cb2f936fdfdf28f314cc43653",
+    "tests\\test_review_packet.py": "859f544eee8ca38b29748cfdec4e9923efd8b062f4fac4c0924c043759875e7e"
+  }
+}

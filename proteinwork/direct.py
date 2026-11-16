@@ -11,6 +11,7 @@ from time import perf_counter
 import numpy as np
 
 from .model import ReducedModel, _validateStates
+from .validation import _integerControl
 
 
 @dataclass
@@ -29,12 +30,6 @@ def _positiveBeta(beta):
     if isinstance(beta, (bool, np.bool_)) or not isinstance(beta, (int, float, np.integer, np.floating)) or not math.isfinite(beta) or beta <= 0:
         raise ValueError("Beta must be finite and strictly positive")
     return float(beta)
-
-
-def _integerControl(value, name, minimum):
-    if isinstance(value, (bool, np.bool_)) or not isinstance(value, (int, np.integer)) or value < minimum:
-        raise ValueError(f"{name} must be an integer at least {minimum}")
-    return int(value)
 
 
 def _samplingInputs(model, beta, seeds, draws, warmup, sweepsPerDraw, initialStates):

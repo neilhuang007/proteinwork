@@ -1,0 +1,26 @@
+{
+  "policy": "final",
+  "records": [
+    {
+      "draws_per_chain": 16384,
+      "segment_seeds": [
+        9401,
+        9402,
+        9403,
+        9404
+      ],
+      "status": "accuracy_not_reached",
+      "checks": {
+        "energy_diagnostics": true,
+        "hamming_diagnostics": true,
+        "independent_accuracy_reference": false,
+        "site_frequency_accuracy": false,
+        "pair_frequency_accuracy": false
+      },
+      "qualification_goal": "reference",
+      "qualified": false,
+      "elapsed_through_diagnostics_seconds": 133.87628789999872,
+      "predeclared_checkpoint": true
+    }
+  ]
+}

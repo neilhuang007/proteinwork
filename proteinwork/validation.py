@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+from numbers import Integral
 from pathlib import Path
 
 
@@ -12,21 +13,29 @@ class SourceDocument(dict):
     """Dictionary carrying the fingerprint of the bytes actually parsed."""
 
 
-def read_json(path: str | Path) -> dict:
-    def pairs(items):
-        result = {}
-        for key, value in items:
-            if key in result:
-                raise ValueError(f"Duplicate JSON key: {key}")
-            result[key] = value
-        return result
+def _uniqueObjectPairs(items):
+    result = {}
+    for key, value in items:
+        if key in result:
+            raise ValueError(f"Duplicate JSON key: {key}")
+        result[key] = value
+    return result
 
+
+def _integerControl(value, name, minimum):
+    """Validate sampler controls, including NumPy integer scalar inputs."""
+    if isinstance(value, bool) or not isinstance(value, Integral) or value < minimum:
+        raise ValueError(f"{name} must be an integer at least {minimum}")
+    return int(value)
+
+
+def read_json(path: str | Path) -> dict:
     def constant(value):
         raise ValueError(f"Nonfinite JSON value: {value}")
 
     data = Path(path).read_bytes()
     value = json.loads(data.decode("utf-8"),
-                       object_pairs_hook=pairs, parse_constant=constant)
+                       object_pairs_hook=_uniqueObjectPairs, parse_constant=constant)
     if not isinstance(value, dict):
         raise ValueError("The JSON document must be an object")
     document = SourceDocument(value)
@@ -58,11 +67,11 @@ def positive(value, name: str, allow_zero: bool = False) -> float:
 
 
 def digest(path: str | Path) -> str:
-    h = hashlib.sha256()
+    hasher = hashlib.sha256()
     with Path(path).open("rb") as stream:
         for block in iter(lambda: stream.read(1024 * 1024), b""):
-            h.update(block)
-    return h.hexdigest()
+            hasher.update(block)
+    return hasher.hexdigest()
 
 
 def object_digest(value) -> str:
@@ -127,6 +136,14 @@ def load_request(path: str | Path) -> tuple[dict, Path]:
         raise ValueError("Planner selection requires a frozen planner file")
     if request.get("purpose") == "reference" and sampling["method"] != "direct":
         raise ValueError("Independent reference runs must use direct sampling")
+    if request.get("purpose") == "reference":
+        selection = request["selection"]
+        if (not isinstance(selection, dict) or type(selection.get("batch_size")) is not int
+                or selection["batch_size"] != 0
+                or selection.get("objective", "model_score") != "model_score"
+                or request.get("allow_unqualified_export", False)
+                or "assays" in request or "reference_run" in request):
+            raise ValueError("Reference runs require batch_size zero and model_score, without assays, another reference or candidate export")
     for name in ("reference_run", "assays", "planner"):
         if name in request and (not isinstance(request[name], str) or not request[name]):
             raise ValueError(f"{name} must be a path string")
