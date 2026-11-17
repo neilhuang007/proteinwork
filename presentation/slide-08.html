@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The current implementation runs in software. | Protein sampling</title>
+<link rel="stylesheet" href="styles.css">
+<script src="slides.js" defer></script>
+</head>
+<body>
+<main class="slide"><p class="eyebrow">Implementation status</p><h1>The current implementation runs in software.</h1><p>We have implemented both routes, so we can now test that distinction between correctness and speed.</p><p>The encoded route runs in NumPy, JAX, or the official THRML software package.</p><ul><li>We first check small systems where we can calculate the exact probabilities.</li><li>We then retain the sampling traces, seeds, timings, and diagnostics for each run.</li></ul><p>For the timing comparison, we run the direct method in JAX and the encoded method in THRML.</p></main>
+</body>
+</html>

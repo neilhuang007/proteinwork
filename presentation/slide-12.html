@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>We made the saved results much smaller. | Protein sampling</title>
+<link rel="stylesheet" href="styles.css">
+<script src="slides.js" defer></script>
+</head>
+<body>
+<main class="slide"><p class="eyebrow">An engineering result</p><h1>We made the saved results much smaller.</h1><p>While investigating those limits, we also removed work that the reference run did not need.</p><figure><img src="assets/storage.svg" alt="Saved artifacts decreased from 94.47 MB to 12.64 MB."><figcaption>Replaying the earlier reference produced identical trace arrays and diagnostic values.</figcaption></figure><p>By skipping unused candidate construction, we reduced saved artifacts by <strong>86.6%</strong>.</p><p>We kept the same samples and diagnostics, so the smaller files are easier to store and inspect.</p></main>
+</body>
+</html>

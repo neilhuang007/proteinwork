@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>We propose a change, then check it. | Protein sampling</title>
+<link rel="stylesheet" href="styles.css">
+<script src="slides.js" defer></script>
+</head>
+<body>
+<main class="slide"><p class="eyebrow">The sampling method</p><h1>We propose a change, then check it.</h1><p>Once the sequence is encoded, we run a short Ising trajectory to propose a new binary state.</p><figure><img src="assets/proposal-model.svg" alt="The current sequence passes through a finite Ising trajectory; valid endpoints receive correction and invalid endpoints retain the current state."><figcaption>A fair coin chooses forward or reverse update order for a fixed number of sweeps.</figcaption></figure><p>We use a Metropolis–Hastings correction to keep valid proposals consistent with the protein distribution.</p><p>If the endpoint is invalid, we keep the old sequence and record it again instead of drawing a replacement.</p></main>
+</body>
+</html>

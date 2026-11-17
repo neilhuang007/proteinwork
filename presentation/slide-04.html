@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The energy defines a distribution over sequences. | Protein sampling</title>
+<link rel="stylesheet" href="styles.css">
+<script src="slides.js" defer></script>
+</head>
+<body>
+<main class="slide"><p class="eyebrow">The sampling target</p><h1>The energy defines a distribution over sequences.</h1><p>We describe those preferences and interactions with a Potts model, which assigns each sequence an energy.</p><p>We then turn that energy into a probability using the relationship below.</p><p class="equation">π(x) ∝ exp(−β E(x)).</p><p>In words, lower-energy sequences are more likely, and the inverse temperature β controls that preference.</p><p>We still want a range of sequences, so our goal is to sample this distribution rather than minimize energy.</p><p><strong>This distribution is the common target for both sampling methods.</strong></p></main>
+</body>
+</html>

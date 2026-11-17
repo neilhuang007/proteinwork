@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>We turn each residue choice into bits. | Protein sampling</title>
+<link rel="stylesheet" href="styles.css">
+<script src="slides.js" defer></script>
+</head>
+<body>
+<main class="slide"><p class="eyebrow">The QUBO encoding</p><h1>We turn each residue choice into bits.</h1><p>To use a binary sampler, we first translate each residue choice into a group of on-or-off variables.</p><figure><img src="assets/one-hot.svg" alt="At an illustrative site allowing A, C and G, choosing C maps to the bits 0, 1, 0; selecting 1, 1, 0 is invalid."><figcaption>This one-hot representation gives each allowed residue its own bit.</figcaption></figure><p>We add an energy penalty when a group selects no residue or more than one residue.</p><p>For every valid sequence, the binary energy remains exactly the same as the original protein energy.</p></main>
+</body>
+</html>

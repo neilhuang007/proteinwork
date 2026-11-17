@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The direct sampler is faster on the small case. | Protein sampling</title>
+<link rel="stylesheet" href="styles.css">
+<script src="slides.js" defer></script>
+</head>
+<body>
+<main class="slide"><p class="eyebrow">Measured timing</p><h1>The direct sampler is faster on the small case.</h1><p>We began with a four-state target so that both methods could be checked against a known answer.</p><figure><img src="assets/timing.svg" alt="Direct median 17.885 seconds; encoded THRML median 26.754 seconds, from three runs each."><figcaption>Each bar shows the median of three repetitions on the same small target.</figcaption></figure><p>All six runs passed at <strong>512 observations per chain</strong>, which gives us a common accuracy checkpoint.</p><p>At that checkpoint, the encoded route took about <strong>1.50 times as long</strong>, so direct sampling won this comparison.</p></main>
+</body>
+</html>
